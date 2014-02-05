@@ -65,6 +65,10 @@ body {
     color: #d9534f;
 }
 
+.list-group-item-heading.alarm-item-time.sleep{
+    color: #5cb85c;
+}
+
 .day-active {
     color: #428bca;
     font-weight: bold;
@@ -72,7 +76,7 @@ body {
 }
 
 .list-group-item.alarm-item {
-    max-width:50px;
+    max-width:350px;
 }
 
 

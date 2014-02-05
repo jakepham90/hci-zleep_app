@@ -1,5 +1,6 @@
 <html lang="en"><head> <title>Bootswatch: Cosmo</title> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8"> <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
 <link rel="stylesheet" href="css/index.css" media="screen">
 <link rel="stylesheet" href="css/link_href.css" media="screen">
 <style>
@@ -22,10 +23,8 @@
                 <a class="navbar-brand" href="#">Zleep</a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav">
                     <li class="active"><a href="#"><span class=" glyphicon
-                            glyphicon-home"></span> home</a></li>
-                    <li><a href="#"><span class=" glyphicon
                             glyphicon-time"></span> myAlarms</a></li>
                     <li><a href="#"><span class="glyphicon
                             glyphicon-music"></span> sleepyJam</a></li>
@@ -33,7 +32,7 @@
                             glyphicon-book"></span> sleep 101</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- something could go here.. -->
+                    <!-- something goes here? -->
                 </ul>
             </div>
         </div>
@@ -48,7 +47,7 @@
     <div class="container myAlarms">
         <!-- myAlarms container [top header + create button] -->
         <div class="row myAlarms-top">
-            <div class="col-xs-12 col-md-8 alarms-title-col"><h1></h1></div>
+            <div class="col-xs-12 col-md-8 alarms-title-col"><h1>alarms</h1></div>
             <div class="col-xs-6 col-md-4 create-new-alarm"><button class="btn btn-default create-new-btn"><span
                         class="glyphicon glyphicon-plus"></span> CREATE NEW</button></div>
         </div>
@@ -58,42 +57,34 @@
             <div class="list-group">
 
                 <!-- alarm 1 -->
-                <!--<a href="#" class="list-group-item alarm-item">
+                <a href="#" class="list-group-item alarm-item">
                     <h4 class="list-group-item-heading alarm-item-time wakeup">6:30 am</h4>
                     <p class="list-group-item-text alarm-item-title">surfing day</p> <p class="list-group-item-text alarm-item-days">
                     <small>SUN <span class="day-active">MON</span> TUE
-                        <span class="day-active">WED</span> THU FRI
-                        SAT</small></p>
-            </a>-->
-
-                <div class="jumbotron">
-                    <h2>Your next alarm is set for 6:30am.<br><small>8 hours and 12
-                            minutes from now</small></h2>
-                    <p>You should try to fall asleep at one of the following times:</p>
-
-                    <div class="list-group">
-
-                        <!-- alarm 1 -->
-                        <a href="#" class="list-group-item alarm-item">
-                            <h4 class="list-group-item-heading alarm-item-time
-                                sleep">9:30 pm</h4>
-                        </a>
-                        <a href="#" class="list-group-item alarm-item">
-                            <h4 class="list-group-item-heading alarm-item-time
-                                sleep">11:00 pm</h4>
-                        </a>
-                        <a href="#" class="list-group-item alarm-item">
-                            <h4 class="list-group-item-heading alarm-item-time
-                                sleep">12:30 pm</h4>
-                        </a>
-                               <a href="#" class="list-group-item alarm-item">
+                        <span class="day-active">WED</span> THU FRI SAT</small></p>
+                </a>
+                <!-- alarm 2 -->
+                <a href="#" class="list-group-item alarm-item">
                     <h4 class="list-group-item-heading alarm-item-time
-                        sleep">12:00 am</h4>
+                        wakeup">7:30 am</h4>
+                    <p class="list-group-item-text alarm-item-title">early
+                    shift</p>
+                    <p class="list-group-item-text alarm-item-days">
+                    <small>SUN MON <span class="day-active">TUE</span>
+                        WED <span class="day-active">THU FRI</span> SAT</small></p>
+                </a>
+                <!-- alarm 3 -->
+                <a href="#" class="list-group-item alarm-item">
+                    <h4 class="list-group-item-heading alarm-item-time
+                        wakeup">5:00 am</h4>
+                    <p class="list-group-item-text alarm-item-title">morning
+                    jog</p>
+                    <p class="list-group-item-text alarm-item-days">
+                    <small><span class="day-active">SUN</span> MON TUE WED THU FRI <span
+                            class="day-active">SAT</span></small></p>
                 </a>
 
-                    </div>
-                    <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
-            </div>            </div>
+            </div>
         </div>
     </div>
 </div>
@@ -113,4 +104,3 @@
 <script src="js/bootstrap.js"></script>
 </body>
 </html>
-
