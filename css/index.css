@@ -65,7 +65,7 @@ body {
     color: #d9534f;
 }
 
-.list-group-item-heading.alarm-item-time.sleep{
+.alarm-item-time.wake{
     color: #5cb85c;
 }
 
@@ -79,4 +79,13 @@ body {
     max-width:350px;
 }
 
+.reminder-method .sleep .time {
+color:#5cb85c;
+}
 
+.form-control.method {
+    max-width:250px;
+}
+.form-conrol button {
+float:left;
+}

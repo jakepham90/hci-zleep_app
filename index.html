@@ -1,116 +1,240 @@
 <html lang="en"><head> <title>Bootswatch: Cosmo</title> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8"> <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
-<link rel="stylesheet" href="css/index.css" media="screen">
-<link rel="stylesheet" href="css/link_href.css" media="screen">
-<style>
+        <meta charset="utf-8"> <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+        <link rel="stylesheet" href="css/index.css" media="screen">
+        <link rel="stylesheet" href="css/link_href.css" media="screen">
+        <style>
 
 
-</style>
+        </style>
 
-<body>
-<!-- nav-bar stuff -->
-<header>
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Zleep</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#"><span class=" glyphicon
-                            glyphicon-home"></span> home</a></li>
-                    <li><a href="#"><span class=" glyphicon
-                            glyphicon-time"></span> myAlarms</a></li>
-                    <li><a href="#"><span class="glyphicon
-                            glyphicon-music"></span> sleepyJam</a></li>
-                    <li><a href="#"><span class="glyphicon
-                            glyphicon-book"></span> sleep 101</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- something could go here.. -->
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- main content -->
-<main>
-<div class="container main">
-
-    <!-- myAlarms container -->
-    <div class="container myAlarms">
-        <!-- myAlarms container [top header + create button] -->
-        <div class="row myAlarms-top">
-            <div class="col-xs-12 col-md-8 alarms-title-col"><h1></h1></div>
-            <div class="col-xs-6 col-md-4 create-new-alarm"><button class="btn btn-default create-new-btn"><span
-                        class="glyphicon glyphicon-plus"></span> CREATE NEW</button></div>
-        </div>
-        <!-- myAlarms container [body] -->
-        <div class="container myAlarms-body">
-            <!-- myAlarms container [items]-->
-            <div class="list-group">
-
-                <!-- alarm 1 -->
-                <!--<a href="#" class="list-group-item alarm-item">
-                    <h4 class="list-group-item-heading alarm-item-time wakeup">6:30 am</h4>
-                    <p class="list-group-item-text alarm-item-title">surfing day</p> <p class="list-group-item-text alarm-item-days">
-                    <small>SUN <span class="day-active">MON</span> TUE
-                        <span class="day-active">WED</span> THU FRI
-                        SAT</small></p>
-            </a>-->
-
-                <div class="jumbotron">
-                    <h2>Your next alarm is set for 6:30am.<br><small>8 hours and 12
-                            minutes from now</small></h2>
-                    <p>You should try to fall asleep at one of the following times:</p>
-
-                    <div class="list-group">
-
-                        <!-- alarm 1 -->
-                        <a href="#" class="list-group-item alarm-item">
-                            <h4 class="list-group-item-heading alarm-item-time
-                                sleep">9:30 pm</h4>
-                        </a>
-                        <a href="#" class="list-group-item alarm-item">
-                            <h4 class="list-group-item-heading alarm-item-time
-                                sleep">11:00 pm</h4>
-                        </a>
-                        <a href="#" class="list-group-item alarm-item">
-                            <h4 class="list-group-item-heading alarm-item-time
-                                sleep">12:30 pm</h4>
-                        </a>
-                               <a href="#" class="list-group-item alarm-item">
-                    <h4 class="list-group-item-heading alarm-item-time
-                        sleep">12:00 am</h4>
-                </a>
-
+        <body>
+            <!-- nav-bar stuff -->
+            <header>
+                <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Zleep</a>
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="#"><span class=" glyphicon
+                                            glyphicon-home"></span> home</a></li>
+                                <li><a href="#"><span class=" glyphicon
+                                            glyphicon-time"></span> myAlarms</a></li>
+                                <li><a href="#"><span class="glyphicon
+                                            glyphicon-music"></span> sleepyJam</a></li>
+                                <li><a href="#"><span class="glyphicon
+                                            glyphicon-book"></span> sleep 101</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <!-- something could go here.. -->
+                            </ul>
+                        </div>
                     </div>
-                    <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
-            </div>            </div>
+                </div>
+            </header>
+
+            <!-- main content -->
+            <main>
+                <div class="container main">
+
+                    <!-- myAlarms container -->
+                    <div class="container myAlarms">
+                        <!-- myAlarms container [top header + create button] -->
+                        <div class="row myAlarms-top">
+                            <div class="col-xs-12 col-md-8 alarms-title-col"><h1></h1></div>
+                            <div class="col-xs-6 col-md-4 create-new-alarm"><button class="btn btn-default create-new-btn"><span
+                                        class="glyphicon glyphicon-plus"></span> CREATE NEW</button></div>
+                        </div>
+                        <!-- myAlarms container [body] -->
+                        <div class="container myAlarms-body">
+                            <!-- myAlarms container [items]-->
+                            <div class="list-group">
+
+                                <!-- alarm 1 -->
+                                <!--<a href="#" class="list-group-item alarm-item">
+                                    <h4 class="list-group-item-heading alarm-item-time wakeup">6:30 am</h4>
+                                    <p class="list-group-item-text alarm-item-title">surfing day</p> <p class="list-group-item-text alarm-item-days">
+                                        <small>SUN <span class="day-active">MON</span> TUE
+                                            <span class="day-active">WED</span> THU FRI
+                                            SAT</small></p>
+                                </a>-->
+
+                                <div class="jumbotron">
+                                    <h2>Your next alarm is set for 6:30am.<br><small>8 hours and 12
+                                            minutes from now</small></h2>
+                                    <br><br>
+                                    <h4>You should try to fall asleep at one of
+                                        the following times:</h4>
+                                    <table class="table">
+
+                                        <tbody class="reminder-method">
+                                            <tr class="sleep">
+                                                <td class="time">9:30pm</td>
+                                                <td>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <select class="form-control method">
+                                                                        <option>SMS</option>
+                                                                        <option selected="selected">Courtesy call</option>
+                                                                        <option>Email</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td>
+                                                                    <button> <span class="glyphicon glyphicon-remove"></span> </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <button><span class="glyphicon glyphicon-plus"></span></button>
+                                                </td> 
+                                            </tr>
+                                            <tr class="sleep">
+                                                <td class="time">11:00pm</td>
+                                                <td>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <select class="form-control method">
+                                                                        <option>SMS</option>
+                                                                        <option selected="selected">Courtesy call</option>
+                                                                        <option>Email</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td><button>
+                                                                        <span class="glyphicon glyphicon-remove remove"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <button><span class="glyphicon glyphicon-plus"></span></button>
+                                                </td> 
+
+                                            </tr>
+                                            <tr class="sleep">
+                                                <td class="time">12:30am</td>
+                                                <td>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <select class="form-control method">
+                                                                        <option>SMS</option>
+                                                                        <option selected="selected">Courtesy call</option>
+                                                                        <option>Email</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td><button>
+                                                                        <span class="glyphicon glyphicon-remove remove"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <button><span class="glyphicon glyphicon-plus"></span></button>
+                                                </td> 
+
+                                            </tr>
+                                            <tr class="sleep">
+                                                <td class="time">1:00am</td>
+                                                <td>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <select class="form-control method">
+                                                                        <option>SMS</option>
+                                                                        <option selected="selected">Courtesy call</option>
+                                                                        <option>Email</option>
+                                                                    </select>
+                                                                </td>
+                                                                <td><button>
+                                                                        <span class="glyphicon glyphicon-remove remove"></span>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <button><span class="glyphicon glyphicon-plus"></span></button>
+                                                </td> 
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <!--
+                                    <div class="row reminder-method">
+                                        <div class=".col-xs-6 .col-md-4">
+                                            <h4 class="alarm-item-time wake"> 9:30</h4>
+                                        </div> 
+
+                                        <div class=".col-xs-6 .col-md-4">
+                                            <select class="form-control
+                                                select-sleep-reminder">
+                                                <option>none</option>
+                                                <option>SMS</option>
+                                                <option selected="selected">Courtesy call</option>
+                                                <option>Email</option>
+                                            </select>
+                                            <span class="glyphicon
+                                                glyphicon-remove"></span></div></div>-->
+
+
+                                    <!--
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item alarm-item">
+                                            <h4 class="list-group-item-heading alarm-item-time
+                                                sleep">9:30 pm</h4>
+                                        </a>
+                                        <a href="#" class="list-group-item alarm-item">
+                                            <h4 class="list-group-item-heading alarm-item-time
+                                                sleep">11:00 pm</h4>
+                                        </a>
+                                        <a href="#" class="list-group-item alarm-item">
+                                            <h4 class="list-group-item-heading alarm-item-time
+                                                sleep">12:30 pm</h4>
+                                        </a>
+                                        <a href="#" class="list-group-item alarm-item">
+                                            <h4 class="list-group-item-heading alarm-item-time
+                                                sleep">12:00 am</h4>
+                                        </div> -->
+                                        <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+                                </div>            </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+
+                <footer>
+                </div>
+
+            </footer>
+
+
         </div>
-    </div>
-</div>
-</main>
 
 
-<footer>
-</div>
-
-</footer>
-
-
-</div>
-
-
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="js/bootstrap.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
 </html>
 
