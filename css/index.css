@@ -1,39 +1,78 @@
-
+body {
+    min-height: 2000px;
+    padding-top: 90px;
+}
 
 .main_frame
 {
-	height:620px;
-	margin-bottom: 100px;
-	border:2px solid black;
-	background-color: #FFFFFF;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	  opacity:0.9;
-  filter:alpha(opacity=90); /* For IE8 and earlier */
+    height:620px;
+    margin-bottom: 100px;
+    border:2px solid black;
+    background-color: #FFFFFF;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity:0.9;
+    filter:alpha(opacity=90); /* For IE8 and earlier */
 }
-
 
 .title
 {
-	margin-top:100px;
-	margin-bottom:0px;
-	font-size: 40px;
-	font-weight: normal;
-	font-style: normal;
-	padding-bottom: 0px;
-	background-color: #000000;
-	color: #FFFFFF;
+    margin-top:100px;
+    margin-bottom:0px;
+    font-size: 40px;
+    font-weight: normal;
+    font-style: normal;
+    padding-bottom: 0px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.container.myAlarms {
+    max-width: 870px;
+}
+
+.myAlarms-body {
+    max-width: 750px;
 }
 
 
-.login
-{
-	height:60px;
+.create-new-btn {
+    background-color: #DC4B39;
+    color: #FFFFFF;
+    float:right;
 }
 
+.create-new-alarm {
+    position:absolute;
+    bottom:10;
+    right:0;
+}
 
+.myAlarms-top {
+    position:relative;
+    border-bottom: 1px solid #eee
+}
 
+.myAlarms-body {
+    height:300px;
+    margin-top:25px;
+}
+
+/* text color */
+.list-group-item-heading.alarm-item-time.wakeup{
+    color: #d9534f;
+}
+
+.day-active {
+    color: #428bca;
+    font-weight: bold;
+
+}
+
+.list-group-item.alarm-item {
+    max-width:50px;
+}
 
 

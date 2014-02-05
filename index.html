@@ -1,119 +1,106 @@
-<html lang="en"><head>
-        <title>Bootswatch: Cosmo</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
-        <link rel="stylesheet" href="css/index.css" media="screen">
-        <link rel="stylesheet" href="css/link_href.css" media="screen">
-        <style>
-
-            body {
-                /* background-image:url('images/background.jpg');*/
-                background-color:white;
-                background-repeat:no-repeat;
-                background-attachment:fixed;
-                background-position:right;
-                padding-top:50px;
-            }
-        </style>
-
-        <body>
-            <div class="container"><!--
-                <div class="col-md-9 title">
-                    <div class="pull-left">
-                        ZLEEP
-                    </div>
-                    <div class="dropdown pull-right">
-
-                        <button type="button" class="btn btn-default login"
-                            data-toggle="dropdown"><span class="caret"></span>
-                            Jake Pham</button>
-
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#">Stats</a></li>
-                            <li><a href="#">Settings</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Log Out</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-9 main_frame">
-                    HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY
-                    HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY
-                    HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY
-                    HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY
-                    HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY
-                    HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY
-                    HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY
-                    HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY  HEY
-                    HEY  HEY
-                </div> -->
-                <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="#">Zleep</a>
-                        </div>
-                        <div class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav">
-                                <!--<li class="active"><a href="#">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#contact">Contact</a></li>-->
-                            </ul>
-                        </div><!--/.nav-collapse -->
-                    </div>
-                </div>
-                <div class="container">
-                    <ul class="nav nav-pills nav-stacked" style="max-width:
-                        250px;">
-
-                        <li class="active"><a href="#">Home</a></li>
+<html lang="en"><head> <title>Bootswatch: Cosmo</title> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+<link rel="stylesheet" href="css/index.css" media="screen">
+<link rel="stylesheet" href="css/link_href.css" media="screen">
+<style>
 
 
-                        <li class="dropdown">
-                            <a id="drop5" role="button" data-toggle="dropdown"
-                                href="#">Sleep Calculator<b class="caret"></b></a>
-                                 <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-                            <li role="presentation"><a role="menuitem" tabindex="-1"
-                                    href="http://twitter.com/fat">bed time</a>
-                       
-                                <li role="presentation"><a role="menuitem" tabindex="-1"
-                                        href="http://twitter.com/fat">wakeup time</a></li>
+</style>
 
+<body>
+<!-- nav-bar stuff -->
+<header>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Zleep</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#"><span class=" glyphicon
+                            glyphicon-time"></span> myAlarms</a></li>
+                    <li><a href="#"><span class="glyphicon
+                            glyphicon-music"></span> sleepyJam</a></li>
+                    <li><a href="#"><span class="glyphicon
+                            glyphicon-book"></span> sleep 101</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- something goes here? -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
 
-                                <li role="presentation" class="divider"></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1"
-                                        href="http://twitter.com/fat">sleep now</a></li> 
-                            </ul>
-                        </li>
+<!-- main content -->
+<main>
+<div class="container main">
 
-                        <li><a href="#">My Sleep Schedule</a></li>
-                        <li><a href="#">Music</a></li>
+    <!-- myAlarms container -->
+    <div class="container myAlarms">
+        <!-- myAlarms container [top header + create button] -->
+        <div class="row myAlarms-top">
+            <div class="col-xs-12 col-md-8 alarms-title-col"><h1>alarms</h1></div>
+            <div class="col-xs-6 col-md-4 create-new-alarm"><button class="btn btn-default create-new-btn"><span
+                        class="glyphicon glyphicon-plus"></span> CREATE NEW</button></div>
+        </div>
+        <!-- myAlarms container [body] -->
+        <div class="container myAlarms-body">
+            <!-- myAlarms container [items]-->
+            <div class="list-group">
 
-                        <li><a href="#">Sleep 101</a></li>
-
-                    </ul>
-                </div>
-                <footer>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <center>Copy Right by Sleep-Aid</center>
-                        </div>
-                    </div>
-
-                </footer>
-
+                <!-- alarm 1 -->
+                <a href="#" class="list-group-item alarm-item">
+                    <h4 class="list-group-item-heading alarm-item-time wakeup">6:30 am</h4>
+                    <p class="list-group-item-text alarm-item-title">surfing day</p> <p class="list-group-item-text alarm-item-days">
+                    <small>SUN <span class="day-active">MON</span> TUE
+                        <span class="day-active">WED</span> THU FRI SAT</small></p>
+                </a>
+                <!-- alarm 2 -->
+                <a href="#" class="list-group-item alarm-item">
+                    <h4 class="list-group-item-heading alarm-item-time
+                        wakeup">7:30 am</h4>
+                    <p class="list-group-item-text alarm-item-title">early
+                    shift</p>
+                    <p class="list-group-item-text alarm-item-days">
+                    <small>SUN MON <span class="day-active">TUE</span>
+                        WED <span class="day-active">THU FRI</span> SAT</small></p>
+                </a>
+                <!-- alarm 3 -->
+                <a href="#" class="list-group-item alarm-item">
+                    <h4 class="list-group-item-heading alarm-item-time
+                        wakeup">5:00 am</h4>
+                    <p class="list-group-item-text alarm-item-title">morning
+                    jog</p>
+                    <p class="list-group-item-text alarm-item-days">
+                    <small><span class="day-active">SUN</span> MON TUE WED THU FRI <span
+                            class="day-active">SAT</span></small></p>
+                </a>
 
             </div>
+        </div>
+    </div>
+</div>
+</main>
 
 
-            <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-            <script src="js/bootstrap.js"></script>
-        </body>
-    </html>
+<footer>
+</div>
+
+</footer>
+
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
