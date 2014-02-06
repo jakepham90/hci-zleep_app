@@ -24,11 +24,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#"><span class=" glyphicon
+                    <li><a href="index.html"><span class=" glyphicon
                             glyphicon-home"></span> home</a></li>
                     <li><a href="myAlarms.html"><span class=" glyphicon
                             glyphicon-time"></span> myAlarms</a></li>
-                    <li><a href="sleepyJams.html"><span class="glyphicon
+                    <li class="active"><a href="#"><span class="glyphicon
                             glyphicon-music"></span> sleepyJams</a></li>
                     <li><a href="#"><span class="glyphicon
                             glyphicon-book"></span> sleep 101</a></li>
@@ -46,32 +46,64 @@
 <!-- main content -->
 <main>
 <div class="container main">
+    <div class="container">
+      
 
-    <!-- myAlarms container -->
-    <div class="container myAlarms">
-        <!-- myAlarms container [top header + create button] -->
-        <div class="row myAlarms-top">
-            <div class="col-xs-12 col-md-8 alarms-title-col"><h1></h1></div>
-            <div class="col-xs-6 col-md-4 create-new-alarm"><a class="btn
-                    btn-default btn-create-new" href="myAlarms.html"><span class="glyphicon glyphicon-plus"></span>
-                    CREATE NEW ALARM</a></div>
-        </div>
-    </div>
-    <!-- myAlarms container [body] -->
-    <div class="container myAlarms-body">
-        <!-- myAlarms container [items]-->
-        <div class="list-group">
-            <div class="jumbotron">
-                <h2>Your next alarm is set for <span
-                        style="color:#428bca;">6:30 am</span>.<br><small>8 hours and 12
-                        minutes from now</small></h2>
-                <br><br>
-    </div></div></div>
-    </main>
+
+        <div class="col-md-9 main_frame">
+	<h3>Music to fall asleep to!</h3>
+
+	<div class="dropdown">
+            <button type="button" class="btn btn-default login" data-toggle="dropdown"><span class="caret"></span> Select Playlist</button>
+
+            <ul class="dropdown-menu">
+              <li><a href="#">Zen Mix</a></li>
+              <li><a href="#">Nature Sounds</a></li>
+              <li><a href="#">Forest Animals</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Random</a></li>
+            </ul>
+	</div>
+	<div><p></p></div>
+	<div class="dropdown">
+            <button type="button" class="btn btn-default login" data-toggle="dropdown"><span class="caret"></span> Import music</button>
+
+            <ul class="dropdown-menu">
+              <li><a href="#">Local drive</a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#">URL</a></li>
+              <li class="divider"></li>
+              <li><a href="#"></a></li>
+            </ul>
+	</div>
+
+	<div>
+	<p>
+	</p>
+	</div>
+	Volume:
+	<input type="range" min="0" max="50" value="45"> 
+	<div>
+	<p>
+	</p>
+	</div>
+	<b><i>FADE OUT</i></b> <i>last:</i> <input type="number" name="quantity" min="1" max="30"> minutes 
+	<div>
+	<p>
+	</p>
+	</div>
+	<b><i>TURN OFF</i></b> <i>after:</i> <input type="number" name="quantity" min="1" max="60"> minutes
+	<div>
+	<p></p>
+	</div>
+
+	<button type="button" class="btn btn-default login">START PLAYING!</button>
+
+      
+
+      </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="js/bootstrap.js"></script>
+</main>
 </body>
 </html>
 
