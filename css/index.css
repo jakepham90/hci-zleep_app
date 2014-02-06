@@ -29,8 +29,24 @@ body {
     color: #FFFFFF;
 }
 
+
+
+
+.reminder-method .reminder-sleep .time {
+color:#5cb85c;
+}
+
+.form-control.method {
+    max-width:250px;
+}
+.form-conrol button {
+float:left;
+}
+
+/*myAlarms page*/
 .container.myAlarms {
     max-width: 870px;
+    min-width:410px;
 }
 
 .myAlarms-body {
@@ -60,6 +76,11 @@ body {
     margin-top:25px;
 }
 
+.alarm-item-days {
+padding-top:5px;
+color: #999;
+}
+
 /* text color */
 .list-group-item-heading.alarm-item-time.wakeup{
     color: #d9534f;
@@ -76,16 +97,7 @@ body {
 }
 
 .list-group-item.alarm-item {
-    max-width:350px;
+    max-width:550px;
 }
 
-.reminder-method .sleep .time {
-color:#5cb85c;
-}
 
-.form-control.method {
-    max-width:250px;
-}
-.form-conrol button {
-float:left;
-}
