@@ -54,7 +54,7 @@ float:left;
 }
 
 
-.create-new-btn {
+.btn-create-new {
     background-color: #DC4B39;
     color: #FFFFFF;
     float:right;
@@ -100,4 +100,10 @@ color: #999;
     max-width:550px;
 }
 
+.list-group-item.alarm-item.new{
+margin:15px 0px 15px 0px;
+}
 
+#time {
+    width:100px;
+}
