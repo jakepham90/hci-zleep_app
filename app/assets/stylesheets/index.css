@@ -1,41 +1,9 @@
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
-}
-
-
-.title_top
-{
-    padding-right: 100px;
-
-}
-
 body {
-    min-height: 2000px;
+    min-height:1200px;
     padding-top: 90px;
 }
 
-.login_center
-{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
 
-.main_frame
-{
-    height:620px;
-    margin-bottom: 100px;
-    border:2px solid black;
-    background-color: #FFFFFF;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    opacity:0.9;
-    filter:alpha(opacity=90); /* For IE8 and earlier */
-}
 
 .title
 {
@@ -74,7 +42,7 @@ float:left;
 }
 
 
-.create-new-btn {
+.btn-create-new {
     background-color: #DC4B39;
     color: #FFFFFF;
     float:right;
@@ -118,5 +86,13 @@ color: #999;
 
 .list-group-item.alarm-item {
     max-width:550px;
+}
+
+.list-group-item.alarm-item.new{
+margin:15px 0px 15px 0px;
+}
+
+#time {
+    width:100px;
 }
 

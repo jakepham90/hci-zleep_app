@@ -4,12 +4,16 @@ Zleep::Application.routes.draw do
   get "alarm/all"
   get "alarm/new"
   get "alarm/music"
+  #
+  get "alarm/myAlarms"
+  get "alarm/sleepyJams"
+  get "alarm/sleep101"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'welcome#index'
+   root 'alarm#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

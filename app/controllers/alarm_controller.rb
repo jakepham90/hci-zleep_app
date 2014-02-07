@@ -2,7 +2,13 @@ class AlarmController < ApplicationController
   def index
   end
 
-  def all
+  def myAlarms
+  end
+
+  def sleepyJams
+  end
+
+  def sleep101
   end
 
   def new 
