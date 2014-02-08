@@ -37,8 +37,12 @@ float:left;
     min-width:410px;
 }
 
+.myAlarms-top {
+    position:relative;
+}
 .myAlarms-body {
-    max-width: 750px;
+/*    max-width: 750px;*/
+       margin-top:25px;
 }
 
 
@@ -53,17 +57,6 @@ float:left;
     bottom:10;
     right:0;
 }
-
-.myAlarms-top {
-    position:relative;
-    border-bottom: 1px solid #eee
-}
-
-.myAlarms-body {
-    height:300px;
-    margin-top:25px;
-}
-
 .alarm-item-days {
 padding-top:5px;
 color: #999;
