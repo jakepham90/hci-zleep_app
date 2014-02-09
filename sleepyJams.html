@@ -52,51 +52,42 @@
     <div class="container">
         <div class="col-md-9 main_frame">
             <h3>Music to fall asleep to!</h3>
-            <div class="dropdown">
-                <button type="button" class="btn btn-default login" data-toggle="dropdown"><span class="caret"></span> Select Playlist</button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Zen Mix</a></li>
-                    <li><a href="#">Nature Sounds</a></li>
-                    <li><a href="#">Forest Animals</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Random</a></li>
-                </ul>
+            <div id="musicpicker">
+		<select>
+		<option>Choose music type!</option>
+  		<option>Zen Mix</option>
+  		<option>Nature Sounds</option>
+  		<option>Forest Animals</option>
+		</select>
+
             </div>
             <div><p></p></div>
-            <div class="dropdown">
-                <button type="button" class="btn btn-default login" data-toggle="dropdown"><span class="caret"></span> Import music</button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Local drive</a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#">URL</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </div>
             <div>
                 </p>
             </div>
             Volume:
-            <input type="range" min="0" max="50" value="45"> 
+            <input id="volume" class="slider" type="range" min="0" max="50" value="45"> 
             <div>
                 <p>
                 </p>
             </div>
-            <b><i>FADE OUT</i></b> <i>last:</i> <input type="number" name="quantity" min="1" max="30"> minutes 
+            <b><i>FADE OUT</i></b> <i>last:</i> <input id="fade" type="number" name="quantity" min="1" max="30"> minutes 
             <div>
                 <p>
                 </p>
             </div>
-            <b><i>TURN OFF</i></b> <i>after:</i> <input type="number" name="quantity" min="1" max="60"> minutes
+            <b><i>TURN OFF</i></b> <i>after:</i> <input id="timer" type="number" name="quantity" min="1" max="60"> minutes
             <div>
                 <p></p>
             </div>
 
-            <button type="button" class="btn btn-default login">START PLAYING!</button>
+            <button id="playmusic" type="button" class="btn btn-default login">START PLAYING!</button>
         </div>
     </div>
 </div>
     </main>
+	<script src="js/music.js"></script>
+
     </body>
     </html>
 
