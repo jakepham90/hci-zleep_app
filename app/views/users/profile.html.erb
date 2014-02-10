@@ -1,0 +1,60 @@
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:method => :put}) do |f| %>
+        <div class="span6 content_padding">
+          <table class="table user_profile_date_table">
+            <tbody>
+            <tr>
+              <td><b>First Name</b></td>
+              <td><%= f.text_field :first_name %> </td>
+            </tr>
+            <tr>
+              <td><b>Last Name: </b></td>
+              <td><%= f.text_field :last_name %></td>
+            </tr>
+            <tr>
+              <td><b>Email: </b></td>
+              <td><%= f.text_field :email %></td>
+            </tr>
+            <tr>
+              <td><b>Location: </b></td>
+              <td><%= f.text_field :location %></td>
+            </tr>
+            <tr>
+              <td><b>New Password: </b></td>
+              <td><%= f.password_field :password, :autocomplete => "off" %></td>
+            </tr>
+            <tr>
+              <td><b>Confirm New Password: </b></td>
+              <td><%= f.password_field :password_confirmation %></td>
+            </tr>
+            <tr>
+              <td><b>Current Password: </b></td>
+              <td><%= f.password_field :current_password %></td>
+            </tr>
+			<tr>
+		      <td>Upload Image</td>
+			  <td><%= f.filepicker_field :image, :button_class => "m-btn green"%></td>
+			</tr>
+            </tbody>
+          </table>
+
+          <%= f.submit "Update your Profile", :class => "m-btn purple rnd" %>
+          <br/><br/>
+
+        </div>
+        <div class="span4">
+          <% if current_user.image.nil? %>
+              <%= image_tag("user_default.png", :size => '300x300', :class => 'img-polaroid') %>
+          <% else %>
+              <%= image_tag current_user.image, :size => '300x300', :class => 'img-polaroid' %>
+          <% end %>
+          <br>
+
+          <h5>Joined at: </h5> <%= current_user.created_at.strftime('%B %d, %Y') %> <br>
+          <h5>Last Signed in at: </h5> <%= current_user.last_sign_in_at.strftime('%B %d, %Y') %><br>
+          IP: <%= current_user.last_sign_in_ip %>
+          <br>
+
+          <%= link_to('View My Profile', user_root_path, :class => "m-btn purple-stripe") %><br>
+          <%= link_to "Cancel my account", registration_path(resource_name), :class => "m-btn red-stripe", :data => {:confirm => "Are you sure?"}, :method => :delete %>
+        </div>
+    <% end %>

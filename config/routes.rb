@@ -1,4 +1,8 @@
 Zleep::Application.routes.draw do
+
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
   get "welcome/index"
   get "alarm/index"
   get "alarm/all"
@@ -9,15 +13,19 @@ Zleep::Application.routes.draw do
   get "alarm/sleepyJams"
   get "alarm/sleep101"
 
+  get "/users/profile/:id" => "users#profile", :as => :public_profile
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
    root 'alarm#index'
 
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
+  resources :users
   resources :alarm
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

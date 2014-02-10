@@ -1,0 +1,48 @@
+<%= devise_error_messages! %>
+
+
+<div class="row login_center">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+  	<h1> Welcome to <b>Zleep</b></h1>
+  	<br><br><br>
+  	<%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+<%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
+<%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
+<br><br>
+
+	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :role => "form") do |f| %>
+
+
+	  <div class="form-group">
+	    <label for="exampleInputEmail1">Email address</label>
+	    <%= f.email_field :email, :autofocus => true, :class => "form-control", :placeholder => "Enter email" %>
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputPassword1">Password</label>
+	    <%= f.password_field :password, :class => "form-control", :placeholder => "Enter Password" %>
+	  </div>
+	  <div class="form-group">
+	  	<% if devise_mapping.rememberable? -%>
+	    	<div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+	  	<% end -%>
+	  </div>
+  	<div><%= f.submit "Sign in" %></div>
+	<% end %>
+	<br><br><br>
+	  	
+
+<%= render "devise/shared/links" %>
+
+
+  </div>
+  <div class="col-md-4"></div>
+
+</div>
+
+
+
+<!-- Modal -->
+
+
+
