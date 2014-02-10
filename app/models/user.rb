@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
  attr_accessible :email, :password, :password_confirmation, :last_name, :location, 
-                  :remember_me, :confirmed_at, :first_name, :fb_token, :fb_url, :username, :image
+                  :remember_me, :confirmed_at, :first_name, :fb_token, :fb_url, :username, :image, :phone_number
 
 
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
