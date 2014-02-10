@@ -61,8 +61,8 @@ ActionMailer::Base.smtp_settings = {
     :port           => '587',
     :authentication => :plain,
     :user_name      => ENV['jakepham90'],
-    :password       => ENV['THdp1990'],
-    :domain         => 'heroku.com'
+    :password       => ENV['zleep12345'],
+    :domain         => 'http://zleep.herokuapp.com'
   }
 
   ActionMailer::Base.delivery_method = :smtp
