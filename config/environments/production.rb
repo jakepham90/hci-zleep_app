@@ -56,8 +56,18 @@ Zleep::Application.configure do
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = "http://assets.example.com"
-  config.action_mailer.default_url_options = { :host => 'http://zleep.herokuapp.com' }
+ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com'
+  }
 
+  ActionMailer::Base.delivery_method = :smtp
+
+  config.action_mailer.default_url_options = { :host => 'http://zleep.herokuapp.com' }
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
   # config.assets.precompile += %w( search.js )
