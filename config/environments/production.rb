@@ -60,9 +60,9 @@ ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
-    :user_name      => ENV['jakepham90'],
-    :password       => ENV['zleep12345'],
-    :domain         => 'http://zleep.herokuapp.com'
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com'
   }
 
   ActionMailer::Base.delivery_method = :smtp
