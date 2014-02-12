@@ -1,74 +1,45 @@
+<div id="jquery_jplayer_1" class="jp-jplayer"></div>
 
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Zleep</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html"><span class=" glyphicon
-                            glyphicon-home"></span> home</a></li>
-                    <li><a href="myAlarms.html"><span class=" glyphicon
-                            glyphicon-time"></span> myAlarms</a></li>
-                    <li class="active"><a href="#"><span class="glyphicon
-                            glyphicon-music"></span> sleepyJams</a></li>
-                    <li><a href="#"><span class="glyphicon
-                            glyphicon-book"></span> sleep 101</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- something could go here.. -->
-                </ul>
+        <div id="jp_container_1" class="jp-audio">
+            <div class="jp-type-playlist">
+                <div class="jp-gui jp-interface">
+                    <ul class="jp-controls">
+                        <li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+                        <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                        <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                        <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+                        <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+                        <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+                        <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+                        <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+                    </ul>
+                    <div class="jp-progress">
+                        <div class="jp-seek-bar">
+                            <div class="jp-play-bar"></div>
+                        </div>
+                    </div>
+                    <div class="jp-volume-bar">
+                        <div class="jp-volume-bar-value"></div>
+                    </div>
+                    <div class="jp-time-holder">
+                        <div class="jp-current-time"></div>
+                        <div class="jp-duration"></div>
+                    </div>
+                    <ul class="jp-toggles">
+                        <li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li>
+                        <li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+                        <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+                        <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+                    </ul>
+                </div>
+                <div class="jp-playlist">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="jp-no-solution">
+                    <span>Update Required</span>
+                    To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                </div>
             </div>
         </div>
-    </div>
-</header>
-
-
-
-<!-- main content -->
-<main>
-<div class="container main">
-    <div class="container">
-        <div class="col-md-9 main_frame">
-            <h3>Music to fall asleep to!</h3>
-            <div id="musicpicker">
-		<select>
-		<option>Choose music type!</option>
-  		<option>Zen Mix</option>
-  		<option>Nature Sounds</option>
-  		<option>Forest Animals</option>
-		</select>
-
-            </div>
-            <div><p></p></div>
-            <div>
-                </p>
-            </div>
-            Volume:
-            <input id="volume" class="slider" type="range" min="0" max="10" value="5"> 
-            <div>
-                <p>
-                </p>
-            </div>
-            <b><i>FADE OUT</i></b> <i>last:</i> <input id="fade" type="number" name="quantity" min="1" max="30" value="0" > minutes 
-            <div>
-                <p>
-                </p>
-            </div>
-            <b><i>TURN OFF</i></b> <i>after:</i> <input id="timer" type="number" name="quantity" min="1" max="60" value="30" > minutes
-            <div>
-                <p></p>
-            </div>
-
-            <button id="playmusic" type="button" class="btn btn-default login">START PLAYING!</button>
-        </div>
-    </div>
-</div>
-
-  

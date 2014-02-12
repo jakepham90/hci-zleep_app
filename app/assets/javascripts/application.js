@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require music
+//= require jqueryplayer
+//= require jplayerplaylist
+//= require musicplaylist
 //= require_tree .
