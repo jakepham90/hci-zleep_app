@@ -77,9 +77,9 @@ playMusic.currentTrack;
 changeTimer.currTime;
 changeFade.currFade;
 
-playMusic.zen = new Audio('zen.mp3');
-playMusic.nature = new Audio('nature.mp3');
-playMusic.animal = new Audio('animals.mp3');
+playMusic.zen = new Audio('../assets/zen.mp3');
+playMusic.nature = new Audio('../assets/nature.mp3');
+playMusic.animal = new Audio('../assets/animals.mp3');
  
 //Parse form input to setup music session
 function playMusic(e){
