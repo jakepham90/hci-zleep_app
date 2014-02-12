@@ -15,4 +15,8 @@ before_filter :authenticate_user!
 
   def new 
   end
+
+  def sleep
+    render :layout => 'goodnight'
+  end
 end

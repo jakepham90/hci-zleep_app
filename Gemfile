@@ -37,6 +37,9 @@ gem 'devise'
 gem 'omniauth-facebook'
 
 
+gem "twilio-ruby", "~> 3.11.5"
+
+
 gem "rake", "10.1.1"
 
 gem 'jplayer-rails'

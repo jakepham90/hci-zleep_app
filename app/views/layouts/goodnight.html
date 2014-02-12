@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Zleep</title>
+
+        <link rel="stylesheet" type="text/css" href="/assets/bootstrap.css" media="screen" />
+   
+		  <style type="text/css">
+		  	body { 
+		  				    background-image:url('/assets/lego_sleepyhead.jpg');
+
+		  		background-color: #000000;
+				background-repeat: no-repeat;
+				background-position:50% -50%;
+
+			}
+			h1{
+				text-align: center;
+				color: #FFFFFF;
+				font-size: 50px;
+			}
+			div
+			{
+				color: #FFFFFF;
+				text-align: center;
+				font-size: 16px;
+			}
+
+		  </style>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body background-color="">
+		<div class="container main">
+			<%= yield %>
+		</div>
+	</body>
+</html>

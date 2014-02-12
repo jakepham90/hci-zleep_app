@@ -8,7 +8,7 @@ Zleep::Application.routes.draw do
   get "alarm/all"
   get "alarm/new"
   get "alarm/music"
-  #
+  get "alarm/sleep"
   get "alarm/myAlarms"
   get "alarm/sleepyJams"
   get "alarm/sleep101"

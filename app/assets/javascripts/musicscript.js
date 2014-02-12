@@ -13,6 +13,7 @@ function initializePage() {
 	
 	//register event handlers for volume and play button
 	$("#playButton").click(startTimer);
+
 }
 
 startTimer.userTime;
@@ -21,8 +22,10 @@ startTimer.userTime;
 function startTimer(e){
 	event.preventDefault();
 	startTimer.userTime = $("#timer").val();
+	document.getElementById("timeoff").innerHTML = startTimer.userTime + " minutes ";
 	console.log("playbutton pushed, music will play for " + startTimer.userTime + " minutes.");
 	window.setInterval(timerEventHandler, 60000);
+
 }
 
 //TimerHandler's persistent time property
@@ -35,12 +38,12 @@ function timerEventHandler(e){
 	timerEventHandler.elapsedTime = timerEventHandler.elapsedTime + 1;
 	console.log("Elapsed time: " + timerEventHandler.elapsedTime);
 
+	document.getElementById("timeoff").innerHTML = (startTimer.userTime - timerEventHandler.elapsedTime) + " minutes." 	;
+
 	//If the timer is expired, stop music playback
 	if (timerEventHandler.elapsedTime >= startTimer.userTime ){
-		location.reload();
+		window.location.href = "/alarm/sleep";
 		timerEventHandler.elapsedTime = 0;
 		window.clearInterval(timerEventHandler);
 	}
 }
-
-
