@@ -15,4 +15,6 @@
 //= require jqueryplayer
 //= require jplayerplaylist
 //= require musicplaylist
+//= require jsapi
+//= require charts
 //= require_tree .

@@ -12,7 +12,7 @@ Zleep::Application.routes.draw do
   get "alarm/myAlarms"
   get "alarm/sleepyJams"
   get "alarm/sleep101"
-
+  get "users/stats"
   get "/users/profile/:id" => "users#profile", :as => :public_profile
 
   # The priority is based upon order of creation: first created -> highest priority.
