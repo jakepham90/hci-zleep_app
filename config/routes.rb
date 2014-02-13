@@ -4,12 +4,7 @@ Zleep::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   get "welcome/index"
-  get "alarms/index"
-  get "alarms/all"
-  get "alarms/new"
-  get "alarms/music"
-  get "alarms/sleep"
-  get "alarms/myAlarms"
+  
   get "musics/index"
   get "alarms/sleep101"
   get "users/stats"
@@ -19,14 +14,14 @@ Zleep::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'alarm#index'
+   root 'welcome#index'
 
 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   resources :users
-  resources :alarm
+  resources :alarms
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

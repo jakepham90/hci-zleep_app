@@ -1,21 +1,135 @@
-<!-- myAlarms container -->
-<div class="container myAlarms">
-    <!-- myAlarms container [top header + create button] -->
-    <div class="myAlarms-top">
-        <div style="float:right;"><a
-                href="/alarm/myAlarms" class="btn btn-default btn-create-new"><span class="glyphicon glyphicon-plus"></span>
-                CREATE NEW ALARM</a></div>
-    </div>
+<div class="row">
+	<div class="col-md-1"></div>
+  <div class="col-md-4">
+    <h2>Your Alarms</h2>
+    <div class="row">
+      <div class="row alarm_list">
+      	<span class="alarm_time">6:30</span>&nbsp;
+      	<span class="alarm_description">Doctor Appointment</span>
+      	<span class="pull-right">
+      		<span class="alarm_control glyphicon glyphicon-edit"></span>&nbsp;&nbsp;
+      		<span class="alarm_control glyphicon glyphicon-remove"></span>
+
+      	</span>
+      	<br>
+      	<center><span class="alarm_day">MON</span>&nbsp;&nbsp;
+      	<span class="alarm_day">TUE</span>&nbsp;&nbsp;
+      	<span class="alarm_day">WED</span>&nbsp;&nbsp;
+      	<span class="alarm_day">THU</span>&nbsp;&nbsp;
+      	<span class="alarm_day">FRI</span>&nbsp;&nbsp;
+      	<span class="alarm_day">SAT</span>&nbsp;&nbsp;
+      	<span class="alarm_day">SUN</span></center>
+      </div> 
+
+      <div class="row alarm_list">
+      	<span class="alarm_time">6:30</span>&nbsp;
+      	<span class="alarm_description">Doctor Appointment</span>
+      	<span class="pull-right">
+      		<span class="alarm_control glyphicon glyphicon-edit"></span>&nbsp;&nbsp;
+      		<span class="alarm_control glyphicon glyphicon-remove"></span>
+
+      	</span>
+      	<br>
+      	<center><span class="alarm_day">MON</span>&nbsp;&nbsp;
+      	<span class="alarm_day">TUE</span>&nbsp;&nbsp;
+      	<span class="alarm_day">WED</span>&nbsp;&nbsp;
+      	<span class="alarm_day">THU</span>&nbsp;&nbsp;
+      	<span class="alarm_day">FRI</span>&nbsp;&nbsp;
+      	<span class="alarm_day">SAT</span>&nbsp;&nbsp;
+      	<span class="alarm_day">SUN</span></center>
+      </div>
+
+			<div class="row alarm_list">
+      	<span class="alarm_time">6:30</span>&nbsp;
+      	<span class="alarm_description">Doctor Appointment</span>
+      	<span class="pull-right">
+      		<span class="alarm_control glyphicon glyphicon-edit"></span>&nbsp;&nbsp;
+      		<span class="alarm_control glyphicon glyphicon-remove"></span>
+
+      	</span>
+      	<br>
+      	<center><span class="alarm_day">MON</span>&nbsp;&nbsp;
+      	<span class="alarm_day">TUE</span>&nbsp;&nbsp;
+      	<span class="alarm_day">WED</span>&nbsp;&nbsp;
+      	<span class="alarm_day">THU</span>&nbsp;&nbsp;
+      	<span class="alarm_day">FRI</span>&nbsp;&nbsp;
+      	<span class="alarm_day">SAT</span>&nbsp;&nbsp;
+      	<span class="alarm_day">SUN</span></center>
+      </div> 
+
+    </div></div>
+  <div class="col-md-1"></div>
+  <div class="col-md-5	">
+  	<h2>Create Alarm</h2>
+  	<div class="col-md-12">
+			<%= form_for :alarm do |f| %>
+				<div class="row">
+					<div class="col-md-8">
+						Alarm Name:
+					</div>
+					<div class="col-md-4">
+						Alarm Type:
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8">
+						<%= f.text_field :title, :class=>"form-control" %>
+					</div>
+					<div class="col-md-4">
+						<%= f.select(:type, options_for_select([ "Personal", "School", "Work" ], "Personal"), {},  { :class => 'form-control' } ) %>
+					</div>
+				</div>
+			  <br>
+			  <p>
+					<div class="row">
+					  <div class="col-md-3">
+					  	Hour:
+					  </div> 
+					  <div class="col-md-3">
+					  	Minute:
+					  </div>
+					  <div class="col-md-3">
+					  	D/N
+					  </div>
+					  <div class="col-md-3">
+					  	Day
+					  </div>
+					</div>
+
+					<div class="row">
+					  <div class="col-md-3">
+							<%= f.select(:hours, options_for_select(('01'..'12').step(1).to_a.map{|s| ["#{s}", s]}), {},  { :class => 'form-control' } ) %>  
+					  </div> 
+					  <div class="col-md-3">
+							<%= f.select(:minutes, options_for_select(('01'..'60').step(1).to_a.map{|s| ["#{s}", s]}), {},  { :class => 'form-control' } ) %>
+					  </div>
+					  <div class="col-md-3">
+							<%= f.select(:ampm, options_for_select([ "AM", "PM" ], "AM"), {},  { :class => 'form-control' } ) %>
+					  </div>
+					  <div class="col-md-3">
+							<%= f.select(:day, options_for_select([ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" ], "Mon"), {},  { :class => 'form-control' } ) %>
+					  </div>
+					</div>
+					<br><br>
+					Minutes to be reminded before bedtime.
+					<div class="row">
+					  <div class="col-md-3">
+							<%= f.select(:reminder_time, options_for_select(('01'..'12').step(1).to_a.map{|s| ["#{s}", s]}), {},  { :class => 'form-control' } ) %>  
+					  </div> 
+
+					 	<div class="col-md-3 pull-right">
+					 		<%= f.submit 'Set Alarm', :class => "btn btn-primary" %>
+					 	</div>
+					</div>
+
+			  </p>
+			 
+			  <p>
+			  </p>
+			<% end %>
+
+  	</div></div>
+	<div class="col-md-1"></div>
+
+
 </div>
-<!-- myAlarms container [body] -->
-<div class="container myAlarms-body">
-    <!-- myAlarms container [items]-->
-<div class="jumbotron">
-        <h2>Your next alarm is set for <span
-                style="color:#428bca;">6:30 am</span>.<br><small>8 hours and 12
-                minutes from now</small></h2>
-</div>
-    <div class="jumbotron">
-        	<p><strong>"Zleep-science"</strong> will help you set your alarm <i>right</i> and offers <i>relaxing</i> music to help you fall asleep.
-            Get started with the menu at the <b><i>top-right</i></b> of the screen!</p></div>
-    </div>

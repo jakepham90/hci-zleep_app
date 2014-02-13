@@ -1,3 +1,42 @@
+.alarm_list
+{
+   border-style:solid;
+   border-color:black;
+   border-width: 1px;
+   padding: 10px;
+   margin: 10px;
+}
+
+.alarm_day
+{
+  font-size: 18px;
+}
+
+.alarm_description
+{
+  color: black;
+  font-weight: bolder;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+.alarm_control
+{
+  color: black;
+  font-weight: normal;
+  font-size: 25px;
+  padding-top: 5px;
+}
+
+.alarm_time
+{
+  color: red;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+
 .reminder-method .reminder-sleep .time {
 color:#5cb85c;
 }
