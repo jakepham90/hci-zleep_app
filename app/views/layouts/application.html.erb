@@ -45,7 +45,7 @@
                                 <% if current_user.first_name.nil? || current_user.first_name == 0 || current_user.first_name == "" %>
                                     User
                                 <% else %>
-                                    <%= user.first_name %>
+                                    <%= current_user.first_name %>
                                 <% end %>
                                 <span class="caret"></span></a>
                                 <ul class="dropdown-menu" aria-labelledby="download">
