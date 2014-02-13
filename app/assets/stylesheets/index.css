@@ -2,8 +2,6 @@ body {
     padding-top: 90px;
 }
 
-
-
 .title
 {
     margin-top:100px;
@@ -16,78 +14,10 @@ body {
     color: #FFFFFF;
 }
 
-
-
-
-.reminder-method .reminder-sleep .time {
-color:#5cb85c;
-}
-
-.form-control.method {
-    max-width:250px;
-}
-.form-conrol button {
-float:left;
-}
-
-/*myAlarms page*/
 .container.myAlarms {
     max-width: 870px;
     min-width:410px;
 }
 
-.myAlarms-top {
-    position:relative;
-}
-.myAlarms-body {
-/*    max-width: 750px;*/
-       margin-top:25px;
-}
 
 
-.btn-create-new {
-    background-color: #DC4B39;
-    color: #FFFFFF;
-    float:right;
-}
-
-.create-new-alarm {
-    position:absolute;
-    bottom:10;
-    right:0;
-}
-.alarm-item-days {
-padding-top:5px;
-color: #999;
-}
-
-/* text color */
-.list-group-item-heading.alarm-item-time.wakeup{
-    color: #d9534f;
-}
-
-.alarm-item-time.wake{
-    color: #5cb85c;
-}
-
-.day-active {
-    color: #428bca;
-    font-weight: bold;
-
-}
-
-.list-group-item.alarm-item {
-    max-width:550px;
-}
-
-.list-group-item.alarm-item.new{
-margin:15px 0px 15px 0px;
-}
-
-#time {
-    width:100px;
-}
-
-.row.myAlarms-top {
-height: 50px;
-}

@@ -1,210 +1,144 @@
 <!-- main content -->
 <main>
-    <div class="container main">
+<div class="container main">
 
-        <!-- myAlarms container -->
-        <div class="container myAlarms">
-            <!-- myAlarms container [top header + create button] -->
-            <div class="row myAlarms-top">
-                <div class="col-xs-12 col-md-8 alarms-title-col"><h1>myAlarms</h1></div>
-                <div class="col-xs-6 col-md-4 create-new-alarm"><button class="btn
-                        btn-default btn-create-new"><span
-                            class="glyphicon glyphicon-plus"></span>
-                        CREATE NEW ALARM</button></div>
-            </div>
-            <!-- myAlarms container [body] -->
-            <div class="container myAlarms-body">
-                <!-- myAlarms container [items]-->
-                <div class="list-group">
-
-                    <!-- dummy data -->
-                    <a href='#' class='list-group-item alarm-item new'> 
-                        <table class="sleep-diagram"> 
-                            <tbody>
-                                <tr>
-                                    <td style="padding-right:5px;">I need to </td> 
-                                    <td style="padding-right:5px;"><select class="form-control method">
-                                            <option>sleep</option>
-                                            <option selected="selected">wake up</option>
-                                        </select>
-                                    </td>
-                                    <td style="padding-right:5px;">at</td>
-                                    <td><input type="email" class="form-control"
-                                        id="time" placeholder="hh:mm" value="8:30am"></td>
-                            </tr></tbody>
-                        </table>
-                        <br>
-                        <h4 style="color:#999;">You should try to fall asleep at one of
-                            the following times:</h4>
-                        <table class="table">
-                            <tbody class="reminder-method">
-                                <tr class="reminder-sleep">
-                                    <td class="time">9:30pm</td>
-                                    <td>
-                                        <table> <tbody>
-                                                <tr> <td>
-                                                        <select class="form-control method">
-                                                            <option>SMS</option>
-                                                            <option selected="selected">Courtesy call</option>
-                                                            <option>Email</option>
-                                                        </select>
-                                                    </td>
-                                                    <td>
-                                                        <button> <span class="glyphicon glyphicon-remove"></span> </button>
-                                                </td> </tr> 
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <button><span class="glyphicon glyphicon-plus"></span></button>
-                                    </td> 
-                                </tr>
-                                <tr class="reminder-sleep">
-                                    <td class="time">11:00pm</td>
-                                    <td>
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <select class="form-control method">
-                                                            <option>SMS</option>
-                                                            <option selected="selected">Courtesy call</option>
-                                                            <option>Email</option>
-                                                        </select>
-                                                    </td>
-                                                    <td><button>
-                                                            <span class="glyphicon glyphicon-remove remove"></span>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <button><span class="glyphicon glyphicon-plus"></span></button>
-                                    </td> 
-
-                                </tr>
-                                <tr class="reminder-sleep">
-                                    <td class="time">12:30am</td>
-                                    <td>
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <select class="form-control method">
-                                                            <option>SMS</option>
-                                                            <option selected="selected">Courtesy call</option>
-                                                            <option>Email</option>
-                                                        </select>
-                                                    </td>
-                                                    <td><button>
-                                                            <span class="glyphicon glyphicon-remove remove"></span>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <button><span class="glyphicon glyphicon-plus"></span></button>
-                                    </td> 
-
-                                </tr>
-                                <tr class="reminder-sleep">
-                                    <td class="time">1:00am</td>
-                                    <td>
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <select class="form-control method">
-                                                            <option>SMS</option>
-                                                            <option selected="selected">Courtesy call</option>
-                                                            <option>Email</option>
-                                                        </select>
-                                                    </td>
-                                                    <td><button>
-                                                            <span class="glyphicon glyphicon-remove remove"></span>
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <button><span class="glyphicon glyphicon-plus"></span></button>
-                                    </td> 
-
-                                </tr>
-
-                            </tbody>
-                        </table>
-                        <h4 style="color:#999;">to wake up at: </h4>
-                        <table class="table"><tbody><tr>
-                                    <td style="color:#d9534f;">8:30 am</td>
-                                    <td>
-                                        <select class="form-control method">
-                                            <option>SMS</option>
-                                            <option selected="selected">Courtesy call</option>
-                                            <option>Email</option>
-                                        </select>
-                                    </td>
-                                    <td><button>
-                                            <span class="glyphicon glyphicon-remove remove"></span>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button><span class="glyphicon glyphicon-plus"></span></button>
-                                    </td> 
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-        </tr></tbody></table>
-        <!-- repeat section -->
-        <h4 style="color:#999;">repeat: </h4>
-        <p class="list-group-item-text alarm-item-days">
-            <small>SUN MON <span class="day-active">TUE</span>
-                WED <span class="day-active">THU FRI</span> SAT</small></p>
-        <br
-        <div><button type="button" class="btn btn-default">Cancel</button>
-            <button type="button" class="btn btn-primary">Done</button></div>
-    </a>
-
-
-    <!-- alarm 1 -->
-    <a href="#" class="list-group-item alarm-item">
-        <h4 class="list-group-item-heading alarm-item-time
-            wakeup">6:30 am</h4>
-        <p class="list-group-item-text alarm-item-title">surfing day</p> <p class="list-group-item-text alarm-item-days">
-            <small>SUN <span class="day-active">MON</span> TUE
-                <span class="day-active">WED</span> THU FRI SAT</small></p>
-        <!-- <input type="checkbox" name="my-checkbox" checked>-->
-    </a>
-    <!-- alarm 2 -->
-    <a href="#" class="list-group-item alarm-item">
-        <h4 class="list-group-item-heading alarm-item-time
-            wakeup">7:30 am</h4>
-        <p class="list-group-item-text alarm-item-title">early
-            shift</p>
-        <p class="list-group-item-text alarm-item-days">
-            <small>SUN MON <span class="day-active">TUE</span>
-                WED <span class="day-active">THU FRI</span> SAT</small></p>
-    </a>
-    <!-- alarm 3 -->
-    <a href="#" class="list-group-item alarm-item">
-        <h4 class="list-group-item-heading alarm-item-time
-            wakeup">5:00 am</h4>
-        <p class="list-group-item-text alarm-item-title">morning
-            jog</p>
-        <p class="list-group-item-text alarm-item-days">
-            <small><span class="day-active">SUN</span> MON TUE WED THU FRI <span
-                    class="day-active">SAT</span></small></p>
-    </a>
-
-</div>
-        </div>
+  <!-- myAlarms container -->
+  <div class="container myAlarms">
+    <!-- myAlarms container [top header + create button] -->
+    <div class="row myAlarms-top">
+      <div class="col-xs-12 col-md-8 alarms-title-col"><h1>myAlarms</h1></div>
+      <div class="col-xs-6 col-md-4 create-new-alarm"><button class="btn
+          btn-default btn-create-new"><span
+            class="glyphicon glyphicon-plus"></span>
+          CREATE NEW ALARM</button></div>
     </div>
+    <!-- myAlarms container [body] -->
+    <div class="container myAlarms-body">
+      <!-- myAlarms container [items]-->
+
+      <!-- dummy data -->
+      <div class= "new-alarm-panel">
+        <!--create new form-->
+        <div>
+          <form class="form-inline" role="form">
+            <div class="form-group">
+              <label>I need to</label>
+            </div>
+            <div class="form-group">
+              <select class="form-control"> 
+                <option>sleep</option>
+                <option selected="selected">wake up</option>
+            </select></div>
+            <label >at</label>
+            <div class="form-group">
+              <input class="form-control"
+              id="time" placeholder="hh:mm" value="8:30"></div>
+            <div class="form-group">
+              <select class="form-control am-pm">
+                <option>am</option>
+                <option>pm</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <!-- <tbody>
+              <tr>
+                <td style="padding-right:5px;">I need to </td> 
+                <td style="padding-right:5px;"><select class="form-control method">
+                    <option>sleep</option>
+                    <option selected="selected">wake up</option>
+                  </select>
+                </td>
+                <td style="padding-right:5px;">at</td>
+                <td><input class="form-control"
+                  id="time" placeholder="hh:mm" value="8:30am"></td>
+                <td><select class="form-control am-pm">
+                    <option>am</option>
+                    <option>pm</option>
+                  </select>
+                  </td>
+                </tr></tbody>
+              </table>-->
+        <br>
+        <!-- suggested times in new form-->
+        <h4 style="color:#999;">You should try to fall asleep at one of
+          the following times:</h4>
+        <td>
+          <table class="table">
+            <tbody class="reminder-method">
+            <tr class="reminder-sleep">
+              <td class="time">9:30pm</td>
+              <td>
+                <table> <tbody>
+                  <tr> <td>
+                      <form role="form" class="reminder-type-form">
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox1" value="option1"> SMS
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox2" value="option2"> call
+                        </label>
+                        <label class="checkbox-inline">
+                          <input type="checkbox" id="inlineCheckbox3" value="option3"> email
+                      </label>                        </form>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </td>
+          </tr></tbody></table>
+          <!-- repeat section -->
+          <h4 style="color:#999;">repeat: </h4>
+          <p class="list-group-item-text alarm-item-days">
+          <small>SUN MON <span class="day-active">TUE</span>
+            WED <span class="day-active">THU FRI</span> SAT</small></p>
+          <br>
+          <div><button type="button" class="btn btn-default">Cancel</button>
+            <button type="button" class="btn btn-primary">Done</button></div>
+        </a>
+
+      </div>
+
+      <!-- alarm 1 -->
+      <table class="alarm-table">
+        <tbody>
+        <tr>
+          <td> <!-- alarm1 -->
+            <div class="list-group-item alarm-item">
+              <h4 class="list-group-item-heading alarm-item-time
+                wakeup">6:30 am</h4>
+              <p class="list-group-item-text alarm-item-title">surfing day</p> <p class="list-group-item-text alarm-item-days">
+              <small>SUN <span class="day-active">MON</span> TUE
+                <span class="day-active">WED</span> THU FRI SAT</small></p>
+              <!-- <input type="checkbox" name="my-checkbox" checked>-->
+            </div>
+          </td>
+
+        </tr>
+        </tbody>
+      </table>
+      <!-- alarm 2 -->
+      <!--<div class="list-group-item alarm-item">
+        <h4 class="list-group-item-heading alarm-item-time
+          wakeup">7:30 am</h4>
+        <p class="list-group-item-text alarm-item-title">early
+        shift</p>
+        <p class="list-group-item-text alarm-item-days">
+        <small>SUN MON <span class="day-active">TUE</span>
+          WED <span class="day-active">THU FRI</span> SAT</small></p>
+      </div>
+
+      <div class="list-group-item alarm-item">
+        <h4 class="list-group-item-heading alarm-item-time
+          wakeup">5:00 am</h4>
+        <p class="list-group-item-text alarm-item-title">morning
+        jog</p>
+        <p class="list-group-item-text alarm-item-days">
+        <small><span class="day-active">SUN</span> MON TUE WED THU FRI <span
+            class="day-active">SAT</span></small></p>
+      </div>
+      -->
+    </div>
+  </div>
 
