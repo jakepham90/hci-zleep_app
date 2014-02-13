@@ -3,11 +3,11 @@ before_filter :authenticate_user!
 skip_before_filter  :verify_authenticity_token
 
   def index
-    @alarms = Alarm.all
+    @alarms = current_user.alarms.all
   end
 
   def new
-    @alarms = Alarm.all
+    @alarms = current_user.alarms.all
     @alarm = current_user.alarms.new
   end
  
@@ -19,7 +19,7 @@ skip_before_filter  :verify_authenticity_token
   end
 
   def edit 
-        @alarms = Alarm.all
+        @alarms = current_user.alarms.all
 
       @alarm = Alarm.find(params[:id])
       if @alarm.user_id != current_user.id

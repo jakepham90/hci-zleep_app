@@ -68539,3 +68539,125 @@ Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-02-13 08:28:50 -0800
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 35ms (Views: 30.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 08:28:51 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 08:28:52 -0800
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-02-13 08:28:54 -0800
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 30.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/alarms/new" for 127.0.0.1 at 2014-02-13 08:28:56 -0800
+Processing by AlarmsController#new as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mAlarm Load (1.0ms)[0m  SELECT "alarms".* FROM "alarms"
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2040589241259279550_70328883121000 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2040589241259279550_70328883121000 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2040589241259279550_70328883121000 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2040589241259279550_70328883121000 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+  Rendered alarms/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 127ms (Views: 115.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2014-02-13 08:29:04 -0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 57ms (Views: 49.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/user-default.png" for 127.0.0.1 at 2014-02-13 08:29:05 -0800
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-02-13 08:29:10 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ypbgk0etR5Kb73P6cn7CMTIgOK2HFkpS+DMPR3zR6G4="}
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-13 08:29:10 -0800
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-13 08:29:10 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 119ms (Views: 114.8ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from irb_binding at (irb):1)
+  [1m[35mAlarm Load (7.4ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1  [["user_id", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from irb_binding at (irb):3)
+  [1m[36mAlarm Load (0.7ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1[0m  [["user_id", 1]]
