@@ -1,12 +1,13 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
+  # Include default devise modules. Others available are:za
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :alarms
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
  attr_accessible :email, :password, :password_confirmation, :last_name, :location, 
-                  :remember_me, :confirmed_at, :first_name, :fb_token, :fb_url, :username, :image, :phone_number
-
+                  :remember_me, :confirmed_at, :first_name, :fb_token, :fb_url, :username, :image, :phone_number , :alarm_map_attributes
 
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
     data = access_token.extra.raw_info

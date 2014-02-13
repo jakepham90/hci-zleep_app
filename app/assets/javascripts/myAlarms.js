@@ -1,19 +1,15 @@
 (function() {
 
   $(document).ready(function(){
-    console.log('test');
+    console.log('test!!!');
+    hideNewTimes();
   });
-
-  $("select").change(function() {
-    var str = "";
-    $("select option:selected").each(function() {
-      str += $(this).text() + " ";
-    });
-    console.log('test.trigger ' + str);
-  })
-
 
 }).call(this);
 
 
+function hideNewTimes () {
 
+  $(".calculated-times").css("visibility", "hidden");
+
+}

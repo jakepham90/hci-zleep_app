@@ -17,29 +17,32 @@
       <!-- myAlarms container [items]-->
 
       <!-- dummy data -->
-      <div class= "new-alarm-panel">
+      <div class= "container new-alarm-panel">
         <!--create new form-->
-        <div>
+        <div class="form-new-alarm">
           <form class="form-inline" role="form">
             <div class="form-group">
               <label>I need to</label>
             </div>
-            <div class="form-group">
-              <select class="form-control"> 
+            <div class="form-group select">
+              <select class="form-control alarmType select"> 
                 <option>sleep</option>
                 <option selected="selected">wake up</option>
             </select></div>
             <label >at</label>
             <div class="form-group">
               <input class="form-control"
-              id="time" placeholder="hh:mm" value="8:30"></div>
-            <div class="form-group">
-              <select class="form-control am-pm">
-                <option>am</option>
-                <option>pm</option>
+              id="time" placeholder="hh:mm"></div>
+            <div class="form-group ">
+              <select class="form-control am-pm select ">
+                <option value="am">am</option>
+                <option value="pm">pm</option>
               </select>
             </div>
           </form>
+          <!-- calculate button -->
+          <button class="btn btn-calculate" type="submit">Calculate</button>
+          
         </div>
 
         <!-- <tbody>
@@ -61,6 +64,7 @@
                 </tr></tbody>
               </table>-->
         <br>
+        <div class="calculated-times">
         <!-- suggested times in new form-->
         <h4 style="color:#999;">You should try to fall asleep at one of
           the following times:</h4>
@@ -99,7 +103,8 @@
         </a>
 
       </div>
-
+    </div>
+      <div class="alarms">
       <!-- alarm 1 -->
       <table class="alarm-table">
         <tbody>
@@ -139,6 +144,6 @@
             class="day-active">SAT</span></small></p>
       </div>
       -->
-    </div>
+  </div>
   </div>
 
