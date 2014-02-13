@@ -13,9 +13,9 @@
 
       <div class="col-md-5">
         <% if current_user.image.nil? %>
-              <%= image_tag("user_default.png", :size => '300x300', :class => 'img-polaroid') %>
+              <%= image_tag("user-default.png", :size => '350x350', :class => 'img-thumbnail') %>
           <% else %>
-              <%= image_tag("#{current_user.image}?type=large", :size => '350x350', :class => 'img-polaroid') %>
+              <%= image_tag("#{current_user.image}?type=large", :size => '350x350', :class => 'img-thumbnail') %>
           <% end %>
       </div>
       <div class="col-md-5">

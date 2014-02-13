@@ -39,6 +39,7 @@ function timerEventHandler(e){
 	//Increment elapsed time
 	timerEventHandler.elapsedTime = timerEventHandler.elapsedTime + 1;
 	console.log("Elapsed time: " + timerEventHandler.elapsedTime);
+	document.getElementById("timeoff").innerHTML = (startTimer.userTime -  timerEventHandler.elapsedTime) + " minutes ";
 
 	//If the timer is expired, stop music playback
 	if (timerEventHandler.elapsedTime >= startTimer.userTime ){

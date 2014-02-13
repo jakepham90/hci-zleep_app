@@ -27,13 +27,13 @@
 
                         <ul class="nav navbar-nav">
                             <li class="<%= 'active' if current_page?(alarm_index_path) %>"><a href="/alarm/index"><span class=" glyphicon
-                                        glyphicon-home"></span> home</a></li>
+                                        glyphicon-home"></span>&nbsp;home</a></li>
                             <li class="<%= 'active' if current_page?(alarm_myAlarms_path) %>"><a href="/alarm/myAlarms"><span class=" glyphicon
-                                        glyphicon-time"></span> myAlarms</a></li>
+                                        glyphicon-time"></span>&nbsp;myAlarms</a></li>
                             <li class="<%= 'active' if current_page?(alarm_sleepyJams_path) %>"><a href="/alarm/sleepyJams"><span class="glyphicon
-                                        glyphicon-music"></span> sleepyJams</a></li>
+                                        glyphicon-music"></span>&nbsp;sleepyJams</a></li>
                             <li class="<%= 'active' if current_page?(alarm_sleep101_path) %>"><a href="/alarm/sleep101"><span class="glyphicon
-                                        glyphicon-book"></span> sleep101</a></li>
+                                        glyphicon-book"></span>&nbsp;sleep101</a></li>
                         </ul>
 
                     <% end %>
@@ -41,9 +41,15 @@
 
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download"><span class="glyphicon glyphicon-user"> </span><%= current_user.email %><span class="caret"></span></a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download"><span class="glyphicon glyphicon-user"> </span>&nbsp;
+                                <% if current_user.first_name.nil? || current_user.first_name == 0 || current_user.first_name == "" %>
+                                    User
+                                <% else %>
+                                    <%= user.first_name %>
+                                <% end %>
+                                <span class="caret"></span></a>
                                 <ul class="dropdown-menu" aria-labelledby="download">
-                                    <li><a href="#">STATS</a></li>
+                                    <li><a href="/users/stats">STATS</a></li>
                                     <li><a href="/users/edit">ACCOUNT SETTINGS</a></li>
 
                                     <li class="divider"></li>
