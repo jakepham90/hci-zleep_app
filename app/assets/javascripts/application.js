@@ -12,9 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require jqueryplayer
 //= require jplayerplaylist
 //= require musicplaylist
 //= require jsapi
 //= require charts
-//= require_tree .
+//= require myAlarms
