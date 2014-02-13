@@ -4,14 +4,14 @@ Zleep::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   get "welcome/index"
-  get "alarm/index"
-  get "alarm/all"
-  get "alarm/new"
-  get "alarm/music"
-  get "alarm/sleep"
-  get "alarm/myAlarms"
-  get "alarm/sleepyJams"
-  get "alarm/sleep101"
+  get "alarms/index"
+  get "alarms/all"
+  get "alarms/new"
+  get "alarms/music"
+  get "alarms/sleep"
+  get "alarms/myAlarms"
+  get "musics/index"
+  get "alarms/sleep101"
   get "users/stats"
   get "/users/profile/:id" => "users#profile", :as => :public_profile
 

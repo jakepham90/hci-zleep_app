@@ -26,13 +26,13 @@
                     <% if user_signed_in? %>
 
                         <ul class="nav navbar-nav">
-                            <li class="<%= 'active' if current_page?(alarm_index_path) %>"><a href="/alarm/index"><span class=" glyphicon
-                                        glyphicon-home"></span>&nbsp;home</a></li>
-                            <li class="<%= 'active' if current_page?(alarm_myAlarms_path) %>"><a href="/alarm/myAlarms"><span class=" glyphicon
-                                        glyphicon-time"></span>&nbsp;myAlarms</a></li>
-                            <li class="<%= 'active' if current_page?(alarm_sleepyJams_path) %>"><a href="/alarm/sleepyJams"><span class="glyphicon
-                                        glyphicon-music"></span>&nbsp;sleepyJams</a></li>
-                            <li class="<%= 'active' if current_page?(alarm_sleep101_path) %>"><a href="/alarm/sleep101"><span class="glyphicon
+                            <li class="<%= 'active' if current_page?(alarms_index_path) %>"><a href="/alarms/index"><span class=" glyphicon
+                                        glyphicon-home"></span>&nbsp;Home</a></li>
+                            <li class="<%= 'active' if current_page?(alarms_myAlarms_path) %>"><a href="/alarms/myAlarms"><span class=" glyphicon
+                                        glyphicon-time"></span>&nbsp;My Alarms</a></li>
+                            <li class="<%= 'active' if current_page?(musics_index_path) %>"><a href="/musics/index"><span class="glyphicon
+                                        glyphicon-music"></span>&nbsp;Music</a></li>
+                            <li class="<%= 'active' if current_page?(alarms_sleep101_path) %>"><a href="/alarms/sleep101"><span class="glyphicon
                                         glyphicon-book"></span>&nbsp;sleep101</a></li>
                         </ul>
 

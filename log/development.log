@@ -42550,3 +42550,1122 @@ Completed 200 OK in 45ms (Views: 38.6ms | ActiveRecord: 1.5ms)
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-12 21:07:22 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-12 21:14:21 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AlarmController#index as HTML
+  [1m[35mUser Load (2.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered alarm/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 474ms (Views: 248.8ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:22 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:22 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:22 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:22 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:22 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:22 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:22 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:22 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:22 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:23 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:23 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:23 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:23 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:23 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:23 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:23 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:23 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-12 21:14:24 -0800
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-02-12 21:14:28 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nHQlJFiwshudQDQpIp87hskcSJyN7SIhvMp/goFO4JU="}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 145ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-12 21:14:28 -0800
+Processing by AlarmController#index as HTML
+Completed 401 Unauthorized in 30ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-12 21:14:28 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (6.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 103ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-12 21:14:46 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 147ms (Views: 141.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-12 21:14:47 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-12 21:14:48 -0800
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-12 21:15:00 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 71ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:00 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:00 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:00 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:00 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:00 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:00 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:00 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:00 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:01 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:01 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:01 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:01 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:01 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:01 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:01 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:01 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:01 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-12 21:15:01 -0800
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-12 21:15:16 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 73ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-12 21:15:17 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-12 21:15:18 -0800
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-12 21:15:42 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 55ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-02-12 21:15:48 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (3.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 70ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/facebook_logo.png" for 127.0.0.1 at 2014-02-12 21:15:48 -0800
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2014-02-12 21:16:00 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-12 21:16:08 -0800
+Processing by AlarmController#index as HTML
+Completed 401 Unauthorized in 3ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-12 21:16:08 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 59ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-13 01:31:09 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (3.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.2) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.2) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1777967868095472649__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/jakepham/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/jakepham/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/jakepham/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAlarms (20140213080121)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (91.8ms)[0m  [1mCREATE TABLE "alarms" ("id" serial primary key, "title" character varying(255), "type" character varying(255), "time" time, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (20.6ms)[0m  CREATE INDEX "index_alarms_on_user_id" ON "alarms" ("user_id")
+  [1m[36mSQL (19.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140213080121"]]
+  [1m[35m (4.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-13 01:31:34 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AlarmController#index as HTML
+Completed 401 Unauthorized in 96ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-13 01:31:34 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (5.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 607ms (Views: 452.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 01:31:35 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 01:31:36 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 01:31:37 -0800
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-02-13 02:20:48 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ML2ynwSqf90z4Pedu4FXmDvd0f1BQohYtq9Jt0OOGYQ=", "user"=>{"email"=>"jakepham90@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (4.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'jakepham90@gmail.com' ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (13.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 7  [["last_sign_in_at", Thu, 13 Feb 2014 04:27:40 UTC +00:00], ["current_sign_in_at", Thu, 13 Feb 2014 10:20:49 UTC +00:00], ["sign_in_count", 10], ["updated_at", Thu, 13 Feb 2014 10:20:49 UTC +00:00]]
+  [1m[36m (4.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 575ms (ActiveRecord: 28.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-13 02:20:49 -0800
+Processing by AlarmController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered alarm/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 355ms (Views: 347.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:50 -0800
+
+
+Started GET "/users/stats" for 127.0.0.1 at 2014-02-13 02:20:55 -0800
+Processing by UsersController#stats as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered users/stats.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 44ms (Views: 35.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 02:20:56 -0800
+
+
+Started GET "/users/stats" for 127.0.0.1 at 2014-02-13 02:25:05 -0800
+Processing by UsersController#stats as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/stats.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 296ms
+
+ActionView::Template::Error (undefined local variable or method `alarm_myAlarms_path' for #<#<Class:0x007f0e441531d8>:0x007f0e44152120>):
+    28:                         <ul class="nav navbar-nav">
+    29:                             <li class="<%= 'active' if current_page?(alarm_index_path) %>"><a href="/alarm/index"><span class=" glyphicon
+    30:                                         glyphicon-home"></span>&nbsp;home</a></li>
+    31:                             <li class="<%= 'active' if current_page?(alarm_myAlarms_path) %>"><a href="/alarm/myAlarms"><span class=" glyphicon
+    32:                                         glyphicon-time"></span>&nbsp;myAlarms</a></li>
+    33:                             <li class="<%= 'active' if current_page?(alarm_sleepyJams_path) %>"><a href="/alarm/sleepyJams"><span class="glyphicon
+    34:                                         glyphicon-music"></span>&nbsp;sleepyJams</a></li>
+  app/views/layouts/application.html.erb:31:in `_app_views_layouts_application_html_erb___4546857315987950598_32084840'
+
+
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.8ms)
+
+
+Started GET "/users/stats" for 127.0.0.1 at 2014-02-13 02:25:36 -0800
+Processing by UsersController#stats as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered users/stats.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 157ms
+
+ActionView::Template::Error (undefined local variable or method `alarms_sleepyJams_path' for #<#<Class:0x007f0e441531d8>:0x007f0e44441070>):
+    30:                                         glyphicon-home"></span>&nbsp;home</a></li>
+    31:                             <li class="<%= 'active' if current_page?(alarms_myAlarms_path) %>"><a href="/alarm/myAlarms"><span class=" glyphicon
+    32:                                         glyphicon-time"></span>&nbsp;myAlarms</a></li>
+    33:                             <li class="<%= 'active' if current_page?(alarms_sleepyJams_path) %>"><a href="/alarm/sleepyJams"><span class="glyphicon
+    34:                                         glyphicon-music"></span>&nbsp;sleepyJams</a></li>
+    35:                             <li class="<%= 'active' if current_page?(alarms_sleep101_path) %>"><a href="/alarm/sleep101"><span class="glyphicon
+    36:                                         glyphicon-book"></span>&nbsp;sleep101</a></li>
+  app/views/layouts/application.html.erb:33:in `_app_views_layouts_application_html_erb___4546857315987950598_69849625813560'
+
+
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.4ms)
+
+
+Started GET "/users/stats" for 127.0.0.1 at 2014-02-13 02:26:19 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#stats as HTML
+  [1m[35mUser Load (2.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/stats.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 515ms
+
+ActionView::Template::Error (undefined local variable or method `alarms_sleepyJams_path' for #<#<Class:0x00000004363630>:0x000000043625f0>):
+    30:                                         glyphicon-home"></span>&nbsp;home</a></li>
+    31:                             <li class="<%= 'active' if current_page?(alarms_myAlarms_path) %>"><a href="/alarm/myAlarms"><span class=" glyphicon
+    32:                                         glyphicon-time"></span>&nbsp;myAlarms</a></li>
+    33:                             <li class="<%= 'active' if current_page?(alarms_sleepyJams_path) %>"><a href="/alarm/sleepyJams"><span class="glyphicon
+    34:                                         glyphicon-music"></span>&nbsp;sleepyJams</a></li>
+    35:                             <li class="<%= 'active' if current_page?(alarms_sleep101_path) %>"><a href="/alarm/sleep101"><span class="glyphicon
+    36:                                         glyphicon-book"></span>&nbsp;sleep101</a></li>
+  app/views/layouts/application.html.erb:33:in `_app_views_layouts_application_html_erb___2938247125195070216_36168580'
+
+
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.9ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (33.1ms)
+
+
+Started GET "/users/stats" for 127.0.0.1 at 2014-02-13 02:26:36 -0800
+Processing by UsersController#stats as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered users/stats.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 140ms
+
+ActionView::Template::Error (undefined local variable or method `musics_sleepyJams_path' for #<#<Class:0x00000004363630>:0x007fb7dc4c7e80>):
+    30:                                         glyphicon-home"></span>&nbsp;home</a></li>
+    31:                             <li class="<%= 'active' if current_page?(alarms_myAlarms_path) %>"><a href="/alarm/myAlarms"><span class=" glyphicon
+    32:                                         glyphicon-time"></span>&nbsp;myAlarms</a></li>
+    33:                             <li class="<%= 'active' if current_page?(musics_sleepyJams_path) %>"><a href="/alarm/sleepyJams"><span class="glyphicon
+    34:                                         glyphicon-music"></span>&nbsp;sleepyJams</a></li>
+    35:                             <li class="<%= 'active' if current_page?(alarms_sleep101_path) %>"><a href="/alarm/sleep101"><span class="glyphicon
+    36:                                         glyphicon-book"></span>&nbsp;sleep101</a></li>
+  app/views/layouts/application.html.erb:33:in `_app_views_layouts_application_html_erb___2938247125195070216_70213825920640'
+
+
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.1ms)
+
+
+Started GET "/users/stats" for 127.0.0.1 at 2014-02-13 02:26:54 -0800
+Processing by UsersController#stats as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/stats.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 129ms
+
+ActionView::Template::Error (undefined local variable or method `alarms_sleep101_path' for #<#<Class:0x00000004363630>:0x00000004372748>):
+    32:                                         glyphicon-time"></span>&nbsp;myAlarms</a></li>
+    33:                             <li class="<%= 'active' if current_page?(musics_index_path) %>"><a href="/alarm/sleepyJams"><span class="glyphicon
+    34:                                         glyphicon-music"></span>&nbsp;sleepyJams</a></li>
+    35:                             <li class="<%= 'active' if current_page?(alarms_sleep101_path) %>"><a href="/alarm/sleep101"><span class="glyphicon
+    36:                                         glyphicon-book"></span>&nbsp;sleep101</a></li>
+    37:                         </ul>
+    38: 
+  app/views/layouts/application.html.erb:35:in `_app_views_layouts_application_html_erb___2938247125195070216_35366920'
+
+
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.3ms)
+
+
+Started GET "/users/stats" for 127.0.0.1 at 2014-02-13 02:27:29 -0800
+Processing by UsersController#stats as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered users/stats.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 197ms (Views: 104.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 02:27:30 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 02:27:30 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 02:27:31 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 02:27:32 -0800
+
+
+Started GET "/users/stats" for 127.0.0.1 at 2014-02-13 02:29:57 -0800
+Processing by UsersController#stats as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered users/stats.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 46ms (Views: 38.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 02:29:57 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 02:29:57 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 02:29:57 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 02:29:57 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 02:29:57 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 02:29:57 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 02:29:57 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 02:29:57 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 02:29:57 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 02:29:57 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 02:29:57 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 02:29:58 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 02:29:58 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 02:29:58 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 02:29:58 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 02:29:58 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 02:29:58 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 02:29:58 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 02:29:59 -0800
+
+
+Started GET "/alarms/myAlarms" for 127.0.0.1 at 2014-02-13 02:30:00 -0800
+
+ActionController::RoutingError (uninitialized constant AlarmsController):
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__3260385286908470949__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/jakepham/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/jakepham/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/jakepham/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (19.0ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (20.1ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (268.6ms)
+
+
+Started GET "/musics/" for 127.0.0.1 at 2014-02-13 02:30:13 -0800
+
+ActionController::RoutingError (No route matches [GET] "/musics"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/jakepham/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/jakepham/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/jakepham/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.9ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.3ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (89.0ms)
+
+
+Started GET "/musics/index" for 127.0.0.1 at 2014-02-13 02:30:23 -0800
+Processing by MusicsController#index as HTML
+  Rendered musics/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 41ms (Views: 36.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/musicscript.js" for 127.0.0.1 at 2014-02-13 02:30:23 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.jpg" for 127.0.0.1 at 2014-02-13 02:30:23 -0800
+
+
+Started GET "/musics/index" for 127.0.0.1 at 2014-02-13 02:30:46 -0800
+Processing by MusicsController#index as HTML
+  Rendered musics/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 02:30:46 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/musicscript.js" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 02:30:47 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 02:30:49 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.jpg" for 127.0.0.1 at 2014-02-13 02:30:49 -0800
+
+
+Started GET "/alarms/myAlarms" for 127.0.0.1 at 2014-02-13 02:30:51 -0800
+
+ActionController::RoutingError (uninitialized constant AlarmsController):
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__3260385286908470949__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/jakepham/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/jakepham/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/jakepham/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (17.8ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.5ms)
+  Rendered /home/jakepham/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (158.9ms)
+
+
+Started GET "/alarms/myAlarms" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+Processing by AlarmsController#myAlarms as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered alarms/myAlarms.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 42ms (Views: 35.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 02:31:30 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 02:31:31 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 02:31:31 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 02:31:31 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 02:31:31 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 02:31:31 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 02:31:31 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 02:31:31 -0800
+
+
+Started GET "/musics/index" for 127.0.0.1 at 2014-02-13 02:31:33 -0800
+Processing by MusicsController#index as HTML
+  Rendered musics/index.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 40ms (Views: 36.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/alarms/sleep101" for 127.0.0.1 at 2014-02-13 02:31:35 -0800
+Processing by AlarmsController#sleep101 as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered alarms/sleep101.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 133ms (Views: 126.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/alarms/index" for 127.0.0.1 at 2014-02-13 02:31:37 -0800
+Processing by AlarmsController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered alarms/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 31.6ms | ActiveRecord: 1.7ms)
