@@ -68354,3 +68354,188 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 08:16:24
 
 
 Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 08:16:25 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-13 08:27:18 -0800
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 311ms (Views: 182.9ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:19 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 08:27:21 -0800
+
+
+Started GET "/alarms/new" for 127.0.0.1 at 2014-02-13 08:27:22 -0800
+Processing by AlarmsController#new as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mAlarm Load (1.1ms)[0m  [1mSELECT "alarms".* FROM "alarms"[0m
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2040589241259279550_70328883121000 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2040589241259279550_70328883121000 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2040589241259279550_70328883121000 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2040589241259279550_70328883121000 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+  Rendered alarms/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 159ms (Views: 74.0ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:23 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:24 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:24 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:24 -0800
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-02-13 08:27:25 -0800
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 116ms (Views: 107.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:25 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 08:27:26 -0800
