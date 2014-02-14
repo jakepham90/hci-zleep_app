@@ -4,7 +4,7 @@
    	<h2>Your Alarms</h2>
     	<div class="row">
     		<% @alarms.each do |alarm| %>
-	      		<div class="row alarm_list">
+	      		<div class="row alarm_list <%= " bg-info" if alarm.id ==@alarm.id %>">
 	      			<div class="row">
 	      				<div class="col-md-12">
 	      					<span class="alarm_time"><%= alarm.hour_time %> : <%= alarm.minute_time %> <%= alarm.ampm %></span>&nbsp;
@@ -90,11 +90,11 @@
 						<br><br>
 						Minutes to be reminded before bedtime.
 						<div class="row">
-						  <div class="col-xs-3">
+						  <div class="col-xs-6">
 								<%= f.select(:reminder_time, options_for_select(('01'..'12').step(1).to_a.map{|s| ["#{s}", s]}), {},  { :class => 'form-control' } ) %>  
 						  </div> 
 
-						 	<div class="col-xs-3 pull-right">
+						 	<div class="col-xs-6 pull-right">
 						 		<%= f.submit 'Set Alarm', :class => "btn btn-primary" %>
 						 	</div>
 						</div>
@@ -107,7 +107,7 @@
 
 	  	</div>
 	</div>
-	<div class="col-md-1"></div>
+	<div class="col-md-1"><br><br><br><br><br></div>
 </div>
 
 

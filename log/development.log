@@ -74131,3 +74131,688 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 22:04:02
 
 
 Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 22:04:04 -0800
+
+
+Started GET "/alarms/30/edit" for 127.0.0.1 at 2014-02-13 22:15:27 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AlarmsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mUser Load (2.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from edit at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:22)
+  [1m[36mAlarm Load (7.7ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mAlarm Load (1.8ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."id" = $1 LIMIT 1  [["id", "30"]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_edit_html_erb___1850691082916241818_22353280 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/edit.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_edit_html_erb___1850691082916241818_22353280 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/edit.html.erb:14)
+  Rendered alarms/edit.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 657ms (Views: 396.7ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 22:15:28 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 22:15:28 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 22:15:28 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 22:15:29 -0800
+
+
+Started GET "/alarms/30/edit" for 127.0.0.1 at 2014-02-13 22:18:44 -0800
+Processing by AlarmsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from edit at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:22)
+  [1m[35mAlarm Load (0.9ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1  [["user_id", 7]]
+  [1m[36mAlarm Load (0.8ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."id" = $1 LIMIT 1[0m  [["id", "30"]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_edit_html_erb___1850691082916241818_22353280 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/edit.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_edit_html_erb___1850691082916241818_22353280 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/edit.html.erb:14)
+  Rendered alarms/edit.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 72ms (Views: 59.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:44 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:44 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:44 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:44 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:44 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:44 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:45 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:45 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:45 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:45 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:45 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:45 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:45 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:45 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:45 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:45 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:45 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:45 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 22:18:46 -0800
+
+
+Started GET "/alarms/30/edit" for 127.0.0.1 at 2014-02-13 22:18:57 -0800
+Processing by AlarmsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from edit at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:22)
+  [1m[36mAlarm Load (1.0ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mAlarm Load (0.8ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."id" = $1 LIMIT 1  [["id", "30"]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_edit_html_erb___1850691082916241818_22353280 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/edit.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_edit_html_erb___1850691082916241818_22353280 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/edit.html.erb:14)
+  Rendered alarms/edit.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 76ms (Views: 60.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 22:18:58 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 22:18:59 -0800
+
+
+Started GET "/alarms/new" for 127.0.0.1 at 2014-02-13 22:19:09 -0800
+Processing by AlarmsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from new at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:10)
+  [1m[35mAlarm Load (0.8ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1  [["user_id", 7]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2262851335831005708_28126000 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2262851335831005708_28126000 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+  Rendered alarms/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 60ms (Views: 50.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:10 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 22:19:12 -0800
+
+
+Started GET "/alarms/new" for 127.0.0.1 at 2014-02-13 22:19:24 -0800
+Processing by AlarmsController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from new at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:10)
+  [1m[35mAlarm Load (0.9ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1  [["user_id", 7]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2262851335831005708_70111617008220 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2262851335831005708_70111617008220 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+  Rendered alarms/new.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 152ms (Views: 138.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:25 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 22:19:26 -0800
+
+
+Started GET "/alarms/new" for 127.0.0.1 at 2014-02-13 22:19:46 -0800
+Processing by AlarmsController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from new at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:10)
+  [1m[35mAlarm Load (0.9ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1  [["user_id", 7]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2262851335831005708_70111516143920 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2262851335831005708_70111516143920 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+  Rendered alarms/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 147ms (Views: 133.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:46 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:46 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 22:19:47 -0800
+
+
+Started GET "/alarms/new" for 127.0.0.1 at 2014-02-13 22:20:00 -0800
+Processing by AlarmsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from new at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:10)
+  [1m[35mAlarm Load (0.9ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1  [["user_id", 7]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2262851335831005708_70111516131480 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2262851335831005708_70111516131480 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+  Rendered alarms/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 78ms (Views: 63.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:01 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 22:20:02 -0800
+
+
+Started GET "/alarms/new" for 127.0.0.1 at 2014-02-13 22:20:30 -0800
+Processing by AlarmsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from new at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:10)
+  [1m[35mAlarm Load (0.9ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1  [["user_id", 7]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2262851335831005708_70111516074640 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2262851335831005708_70111516074640 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+  Rendered alarms/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 64ms (Views: 52.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:30 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:30 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:30 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:30 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:30 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:30 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:30 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:31 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 22:20:31 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:31 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:31 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:31 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:31 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:31 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:31 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:31 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:31 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 22:20:31 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 22:20:31 -0800
+
+
+Started GET "/alarms/new" for 127.0.0.1 at 2014-02-13 22:22:18 -0800
+Processing by AlarmsController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from new at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:10)
+  [1m[35mAlarm Load (1.2ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1  [["user_id", 7]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2262851335831005708_70111549618180 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb___2262851335831005708_70111549618180 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:14)
+  Rendered alarms/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 90ms (Views: 74.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 22:22:19 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 22:22:23 -0800
+
+
+Started GET "/alarms/30/edit" for 127.0.0.1 at 2014-02-13 22:22:43 -0800
+Processing by AlarmsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from edit at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:22)
+  [1m[35mAlarm Load (0.9ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1  [["user_id", 7]]
+  [1m[36mAlarm Load (0.6ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."id" = $1 LIMIT 1[0m  [["id", "30"]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_edit_html_erb___1850691082916241818_70111686299660 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/edit.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_edit_html_erb___1850691082916241818_70111686299660 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/edit.html.erb:14)
+  Rendered alarms/edit.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 64ms (Views: 51.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/alarms/30/edit" for 127.0.0.1 at 2014-02-13 22:22:47 -0800
+Processing by AlarmsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from edit at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:22)
+  [1m[36mAlarm Load (0.9ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1[0m  [["user_id", 7]]
+  [1m[35mAlarm Load (0.7ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."id" = $1 LIMIT 1  [["id", "30"]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_edit_html_erb___1850691082916241818_70111686299660 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/edit.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_edit_html_erb___1850691082916241818_70111686299660 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/edit.html.erb:14)
+  Rendered alarms/edit.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 136ms (Views: 123.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/alarms/30/edit" for 127.0.0.1 at 2014-02-13 22:24:50 -0800
+Processing by AlarmsController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from edit at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:22)
+  [1m[35mAlarm Load (1.1ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1  [["user_id", 7]]
+  [1m[36mAlarm Load (1.1ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."id" = $1 LIMIT 1[0m  [["id", "30"]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_edit_html_erb___1850691082916241818_34671980 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/edit.html.erb:14)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_edit_html_erb___1850691082916241818_34671980 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/edit.html.erb:14)
+  Rendered alarms/edit.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 73ms (Views: 59.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 22:24:50 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 22:24:50 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:24:50 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 22:24:50 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 22:24:50 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 22:24:50 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 22:24:50 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 22:24:50 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 22:24:50 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 22:24:50 -0800
