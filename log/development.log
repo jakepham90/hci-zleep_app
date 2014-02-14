@@ -78625,3 +78625,680 @@ Completed 200 OK in 85ms (Views: 68.4ms | ActiveRecord: 3.0ms)
 
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:05:49 -0800
+
+
+Started GET "/alarms" for 127.0.0.1 at 2014-02-13 23:08:31 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AlarmsController#index as HTML
+  [1m[35mUser Load (2.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:6)
+  [1m[36mAlarm Load (8.0ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1[0m  [["user_id", 7]]
+  Rendered alarms/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 549ms (Views: 348.9ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:33 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 23:08:36 -0800
+
+
+Started GET "/alarms" for 127.0.0.1 at 2014-02-13 23:08:41 -0800
+Processing by AlarmsController#index as HTML
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:6)
+  [1m[36mAlarm Load (0.7ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1[0m  [["user_id", 7]]
+  Rendered alarms/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 59ms (Views: 48.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:42 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 23:08:44 -0800
+
+
+Started GET "/alarms/new" for 127.0.0.1 at 2014-02-13 23:08:44 -0800
+Processing by AlarmsController#new as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from new at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:10)
+  [1m[36mAlarm Load (0.8ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1[0m  [["user_id", 7]]
+  Rendered alarms/new.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 172ms (Views: 103.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/alarms/new" for 127.0.0.1 at 2014-02-13 23:08:45 -0800
+Processing by AlarmsController#new as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from new at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:10)
+  [1m[36mAlarm Load (1.0ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1[0m  [["user_id", 7]]
+  Rendered alarms/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 84ms (Views: 67.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:08:45 -0800
+
+
+Started POST "/alarms" for 127.0.0.1 at 2014-02-13 23:08:59 -0800
+Processing by AlarmsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R1gwIXeSw8K9LBcvVsiL0MQ51XwPRfAvZhlHNoyvlo4=", "alarm"=>{"title"=>"TEST", "alarm_type"=>"Personal", "hour_time"=>"05", "minute_time"=>"05", "ampm"=>"AM", "day"=>"Mon", "reminder_time"=>"05"}, "commit"=>"Set Alarm"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (9.2ms)[0m  INSERT INTO "alarms" ("alarm_type", "ampm", "created_at", "day", "hour_time", "minute_time", "reminder_time", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["alarm_type", "Personal"], ["ampm", "AM"], ["created_at", Fri, 14 Feb 2014 07:08:59 UTC +00:00], ["day", "Mon"], ["hour_time", "05"], ["minute_time", "05"], ["reminder_time", "05"], ["title", "TEST"], ["updated_at", Fri, 14 Feb 2014 07:08:59 UTC +00:00], ["user_id", 7]]
+  [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/alarms/new
+Completed 302 Found in 42ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/alarms/new" for 127.0.0.1 at 2014-02-13 23:08:59 -0800
+Processing by AlarmsController#new as HTML
+  [1m[35mUser Load (2.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from new at /home/jakepham/Workspace/hci-zleep_app/app/controllers/alarms_controller.rb:10)
+  [1m[36mAlarm Load (1.2ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1[0m  [["user_id", 7]]
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb__3115336601395442800_40728220 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:15)
+DEPRECATION WARNING: :disable_with option is deprecated and will be removed from Rails 4.1. Use 'data: { disable_with: 'Text' }' instead. (called from block in _app_views_alarms_new_html_erb__3115336601395442800_40728220 at /home/jakepham/Workspace/hci-zleep_app/app/views/alarms/new.html.erb:15)
+  Rendered alarms/new.html.erb within layouts/application (89.3ms)
+Completed 200 OK in 141ms (Views: 124.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:09:00 -0800
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-02-13 23:09:03 -0800
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/jakepham/Workspace/hci-zleep_app/app/controllers/welcome_controller.rb:5)
+  [1m[36mAlarm Load (0.9ms)[0m  [1mSELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1[0m  [["user_id", 7]]
+  Rendered welcome/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 51ms (Views: 38.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:09:04 -0800
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-02-13 23:10:16 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R1gwIXeSw8K9LBcvVsiL0MQ51XwPRfAvZhlHNoyvlo4="}
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 114ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-13 23:10:16 -0800
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 33ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-13 23:10:16 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (5.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 71ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 23:10:16 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:10:17 -0800
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2014-02-13 23:10:28 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-13 23:23:15 -0800
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-13 23:23:15 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 123ms (Views: 118.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:16 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 23:23:18 -0800
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-13 23:23:51 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:51 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:51 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:51 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 23:23:52 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 23:23:53 -0800
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-13 23:25:52 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 57ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 23:25:53 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 23:25:55 -0800
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-13 23:26:53 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 80ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:26:54 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:26:55 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 23:26:55 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 23:26:55 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 23:26:55 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 23:26:55 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 23:26:56 -0800
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-13 23:27:15 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 69ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:16 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 23:27:18 -0800
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-13 23:27:35 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 88ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/jplayer.blue.monday.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/alarm.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/musics.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/myAlarms.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/jqueryplayer.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/jplayerplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/musicplaylist.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/jsapi.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/charts.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/myAlarms.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-13 23:27:36 -0800
+
+
+Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-02-13 23:27:39 -0800
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-02-13 23:27:59 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oe5NDljrUh3RhNev+6dvyDzIWlt8DXZ+NzhhzJ9tz2E=", "user"=>{"email"=>"jake.pham@telaeris.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'jake.pham@telaeris.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 290ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oe5NDljrUh3RhNev+6dvyDzIWlt8DXZ+NzhhzJ9tz2E=", "user"=>{"email"=>"jake.pham@telaeris.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (3.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 426ms (Views: 155.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-02-13 23:28:08 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oe5NDljrUh3RhNev+6dvyDzIWlt8DXZ+NzhhzJ9tz2E=", "user"=>{"email"=>"jake.pham@telaeris.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'jake.pham@telaeris.com' ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 273ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oe5NDljrUh3RhNev+6dvyDzIWlt8DXZ+NzhhzJ9tz2E=", "user"=>{"email"=>"jake.pham@telaeris.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 317ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-02-13 23:28:16 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oe5NDljrUh3RhNev+6dvyDzIWlt8DXZ+NzhhzJ9tz2E=", "user"=>{"email"=>"jakepham90@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'jakepham90@gmail.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (2.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 7[0m  [["last_sign_in_at", Fri, 14 Feb 2014 01:20:30 UTC +00:00], ["current_sign_in_at", Fri, 14 Feb 2014 07:28:16 UTC +00:00], ["sign_in_count", 13], ["updated_at", Fri, 14 Feb 2014 07:28:16 UTC +00:00]]
+  [1m[35m (5.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 309ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-13 23:28:16 -0800
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/jakepham/Workspace/hci-zleep_app/app/controllers/welcome_controller.rb:5)
+  [1m[35mAlarm Load (0.9ms)[0m  SELECT "alarms".* FROM "alarms" WHERE "alarms"."user_id" = $1  [["user_id", 7]]
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 33.8ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-02-13 23:28:22 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DBSfjTLorZv4R3FCiIWaK06z6JTUNFjxznGHiDg1zM4="}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 7 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 98ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-13 23:28:22 -0800
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 3ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-02-13 23:28:22 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.0ms)
