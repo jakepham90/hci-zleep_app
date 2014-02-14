@@ -1,9 +1,20 @@
 <div class ="row">
 	<div class="col-md-1"></div>
 	<div class="col-md-4 jumbotron">
-		<h2>Your next alarm is set for <span
-                style="color:#428bca;">6:30 am</span>.<br><small>8 hours and 12
-                minutes from now</small></h2>
+		<%if @alarms.first.present?%>
+			<h2>Your next alarm is set for <span
+                style="color:#428bca;"><%= @alarms.first.hour_time %> : <%= @alarms.first.minute_time %> am</span>.</h2>
+
+		<%else %>
+			<h2>You have no alarm.</h2>
+			<h4> Click below to create alarm </h4>
+				<a href="/alarms/new" class="btn btn-danger"> Create Alarm Now !</a>
+
+
+
+		<% end %>
+
+		
 	</div>
 		<div class="col-md-1"></div>
 

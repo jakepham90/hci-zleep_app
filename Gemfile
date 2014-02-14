@@ -39,8 +39,6 @@ gem 'omniauth-facebook'
 
 gem "twilio-ruby", "~> 3.11.5"
 
-gem 'whenever', :require => false
-
 
 gem "rake", "10.1.1"
 
