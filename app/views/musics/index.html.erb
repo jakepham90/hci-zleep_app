@@ -2,8 +2,8 @@
 
 <div class="row">
     <div class="col-md-6">
-       	    <b><strong><h2 id="title"></h2></strong></b>
-            <b><strong><h3 id="timeoff"></h3></strong></b>
+       	    <b><strong><h2 id="title1"></h2></strong></b>
+            <b><strong><h3 id="title2"></h3></strong></b>
         <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 
         <div id="jp_container_1" class="jp-audio">
@@ -53,23 +53,24 @@
     </div>
     <div class="col-md-6">
 
-        <h2> Time you want music to turn off </h2><br>
+        <h2 id='timerText1'> Time you want music to turn off </h2>
+	<h3 id='timerText2'></h3>
         <div class="row">
              <div class="col-md-3">
                 <select class="form-control" id="timer">
-                  <option>1</option>               
-                  <option>3</option>               
-                  <option>10</option>
-                  <option>20</option>
-                  <option>30</option>
-                  <option>40</option>
-                  <option>50</option>
-                  <option>60</option>
+                  <option>1 minute</option>               
+                  <option>5 minutes</option>               
+                  <option>10 minutes</option>
+                  <option>20 minutes</option>
+                  <option>30 minutes</option>
+                  <option>40 minutes</option>
+                  <option>50 minutes</option>
+                  <option>60 minutes</option>
 
                 </select>
             </div>
             <div class="col-md-6">
-                <button type="button" class="btn btn-primary" id="playButton">Set</button>
+                <button type="button" class="btn btn-primary" id="playButton">Start Timer</button>
 
             </div>
         </div>
