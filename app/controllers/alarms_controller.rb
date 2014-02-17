@@ -9,6 +9,13 @@ skip_before_filter  :verify_authenticity_token
   def new
     @alarms = current_user.alarms.all
     @alarm = current_user.alarms.new
+    @calcd_hrs = Array.new(4)
+    @calcd_mins = Array.new(4)
+    @calcd_ampm = Array.new(4)
+    gon.calcd_hrs = @calcd_hrs
+    gon.calcd_mins = @calcd_mins
+    gon.calcd_ampm = @calcd_ampm
+
   end
  
   def create
@@ -46,9 +53,6 @@ skip_before_filter  :verify_authenticity_token
 
   def show
     @alarm = Alarm.find(params[:id])
-  end
-
-  def sleep101
   end
 
 

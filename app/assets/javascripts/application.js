@@ -18,4 +18,4 @@
 //= require musicplaylist
 //= require jsapi
 //= require charts
-//= require myAlarms
+//= require myalarms

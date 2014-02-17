@@ -44,6 +44,8 @@ gem "rake", "10.1.1"
 
 gem 'jplayer-rails'
 
+gem "gon", "~> 5.0.4"
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', :require => false

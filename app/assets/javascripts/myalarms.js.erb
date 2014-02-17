@@ -1,0 +1,44 @@
+(function() {
+
+  $(document).ready(function(e){
+    initializePage();
+  });
+
+}).call(this);
+
+function initializePage () {
+   $(".btn.btn-primary.btn-calculate").click(calculator );
+}
+
+
+function calculator (e) {
+   e.preventDefault();
+  var avgCycle = 90;
+  var numCycle = 5;
+  var prepTimeMins = 25;
+  
+ /* var type = $("#alarm_alarm_type option:selected").text();
+  var hour = $("#alarm_hour_time option:selected").text();
+  var min  = $("#alarm_minute_time option:selected").text();
+  var ampm = $("#alarm_ampm option:selected").text();*/
+
+  var hour = gon.calcd_hrs;
+
+
+  var calc_hour = {};
+  var calc_min = {};
+  var calc_ampm = {};
+  
+
+  //var test = function () {
+   // console.log('type > ' + type);
+    console.log('hour > ' + hour);
+   // console.log('min > ' + min);
+   // console.log('ampm > ' + ampm);
+ // };
+
+
+
+}
+
+
