@@ -1,44 +1,80 @@
 (function() {
 
-  $(document).ready(function(e){
+  $(document).ready(function(){
     initializePage();
   });
 
 }).call(this);
 
+
 function initializePage () {
-   $(".btn.btn-primary.btn-calculate").click(calculator );
+  $(".btn.btn-primary.btn-calculate").click(function (e) {
+    e.preventDefault(); 
+    /* fetching selected vals */
+    var type = $("#alarm_alarm_type option:selected").text();
+    var hour = new Number ($("#alarm_hour_time option:selected").text());
+    var min  = new Number ($("#alarm_minute_time option:selected").text());
+    var ampm = $("#alarm_ampm option:selected").text();    
+    var targetTime = new Time (hour, min, ampm);
+    console.log(' > ' +targetTime.hour);
+
+    var alarm = new Alarm ( targetTime, null);
+    var times = alarm.getTimes();
+  });
 }
 
+function Time(h,m, ap) {
+  this.hour = h;
+  this.min  = m;
+  this.ampm = ap;
+  var preptime = 14;
 
-function calculator (e) {
-   e.preventDefault();
-  var avgCycle = 90;
-  var numCycle = 5;
-  var prepTimeMins = 25;
-  
- /* var type = $("#alarm_alarm_type option:selected").text();
-  var hour = $("#alarm_hour_time option:selected").text();
-  var min  = $("#alarm_minute_time option:selected").text();
-  var ampm = $("#alarm_ampm option:selected").text();*/
+  this.toMilitary = function () {
+    if (this.ampm == 'PM')
+      this.hour = this.hour + 12;
+  }
+  this.addHour = function (h) {
+    this.hour = (this.hour + 1) % 24;
+  }
 
-  var hour = gon.calcd_hrs;
+  this.addMin = function (m) {
+    var tmp = this.min + m + preptime;
+    if (tmp > 59) {
+      this.min = tmp % 60;
+      this.addHour(1);
+    }
+  }
 
-
-  var calc_hour = {};
-  var calc_min = {};
-  var calc_ampm = {};
-  
-
-  //var test = function () {
-   // console.log('type > ' + type);
-    console.log('hour > ' + hour);
-   // console.log('min > ' + min);
-   // console.log('ampm > ' + ampm);
- // };
-
-
-
+  this.addHourMin = function (h,m) {
+    this.addMin(m);
+    this.addHour(h);
+    return [this.hour, this.min];
+  }
+  return (this.toMilitary());
 }
 
+/* input time in military */
+function Alarm(targetTime, type) {
+  this.AVG_CYCLE = 90;
+  this.NUM_CYCLE = 5;
+  this.MIN_TO_ASLEEP = 25;
 
+  this.alarmtime = targetTime;
+  var _more = new Time (9,25, null);
+  var _normal = new Time (7,55,null);
+  var _less = new Time (6,25, null);
+
+  this.getTimes = function () {
+    var times = {}
+    var t = [_more, _normal, _less];
+    var label = ['more', 'normal', 'low'];
+
+    for ( var i = 0; i < 3; i++) {
+      t[i].addHourMin(this.alarmtime.hour, this.alarmtime.min);
+      times[label[i]] = {hour: t[i].hour, min: t[i].min};
+      console.log("time" + i + " > " + " " + times[label[i]].hour+ ":"+times[label[i]].min);
+    }
+
+    return times;
+  }
+}
