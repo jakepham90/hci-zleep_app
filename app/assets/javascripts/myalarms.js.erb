@@ -40,6 +40,10 @@ function Time(h,m, ap) {
   }
   this.addHour = function (h) {
     this.hour = (this.hour + 1) % 24;
+    //update ampm
+    if (this.hour >= 0 && this.hour > 12)
+      this.ampm = 'AM';
+    else this.ampm = 'PM';
   }
 
   this.addMin = function (m) {
@@ -55,6 +59,7 @@ function Time(h,m, ap) {
     this.addHour(h);
     return [this.hour, this.min];
   }
+
   return (this.toMilitary());
 }
 
@@ -71,12 +76,13 @@ function Alarm(targetTime, type) {
 
   this.getTimes = function () {
     var times = [];
-    var t = [_more, _normal, _less];
-    var label = ['more', 'normal', 'low'];
+    var t = [_less, _normal, _more];
+    var label = ['less', 'normal', 'more'];
+    var amount = ['6h25m', '7h55m', '9h25m'];
 
     for ( var i = 0; i < 3; i++) {
       t[i].addHourMin(this.alarmtime.hour, this.alarmtime.min);
-      var hr_min = [t[i].hour, t[i].min];
+      var hr_min = [t[i].hour, t[i].min, t[i].ampm, amount[i]];
       times.push(hr_min);
       /*times[label[i]] = {hour: t[i].hour, min: t[i].min};
       console.log("time" + i + " > " + " " + times[label[i]].hour+ ":"+times[label[i]].min);*/
@@ -88,13 +94,13 @@ function Alarm(targetTime, type) {
 
 function renderTimes (times) {
  
-  var html = "  <h4 style='color:#999;'>You should try to fall asleep at one of the following times:</h4><div class='btn-group' data-toggle='buttons'>";
+  var html = "<h4 style='color:#999;'>You should try to fall asleep at one of the following times:</h4>"
     var count = 1;
   for (var i in times) { 
 
     //test
     console.log(">> hour: "+times[i][0] +"min: "+times[i][1] ); 
-    var label = times[i][0] + ":" + times[i][1];
+    var label = times[i][0] + ":" + times[i][1] + '  '+ times[i][2]+' ' + times[i][3];
     html +=  _radio_tag( "time"+count , times[i][0], times[i][1], label); 
     count++;
   }
@@ -107,5 +113,5 @@ function renderTimes (times) {
 }
 
 function _radio_tag (id, hour, min, label) {
-  return "<label class='btn btn-primary'><input type='radio' name='options' id=" + id + " hour="+ hour +"min="+min+">" + label +"</label>";
+  return "<div class='radio'> <label> <input type='radio' name='optionsRadios' id="+id+"hour="+"min="+min+">"+label+"</label> </div> ";
 }

@@ -9,6 +9,7 @@ javascript_tag reminders: {}
 
       <!--create new form-->
       <div class="form-new-alarm">
+        <p id="create-title">Create alarm</p>
         <form class="form-inline" role="form">
           <%= form_for :alarm, url: alarms_path do |f| %>
             <label>I need to</label>
