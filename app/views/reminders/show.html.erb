@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Alarm:</strong>
+  <%= @reminder.alarm_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @reminder.user_id %>
+</p>
+
+<p>
+  <strong>Reminder hour:</strong>
+  <%= @reminder.reminder_hour %>
+</p>
+
+<p>
+  <strong>Reminder minute:</strong>
+  <%= @reminder.reminder_minute %>
+</p>
+
+<p>
+  <strong>Call:</strong>
+  <%= @reminder.call %>
+</p>
+
+<p>
+  <strong>Sms:</strong>
+  <%= @reminder.sms %>
+</p>
+
+<%= link_to 'Edit', edit_reminder_path(@reminder) %> |
+<%= link_to 'Back', reminders_path %>

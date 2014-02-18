@@ -23,7 +23,7 @@
           <label >at</label>
 
           <div class="form-group">
-            <%= f.select(:hour_time, options_for_select(('01'..'12').step(1).to_a.map{|s| ["#{s}", s]}), {},  { :class => 'form-control' } ) %> </div>
+            <%= f.select(:hour_time, options_for_select(('1'..'12').step(1).to_a.map{|s| ["#{s}", s]}), {},  { :class => 'form-control' } ) %> </div>
           <div class="form-group">
             <%= f.select(:minute_time, options_for_select(('01'..'60').step(1).to_a.map{|s| ["#{s}", s]}), {},  { :class => 'form-control' } ) %></div>
           <div class="form-group">

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alarm_id: 1
+  user_id: 1
+  reminder_hour: MyString
+  reminder_minute: MyString
+  call: false
+  sms: false
+
+two:
+  alarm_id: 1
+  user_id: 1
+  reminder_hour: MyString
+  reminder_minute: MyString
+  call: false
+  sms: false
