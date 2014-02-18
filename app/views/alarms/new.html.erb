@@ -1,4 +1,4 @@
-
+javascript_tag reminders: {}
 <!-- myAlarms container -->
 <div class="container myAlarms">
 
@@ -11,29 +11,28 @@
       <div class="form-new-alarm">
         <form class="form-inline" role="form">
           <%= form_for :alarm, url: alarms_path do |f| %>
-
-            <div class="form-group">
             <label>I need to</label>
-          </div>
-
           <div class="form-group select">
-            <%= f.select(:alarm_type, options_for_select([ "wakeup", "sleep"], "wakeup"), {},  { :class => 'form-control' } ) %>
-          </div>
-          <br>
+            <%= f.select(:alarm_type, options_for_select([ "wakeup", "sleep"], "wakeup"), {},  { :class => 'form-control' } ) %> </div>
           <label >at</label>
-
           <div class="form-group">
             <%= f.select(:hour_time, options_for_select(('1'..'12').step(1).to_a.map{|s| ["#{s}", s]}), {},  { :class => 'form-control' } ) %> </div>
           <div class="form-group">
             <%= f.select(:minute_time, options_for_select(('01'..'60').step(1).to_a.map{|s| ["#{s}", s]}), {},  { :class => 'form-control' } ) %></div>
           <div class="form-group">
             <%= f.select(:ampm, options_for_select([ "AM", "PM" ], "AM"), {},  { :class => 'form-control' } ) %></div>
-            <button class="btn btn-primary btn-calculate">Calculate times</button> 
-        </form>
+           <div class="form-group">
+             <button class="btn btn-primary btn-calculate">Calculate times</button> </div>
+            <%= f.hidden_field :reminder_hour, :value => 10 %>
+          </form>
       <% end %>
       </div> <!-- new-alarm-panel -->
       <br>
-<%= yield :script %>
+      <div id="reminder_times">
+
+      </div>
+
+
 
     </div>
     <div class="alarms">

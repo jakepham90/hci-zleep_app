@@ -12,7 +12,6 @@ skip_before_filter  :verify_authenticity_token
   end
  
   def create
-
     @alarm = current_user.alarms.new(post_params)
     @alarm.save
     redirect_to(new_alarm_path)
