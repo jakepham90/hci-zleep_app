@@ -23,8 +23,9 @@ require
 
 .alarm_day
 {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
+  text-transform: lowercase;
 }
 
 .alarm_description
@@ -46,9 +47,8 @@ require
 
 .alarm_time
 {
-  color: red;
-  font-weight: bolder;
-  font-size: 25px;
+  color: #DC4B39;
+  font-size: 18px;
 }
 
 
@@ -100,12 +100,9 @@ float:left;
   width:60px;
 }
 
-
-
-.btn-create-new {
+#btn-create-new {
     background-color: #DC4B39;
-    color: #FFFFFF;
-    float:right;
+    color: #FFFFFF; float:right;
 }
 .create-new-alarm {
     position:absolute;
