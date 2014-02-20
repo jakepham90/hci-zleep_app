@@ -75,8 +75,7 @@ float:left;
 
 
 .new-alarm-panel {
-  width:350px;
-  float:left;
+  height: 175px;
   margin-right:10px;
   padding:10px 2px 10px 10px;
   background-color:#eee;
@@ -166,23 +165,28 @@ max-width: 2000px;
 min-width: 410px;
 }
 
-#create-title {
+.title {
   color: #d9534f;
-  font-size: 24px;
-  line-height:36px;
+  font-size: 18px;
+  line-height:24px;
 }
 
 #timepicker {
   width:80px;
 }
 
-#alarm_title {
-margin-bottom: 12px;
-}
 
 .alarms-h2 {
   color: #d9534f;
   font-size:18px;
   line-height: 24px;
   
+}
+
+#col-repeat-input {
+  margin-top:15px;
+}
+
+.modal-body {
+min-height: 200px;
 }

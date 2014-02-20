@@ -1,71 +1,144 @@
 <!-- myAlarms container -->
 <div class="container myAlarms">
+  <!-- Button trigger modal -->
+  <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span> CREATE NEW ALARM</button>
 
-  <!-- myAlarms container [body] -->
-  <div class="container myAlarms-body">
-    <!-- myAlarms container [items]-->
-    <div class= "container new-alarm-panel">
+  <!-- Modal 1-->
+  <div id="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div id="modal-dialog-1"  class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Create alarm</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <!-- time input column -->
+            <div class="col-xs-12 col-time-input">
+              <form class="form-inline" role="form">
+                <%= form_for :alarm, url: alarms_path do |f| %>
+                  <!-- <span style="margin-right:10px;">title:</span>--><!-- <%= f.text_field :title, valeu: 'alarm' %><br>-->
+                <span>I need to</span>
+                <div class="form-group select">
+                  <%= f.select(:alarm_type, options_for_select([ "wakeup", "sleep"], "wakeup"), {},  { :class => 'form-control' } ) %> </div>
+                <span >at</span>
+                <div class="form-group">
+                  <div class='input-append bootstrap-timepicker' style='display: inline;'>
+                    <input id="timepicker"class='dateselect-time input-small timepicker' type='text' >
+                    <span class='add-on'><i class='icon-time glyphicon glyphicon-time'></i></span>
+                  </div>
+                </div>
+              </div> <!-- /.col-time-input-->
+              <!--repeat column -->
+              <div id="col-repeat-input" class="col-xs-12">
+                <span>REPEAT</span>
+                <div>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option-sun"> sun
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option-mon"> mon
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option-tues"> tues
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option-wed"> wed
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option-thurs"> thurs
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option-fri"> fri
+                  </label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" id="inlineCheckbox3" value="option-sat"> sat
+                  </label>
+                </div>
+              </div><!--/.col-repeat-input -->   
+            </form>
+          </div><!--/.row -->
 
-      <!--create new form-->
-      <div class="form-new-alarm">
-        <p id="create-title">Create alarm</p>
-        <form class="form-inline" role="form">
-          <%= form_for :alarm, url: alarms_path do |f| %>
-            <span style="margin-right:10px;">title:</span>
-            <%= f.text_field :title, valeu: 'alarm' %><br>
-            <span>I need to</span>
-          <div class="form-group select">
-            <%= f.select(:alarm_type, options_for_select([ "wakeup", "sleep"], "wakeup"), {},  { :class => 'form-control' } ) %> </div>
-          <span >at</span>
-          <div class="form-group">
-            <div class='input-append bootstrap-timepicker' style='display: inline;'>
-              <input id="timepicker"class='dateselect-time input-small timepicker' type='text' data-time='12:45 PM'>
-              <span class='add-on'><i class='icon-time glyphicon glyphicon-time'></i></span>
+          <div class="row">
+            <div class="col-xs-12">
+              <span>ALARM TYPE</span>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> call 
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> sms
+                </label>
+              </div>
             </div>
           </div>
-          <br>
-          <!--<button class="btn btn-primary btn-calculate">Calculate times</button> </div> -->
-        <%= f.hidden_field :hour_time, :value => 00 %>
-        <%= f.hidden_field :minute_time, :value => 00 %>
-        <%= f.hidden_field :ampm, :value => 'AM' %>
-        <%= f.hidden_field :reminder_hour, :value => 10 %>
-      </form>
+        </div> <!-- /.modal-body -->
+        <div class="modal-footer">
 
-      <div>repeat: </div>
-    <% end %>
-    </div> <!-- new-alarm-panel -->
-    <br>
-    <div id="reminder_times">
-    </div>
+          <button id="btn-modal-1-cancel"type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button id="btn-modal-1-next"type="button" class="btn btn-primary">Next</button>
+        </div>
+      </div><!-- /.modal-step-1 -->
+    </div> <! -- /.modal-dialog -->
+  </div> <!-- /.modal -->
 
-  </div>
-  <div class="alarms">
-    <!-- alarm 1 -->
-    <table class="alarm-table">
-      <tbody>
-      <tr>
-        <td> <!-- alarm1 -->
-          <div class="list-group-item alarm-item">
-            <h4 class="list-group-item-heading alarm-item-time
-              wakeup">6:30 am</h4>
-            <p class="list-group-item-text alarm-item-title">surfing day</p> <p class="list-group-item-text alarm-item-days">
-            <small>SUN <span class="day-active">MON</span> TUE
-              <span class="day-active">WED</span> THU FRI SAT</small></p>
-            <!-- <input type="checkbox" name="my-checkbox" checked>-->
+
+
+  <!-- Modal TWO -->
+  <div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div id="modal-dialog-2" class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel"></h4>
+        </div>
+        <div id="modal-body-2" class="modal-body">
+          <span>REMINDER</span>
+          <div class="row">
+            <div class=" col-xs-12">
+              <div>
+                <label class="radio-inline">
+                  <input type="radio" id="inlineCheckbox1" value="option1"> SMS
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" id="inlineCheckbox2" value="option2"> Call
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" id="inlineCheckbox3" value="option3"> None
+                </label>    
+                <label> <input class="radio-inline form-control"type="number" name="quantity" min="1" max="60" value="10"></label>
+                <label class=> <select class="form-control radio-inline">
+                    <option>minutes</option>
+                    <option>hours</option>
+                    <option>days</option>
+                </select></label>
+              </div>
+            </div>
           </div>
-        </td>
-
-      </tr>
-      </tbody>
-    </table>
-
+        </div>
+        <div class="modal-footer">
+            <button id="btn-modal-2-cancel"type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <a href="#" id="btn-modal-2-save" type="button"><%= f.submit 'Save',  { :class => 'btn btn-primary btn-save"' } %></a
+        </div>
+      </div>
+    </div>
   </div>
+
+  <%= f.hidden_field :hour_time, :value => 00 %>
+  <%= f.hidden_field :minute_time, :value => 00 %>
+  <%= f.hidden_field :ampm, :value => 'AM' %>
+
+<% end %>
 </div>
-</div>
+
+
+</div> <!-- /.container myAlarms -->
 
 
 <script> 
-$('#timepicker').timepicker().on('show.timepicker', function(e) {
+$('#timepicker').timepicker({defaultTime:false}).on('show.timepicker', function(e) {
     console.log('The time is ' + e.time.value);
     var hour = $(".bootstrap-timepicker-hour").val();
     console.log('The hour is ' + e.time.showInputs);

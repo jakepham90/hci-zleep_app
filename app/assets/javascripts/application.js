@@ -13,10 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require bootstrap-timepicker
 //= require jqueryplayer
 //= require jplayerplaylist
 //= require musicplaylist
 //= require jsapi
 //= require charts
 //= require myalarms
-//= require bootstrap-timepicker
+
+

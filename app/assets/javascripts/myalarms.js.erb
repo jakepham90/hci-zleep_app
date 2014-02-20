@@ -1,31 +1,30 @@
 (function() {
-
   $(document).ready(function(){
     initializePage();
   });
-
 }).call(this);
 
-
 function initializePage () {
-  $(".btn.btn-primary.btn-calculate").click(function (e) {
+      _modalHandler();
+  /*$("#modal-1-next-btn").click(function (e) {
     e.preventDefault(); 
-    /* fetching selected vals */
     var type = $("#alarm_alarm_type option:selected").text();
-    var hour = new Number ($("#alarm_hour_time option:selected").text());
-    var min  = new Number ($("#alarm_minute_time option:selected").text());
+    var hour = new Number ( $(".bootstrap-timepicker-hour").val() );
+    var min  = new Number ( $(".bootstrap-timepicker-minute").val() );
     var ampm = $("#alarm_ampm option:selected").text();    
     var targetTime = new Time (hour, min, ampm);
-    console.log(' > ' +targetTime.hour);
-
     var alarm = new Alarm ( targetTime, null);
     var times = alarm.getTimes();
-    //times = to_ruby(times);
-    console.log(times.toString());
+    var html = renderTimes(times);
+    $("#modal-body-2").prepend(html);
+    $("#modal-dialog-1").replaceWith($("#modal-dialog-2"));
+    if (type=="wakeup"){
+      $(".modal-title").append("Bedtimes")
+    } else 
+    $(".modal-title").append("Wake-up times")
     
-    renderTimes(times);
 
-  });
+  });*/
 }
 
 function Time(h,m, ap) {
@@ -53,7 +52,6 @@ function Time(h,m, ap) {
       this.addHour(1);
     }
   }
-
   this.addHourMin = function (h,m) {
     this.addMin(m);
     this.addHour(h);
@@ -68,7 +66,6 @@ function Alarm(targetTime, type) {
   this.AVG_CYCLE = 90;
   this.NUM_CYCLE = 5;
   this.MIN_TO_ASLEEP = 25;
-
   this.alarmtime = targetTime;
   var _more = new Time (9,25, null);
   var _normal = new Time (7,55,null);
@@ -79,39 +76,84 @@ function Alarm(targetTime, type) {
     var t = [_less, _normal, _more];
     var label = ['less', 'normal', 'more'];
     var amount = ['6h25m', '7h55m', '9h25m'];
-
     for ( var i = 0; i < 3; i++) {
       t[i].addHourMin(this.alarmtime.hour, this.alarmtime.min);
       var hr_min = [t[i].hour, t[i].min, t[i].ampm, amount[i]];
       times.push(hr_min);
-      /*times[label[i]] = {hour: t[i].hour, min: t[i].min};
-      console.log("time" + i + " > " + " " + times[label[i]].hour+ ":"+times[label[i]].min);*/
     }
-
     return times;
   }
 }
 
 function renderTimes (times) {
- 
   var html = "<h4 style='color:#999;'>You should try to fall asleep at one of the following times:</h4>"
     var count = 1;
   for (var i in times) { 
-
-    //test
     console.log(">> hour: "+times[i][0] +"min: "+times[i][1] ); 
     var label = times[i][0] + ":" + times[i][1] + '  '+ times[i][2]+' ' + times[i][3];
     html +=  _radio_tag( "time"+count , times[i][0], times[i][1], label); 
     count++;
   }
-  console.log(html);
-  $("#reminder_times").append(html);
-  
-
-
-
+  return html;
 }
 
 function _radio_tag (id, hour, min, label) {
   return "<div class='radio'> <label> <input type='radio' name='optionsRadios' id="+id+"hour="+"min="+min+">"+label+"</label> </div> ";
 }
+
+function _modalHandler() {
+  var IS_DIRTY = false;
+  var ORIG_MODAL_ONE_DIALOG = $("#modal-dialog-1").clone();
+  var DEFAULT_MODAL_TWO_DIALOG = "<div id='modal-dialog-2' class='modal-dialog'> <div class='modal-content'> <div class='modal-header'> <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button> <h4 class='modal-title' id='myModalLabel'></h4> </div> <div id='modal-body-2' class='modal-body'> <span>REMINDER</span> <div class='row'> <div class=' col-xs-12'> <div> <label class='radio-inline'> <input type='radio' id='inlineCheckbox1' value='option1'> SMS </label> <label class='radio-inline'> <input type='radio' id='inlineCheckbox2' value='option2'> Call </label> <label class='radio-inline'> <input type='radio' id='inlineCheckbox3' value='option3'> None </label>    <label> <input class='radio-inline form-control' type='number' name='quantity' min='1' max='60' value='10'></label> <label class=''> <select class='form-control radio-inline'> <option>minutes</option> <option>hours</option> <option>days</option> </select></label> </div> </div> </div> </div> <div class='modal-footer'> <button id='btn-modal-2-cancel' type='button' class='btn btn-default' data-dismiss='modal'>Cancel</button> <button id='btn-modal-2-save' type='button' class='btn btn-primary btn-save'>Save</button> </div> </div> </div>";
+    
+  var ORIG_MODAL_TWO_BODY = $("#modal-body-2").clone();
+  var CREATE_BTN = $("#btn-create-new").clone();
+    var type = $("#alarm_alarm_type option:selected").text();
+    var hour ='';
+    var min =''; 
+    var ampm = $("#alarm_ampm option:selected").text();  
+  
+  /* modal-1 next */
+  $("#btn-modal-1-next").click(function (e) {
+    e.preventDefault(); 
+     console.log(type+hour+min+ampm);
+    type = $("#alarm_alarm_type option:selected").text();
+    hour = $(".bootstrap-timepicker-hour").val() ;
+    min  = $(".bootstrap-timepicker-minute").val() ;
+    ampm = $("#alarm_ampm option:selected").text();    
+    var targetTime = new Time (hour, min, ampm);
+    var alarm = new Alarm ( targetTime, null);
+    var times = alarm.getTimes();
+    var html = renderTimes(times);
+    $("#modal-body-2").prepend(html);
+    $("#modal-dialog-1").replaceWith($("#modal-dialog-2"));
+    if (type=="wakeup"){
+      $(".modal-title").append("Bedtimes")
+    } else 
+    $(".modal-title").append("Wake-up times")
+  });
+
+  /* modal-2 save */
+  /* modal-2 cancel */
+  $("#btn-modal-2-cancel").click( function (e) {
+    e.preventDefault();
+    // reset the dialog 
+    $("#modal-dialog-2").replaceWith(ORIG_MODAL_ONE_DIALOG);
+    $(".modal").attr("aria-hidden", "true");
+    $(".modal").attr("class", "modal fade");
+    $(".modal-backdrop").attr("class", "modal-backdrop fade");
+    $("body").removeAttr("class");
+    $(".modal-backdrop").remove();
+  });
+
+  $("#btn-modal-2-save").click( function (e){
+    e.preventDefault();
+    console.log(type+hour+min+ampm);
+    $("#alarm_hour_time").attr("value",hour);
+    $("#alarm_minute_time").attr("value",min);
+    $("#alarm_ampm").attr("value",ampm);
+    location.reload(true);
+  });
+}
+
+
