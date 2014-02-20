@@ -3,7 +3,7 @@
   <!-- Button trigger modal -->
   <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span> CREATE NEW ALARM</button>
 
-  <!-- Modal 1-->
+  <!-- --------- Modal ONE ------------ -->
   <div id="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
 
     <div id="modal-dialog-1"  class="modal-dialog">
@@ -51,7 +51,7 @@
                     <input type="checkbox" id="inlineCheckbox1" value="option-wed"> wed
                   </label>
                   <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox2" value="option-thurs"> thurs
+                    <inpput type="checkbox" id="inlineCheckbox2" value="option-thurs"> thurs
                   </label>
                   <label class="checkbox-inline">
                     <input type="checkbox" id="inlineCheckbox3" value="option-fri"> fri
@@ -91,7 +91,7 @@
 
 
 
-  <!-- Modal TWO -->
+  <!-- -------- Modal TWO------------ -->
   <div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div id="modal-dialog-2" class="modal-dialog">
       <div class="modal-content">
@@ -128,6 +128,7 @@
             <%= f.hidden_field :hour_time, :value => 00 %>
           <%= f.hidden_field :minute_time, :value => 00 %>
           <%= f.hidden_field :ampm, :value => 'AM' %>
+          <button id="btn-modal-2-back" type="button" class = "btn btn-default"><span class=" glyphicon glyphicon-chevron-left"></span></button>
           <button id="btn-modal-2-cancel"type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           <%= submit_tag 'Save' %>
         <% end %>

@@ -5,28 +5,12 @@
 }).call(this);
 
 function initializePage () {
-      _modalHandler();
-  /*$("#modal-1-next-btn").click(function (e) {
-    e.preventDefault(); 
-    var type = $("#alarm_alarm_type option:selected").text();
-    var hour = new Number ( $(".bootstrap-timepicker-hour").val() );
-    var min  = new Number ( $(".bootstrap-timepicker-minute").val() );
-    var ampm = $("#alarm_ampm option:selected").text();    
-    var targetTime = new Time (hour, min, ampm);
-    var alarm = new Alarm ( targetTime, null);
-    var times = alarm.getTimes();
-    var html = renderTimes(times);
-    $("#modal-body-2").prepend(html);
-    $("#modal-dialog-1").replaceWith($("#modal-dialog-2"));
-    if (type=="wakeup"){
-      $(".modal-title").append("Bedtimes")
-    } else 
-    $(".modal-title").append("Wake-up times")
-    
-
-  });*/
+  _modalHandler();
 }
 
+/* ======================*/
+/* Time Module          */
+/* ======================*/
 function Time(h,m, ap) {
   this.hour = h;
   this.min  = m;
@@ -39,7 +23,6 @@ function Time(h,m, ap) {
   }
   this.addHour = function (h) {
     this.hour = (this.hour + 1) % 24;
-    //update ampm
     if (this.hour >= 0 && this.hour > 12)
       this.ampm = 'AM';
     else this.ampm = 'PM';
@@ -61,7 +44,9 @@ function Time(h,m, ap) {
   return (this.toMilitary());
 }
 
-/* input time in military */
+/* ======================*/
+/* Alarm Module          */
+/* ======================*/
 function Alarm(targetTime, type) {
   this.AVG_CYCLE = 90;
   this.NUM_CYCLE = 5;
@@ -85,7 +70,10 @@ function Alarm(targetTime, type) {
   }
 }
 
-function renderTimes (times) {
+/* ======================*/
+/* _render times helper  */
+/* ======================*/
+function _renderTimes (times) {
   var html = "<h4 style='color:#999;'>You should try to fall asleep at one of the following times:</h4>"
     var count = 1;
   for (var i in times) { 
@@ -101,19 +89,24 @@ function _radio_tag (id, hour, min, label) {
   return "<div class='radio'> <label> <input type='radio' name='optionsRadios' id="+id+"hour="+"min="+min+">"+label+"</label> </div> ";
 }
 
-function _modalHandler() {
-    
-  var ORIG_MODAL_TWO_BODY = $("#modal-body-2").clone();
+/* ========================*/
+/* _moduleHandler Module   */
+/* ========================*/
+function _modalHandler() { 
+  var DEFAULT_MODAL_TWO_DIALOG = $("#modal-dialog-2").clone();
   var CREATE_BTN = $("#btn-create-new").clone();
-    var type = $("#alarm_alarm_type option:selected").text();
-    var hour ='';
-    var min =''; 
-    var ampm = $("#alarm_ampm option:selected").text();  
-  
+  var dirty_dialog_1 = "";
+  var input_time = '';
+  var type = $("#alarm_alarm_type option:selected").text();
+  var hour ='';
+  var min =''; 
+  var ampm = $("#alarm_ampm option:selected").text();  
+
   /* modal-1 next */
   $("#btn-modal-1-next").click(function (e) {
     e.preventDefault(); 
-     console.log(type+hour+min+ampm);
+    console.log(type+hour+min+ampm);
+    input_time = $("#timepicker").val();
     type = $("#alarm_alarm_type option:selected").text();
     hour = $(".bootstrap-timepicker-hour").val() ;
     min  = $(".bootstrap-timepicker-minute").val() ;
@@ -121,8 +114,9 @@ function _modalHandler() {
     var targetTime = new Time (hour, min, ampm);
     var alarm = new Alarm ( targetTime, null);
     var times = alarm.getTimes();
-    var html = renderTimes(times);
+    var html = _renderTimes(times);
     $("#modal-body-2").prepend(html);
+    dirty_dialog_1 = $("#modal").html();     // get dialog1
     $("#modal-dialog-1").replaceWith($("#modal-dialog-2"));
     if (type=="wakeup"){
       $(".modal-title").append("Bedtimes")
@@ -133,6 +127,12 @@ function _modalHandler() {
   $("#btn-modal-2-cancel").click( function (e) {
     e.preventDefault();
     location.reload(); 
+  });
+
+  $("#btn-modal-2-back").click( function (e) {
+    e.preventDefault();
+    $("#modal-dialog-2").replaceWith(dirty_dialog_1);
+    $("#timepicker").val(input_time);
   });
 }
 
