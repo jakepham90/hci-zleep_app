@@ -2,8 +2,8 @@
 <div class="container myAlarms">
   <!-- Button trigger modal -->
     <%= form_for :alarm, url: {action: "create"} do |f| %>
-    <%= f.hidden_field :hour_time, :value => 00 %>
-  <%= f.hidden_field :minute_time, :value => 00 %>
+    <%= f.hidden_field :hour_time %>
+  <%= f.hidden_field :minute_time %>
   <%= f.hidden_field :ampm, :value => 'AM' %>
   <!-- --------- Modal ONE ------------ -->
   <div id="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
@@ -113,7 +113,7 @@
         <div class="modal-footer">
           <button id="btn-modal-2-back" type="button" class = "btn btn-default"><span class=" glyphicon glyphicon-chevron-left"></span></button>
           <button id="btn-modal-2-cancel"type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <%= submit_tag 'Save' %>
+          <span id="btn_save"><%= submit_tag 'Save' %></span>
         </div>
       </div>
     </div>
@@ -126,7 +126,7 @@
 <!-- Showing user's alarms -->
 <div class="row" >
   <div class="col-md-12" style="margin:0 auto;"/ >
-   <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span> ALARM</button>
+   <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span></button>
   </div>
 </div>
 
