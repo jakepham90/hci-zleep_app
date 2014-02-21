@@ -5,6 +5,19 @@
 }).call(this);
 
 function initializePage () {
+  $('#checkbox-list-days').hide();
+  $('#repeatCheckbox:checkbox').click(function() {
+    var $this = $(this);
+    // $this will contain a reference to the checkbox   
+    if ($this.is(':checked')) {
+      $('#checkbox-list-days').slideDown( "fast");
+    } else {
+      $('#checkbox-list-days').slideUp( "fast", function() {
+      $('input[name=dayCheckBox]').prop('checked', false);
+      });
+
+    }
+});
   _modalHandler();
 }
 
@@ -60,7 +73,7 @@ function Alarm(targetTime, type) {
     var times = [];
     var t = [_less, _normal, _more];
     var label = ['less', 'normal', 'more'];
-    var amount = ['6h25m', '7h55m', '9h25m'];
+    var amount = ['9h25m', '7h55m','6h25m'];
     for ( var i = 0; i < 3; i++) {
       t[i].addHourMin(this.alarmtime.hour, this.alarmtime.min);
       var hr_min = [t[i].hour, t[i].min, t[i].ampm, amount[i]];
@@ -101,6 +114,7 @@ function _modalHandler() {
   var hour ='';
   var min =''; 
   var ampm = $("#alarm_ampm option:selected").text();  
+  var repeatingDays = [];
 
   /* modal-1 next */
   $("#btn-modal-1-next").click(function (e) {
@@ -110,18 +124,22 @@ function _modalHandler() {
     type = $("#alarm_alarm_type option:selected").text();
     hour = $(".bootstrap-timepicker-hour").val() ;
     min  = $(".bootstrap-timepicker-minute").val() ;
-    ampm = $("#alarm_ampm option:selected").text();    
+    ampm = $("#alarm_ampm option:selected").text();  
+    repeatingDays = $('input[name=dayCheckBox]:checked').map(function() { return $(this).val(); });
     var targetTime = new Time (hour, min, ampm);
     var alarm = new Alarm ( targetTime, null);
     var times = alarm.getTimes();
     var html = _renderTimes(times);
+
     $("#modal-body-2").prepend(html);
     dirty_dialog_1 = $("#modal").html();     // get dialog1
     $("#modal-dialog-1").replaceWith($("#modal-dialog-2"));
     if (type=="wakeup"){
       $(".modal-title").append("Bedtimes")
     } else 
-    $(".modal-title").append("Wake-up times")
+    $(".modal-title").append("Wake-up times");
+
+     
   });
 
   $("#btn-modal-2-cancel").click( function (e) {
@@ -134,6 +152,10 @@ function _modalHandler() {
     $("#modal-dialog-2").replaceWith(dirty_dialog_1);
     $("#timepicker").val(input_time);
   });
+}
+
+function _updateForm () {
+  
 }
 
 

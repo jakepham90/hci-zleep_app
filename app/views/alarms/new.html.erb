@@ -2,7 +2,10 @@
 <div class="container myAlarms">
   <!-- Button trigger modal -->
   <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span> CREATE NEW ALARM</button>
-
+  <%= form_for :alarm, url: {action: "create"} do |f| %>
+   <%= f.hidden_field :hour_time, :value => 00 %>
+  <%= f.hidden_field :minute_time, :value => 00 %>
+  <%= f.hidden_field :ampm, :value => 'AM' %>
   <!-- --------- Modal ONE ------------ -->
   <div id="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
 
@@ -17,7 +20,6 @@
             <!-- time input column -->
             <div class="col-xs-12 col-time-input">
               <form class="form-inline" role="form">
-
 
                 <span>I need to</span>
                 <div class="form-group ">
@@ -36,29 +38,15 @@
               </div> <!-- /.col-time-input-->
               <!--repeat column -->
               <div id="col-repeat-input" class="col-xs-12">
-                <span>REPEAT</span>
-                <div>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox1" value="option-sun"> sun
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox2" value="option-mon"> mon
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox3" value="option-tues"> tues
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox1" value="option-wed"> wed
-                  </label>
-                  <label class="checkbox-inline">
-                    <inpput type="checkbox" id="inlineCheckbox2" value="option-thurs"> thurs
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox3" value="option-fri"> fri
-                  </label>
-                  <label class="checkbox-inline">
-                    <input type="checkbox" id="inlineCheckbox3" value="option-sat"> sat
-                  </label>
+                <label class="checkbox-inline">REPEAT<input type="checkbox" id="repeatCheckbox"/></label>
+                <div id="checkbox-list-days">
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" name="dayCheckBox" value="sun"/> sun </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox2" name="dayCheckBox" value="mon"/> mon </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox3" name="dayCheckBox" value="tues"/> tues </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" name="dayCheckBox" value="wed"/> wed </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox2" name="dayCheckBox" value="thurs"/>thurs </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox3" name="dayCheckBox" value="fri"/> fri </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox3" name="dayCheckBox" value="sat"/> sat </label>
                 </div>
               </div><!--/.col-repeat-input -->   
             </form>
@@ -124,19 +112,17 @@
           </div>
         </div>
         <div class="modal-footer">
-          <%= form_for :alarm, url: {action: "create"} do |f| %>
-            <%= f.hidden_field :hour_time, :value => 00 %>
-          <%= f.hidden_field :minute_time, :value => 00 %>
-          <%= f.hidden_field :ampm, :value => 'AM' %>
           <button id="btn-modal-2-back" type="button" class = "btn btn-default"><span class=" glyphicon glyphicon-chevron-left"></span></button>
           <button id="btn-modal-2-cancel"type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           <%= submit_tag 'Save' %>
-        <% end %>
+
 
         </div>
       </div>
     </div>
   </div>
+
+<% end %>
 
 </div>
 
@@ -146,34 +132,34 @@
   <div class="row">
     <% if @alarms.present? %>
       <% @alarms.each do |alarm| %>
-        <div class="row alarm_list">
-        <div class="row">
-          <div class="col-md-12">
-            <h1 class="alarm_time" style="text-transform: lowercase;"><%= alarm.hour_time %> : <%= alarm.minute_time %> <%= alarm.ampm  %></h1>&nbsp;   <!-- time -->
-            <span class="pull-right">
-              <%= link_to edit_alarm_path(alarm), class: 'btn btn-default btn-xs' do %> <span class="alarm_control glyphicon glyphicon-edit"></span><% end %> <!-- to edit -->
-              <%= link_to alarm, confirm: 'Are you sure?', disable_with: 'deleting...', method: :delete, class: 'btn btn-default btn-xs' do %>
-                      <span class="alarm_control glyphicon glyphicon-remove"></span><% end %>
-            </span>
-          </div>
+      <div class="row alarm_list">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="alarm_time" style="text-transform: lowercase;"><%= alarm.hour_time %> : <%= alarm.minute_time %> <%= alarm.ampm  %></h1>&nbsp;   <!-- time -->
+          <span class="pull-right">
+            <%= link_to edit_alarm_path(alarm), class: 'btn btn-default btn-xs' do %> <span class="alarm_control glyphicon glyphicon-edit"></span><% end %> <!-- to edit -->
+            <%= link_to alarm, confirm: 'Are you sure?', disable_with: 'deleting...', method: :delete, class: 'btn btn-default btn-xs' do %>
+              <span class="alarm_control glyphicon glyphicon-remove"></span><% end %>
+      </span>
         </div>
+      </div>
 
-        <div class="row">
-          <center>
-            <span class="alarm_day <%= "day_active" if alarm.day == "Mon" %>">MON</span>&nbsp;&nbsp;
-            <span class="alarm_day <%= "day_active" if alarm.day == "Tue" %>">TUE</span>&nbsp;&nbsp;
-            <span class="alarm_day <%= "day_active" if alarm.day == "Wed" %>">WED</span>&nbsp;&nbsp;
-            <span class="alarm_day <%= "day_active" if alarm.day == "Thu" %>">THU</span>&nbsp;&nbsp;
-            <span class="alarm_day <%= "day_active" if alarm.day == "Fri" %>">FRI</span>&nbsp;&nbsp;
-            <span class="alarm_day <%= "day_active" if alarm.day == "Sat" %>">SAT</span>&nbsp;&nbsp;
-            <span class="alarm_day <%= "day_active" if alarm.day == "Sun" %>">SUN</span>
-          </center>
-        </div>
-        <div class"row">
-          <span class="alarm_description"><%= alarm.title %></span>
-        </div>
-      </div> 
-    <%end%>
+      <div class="row">
+        <center>
+          <span class="alarm_day <%= "day_active" if alarm.day == "Mon" %>">MON</span>&nbsp;&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.day == "Tue" %>">TUE</span>&nbsp;&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.day == "Wed" %>">WED</span>&nbsp;&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.day == "Thu" %>">THU</span>&nbsp;&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.day == "Fri" %>">FRI</span>&nbsp;&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.day == "Sat" %>">SAT</span>&nbsp;&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.day == "Sun" %>">SUN</span>
+        </center>
+      </div>
+      <div class"row">
+        <span class="alarm_description"><%= alarm.title %></span>
+      </div>
+    </div> 
+  <%end%>
   <% else %>
       <h4>You have no alarm yet. Create alarm on the right.</h4>
   <% end %>   		
