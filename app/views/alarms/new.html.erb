@@ -114,8 +114,6 @@
           <button id="btn-modal-2-back" type="button" class = "btn btn-default"><span class=" glyphicon glyphicon-chevron-left"></span></button>
           <button id="btn-modal-2-cancel"type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           <%= submit_tag 'Save' %>
-
-
         </div>
       </div>
     </div>
@@ -126,16 +124,15 @@
 </div>
 
 <!-- Showing user's alarms -->
-<div class="row">
-  <div class="col-md-6" style="margin:0 auto;">
-   <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span> CREATE NEW ALARM</button>
+<div class="row" >
+  <div class="col-md-12" style="margin:0 auto;"/ >
+   <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span> ALARM</button>
   </div>
 </div>
 
-<div class="row" style="margin:0 auto;">
-  <div class="col-md-12">
-   
-    <% if @alarms.present? %>
+<div class="row" >
+  <div class="col-md-12" style="margin:0 auto;">
+      <% if @alarms.present? %>
       <% @alarms.each do |alarm| %>
         <div class="row alarm_list">
 
@@ -159,16 +156,7 @@
     <% end %>   		
     </a>
 
-    <!-- alarm 1 -->
-    <a href="#" class="list-group-item alarm-item">
-      <h4 class="list-group-item-heading alarm-item-time
-        wakeup">6:30 am</h4>
-      <p class="list-group-item-text alarm-item-title">surfing day</p>
-      <p class="list-group-item-text alarm-item-days">
-        <small>SUN <span class="day-active">MON</span> TUE <span class="day-active">WED</span> THU FRI SAT</small></p>
-      <!-- <input type="checkbox" name="my-checkbox" checked>-->
-    </a>
-
+   
 
 
   </div>
