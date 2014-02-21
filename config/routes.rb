@@ -7,7 +7,7 @@ Zleep::Application.routes.draw do
 
   get "welcome/index"
   get "alarms/sleep"
-
+  get "alarms/help" 
   get "musics/index"
   get "alarms/sleep101"
   get "users/stats"
@@ -26,6 +26,7 @@ Zleep::Application.routes.draw do
   resources :users
   resources :alarms
   resources :reminders
+  resources :days
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

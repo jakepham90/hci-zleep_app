@@ -13,8 +13,11 @@ skip_before_filter  :verify_authenticity_token
  
   def create
     @alarm = current_user.alarms.new(post_params)
-    @alarm.save
-    redirect_to(new_alarm_path)
+    debug(post_params.inspect)
+    #Rails.logger.debug post_params.inspect
+
+    #@alarm.save
+    #redirect_to(new_alarm_path)
   end
 
   def edit 
@@ -54,9 +57,9 @@ skip_before_filter  :verify_authenticity_token
 
   private
   def post_params
-    params.require(:alarm).permit(:title, :alarm_type, :alarm_hour, :alarm_minute, :wakeup_hour, :wakeup_minute,
-      :reminder_time, :reminder_type, :alarm_ampm, :reminder_ampm, :repeat_monday , :repeat_tuesday , :repeat_wednesday, 
-      :repeat_thursday, :repeat_friday, :repeat_saturday, :repeat_sunday)
+    params.require(:alarm).permit(:title, :wakeup_reminder_time, :sleeping_hour, :sleeping_minute, :is_dismiss, :sleep_reminder_time, :sleep_reminder_type,
+            :sleeping_ampm, :repeat_monday,  :repeat_tuesday,  :repeat_wednesday,  :repeat_thursday,  :repeat_friday,  :repeat_saturday,
+             :repeat_sunday, :wakeup_hour, :wakeup_minute, :wakeup_ampm)
   end
 
 

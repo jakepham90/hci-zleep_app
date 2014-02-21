@@ -1,10 +1,10 @@
 <!-- myAlarms container -->
 <div class="container myAlarms">
   <!-- Button trigger modal -->
-    <%= form_for :alarm, url: {action: "create"} do |f| %>
+<%= form_for :alarm, url: {action: "create"} do |f| %>
     <%= f.hidden_field :wakeup_hour, :value => 00 %>
     <%= f.hidden_field :wakeup_minute, :value => 00 %>
-    <%= f.hidden_field :ampm, :value => 'AM' %>
+    <%= f.hidden_field :wakeup_ampm, :value => 'AM' %>%
   <!-- --------- Modal ONE ------------ -->
   <div id="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
 
@@ -39,13 +39,13 @@
               <div id="col-repeat-input" class="col-xs-12">
                 <label class="checkbox-inline">REPEAT<input type="checkbox" id="repeatCheckbox"/></label>
                 <div id="checkbox-list-days">
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_monday %> Monday </label>
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_tuesday %> Tuesday </label>
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_wednesday %> Wednesday </label>
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_thursday %> Thursday </label>
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_friday %> Friday </label>
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_saturday %> Saturday </label>
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_sunday %> Sunday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_monday,{}, true, false  %> Monday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_tuesday,{}, true, false  %> Tuesday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_wednesday,{}, true, false  %> Wednesday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_thursday,{}, true, false  %> Thursday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_friday,{}, true, false  %> Friday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_saturday,{}, true, false  %> Saturday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_sunday,{}, true, false  %> Sunday </label>
                 </div>
               </div><!--/.col-repeat-input -->   
             </form>
@@ -101,7 +101,9 @@
                 <label class="radio-inline">
                     <%= f.radio_button :sleep_reminder_type, 'NONE' %> None
                 </label>    
-                <label> <input class="radio-inline form-control"type="number" name="quantity" min="1" max="60" value="10"></label>
+                <label>
+                    <%= f.select(:sleep_reminder_time, options_for_select(('0'..'100').step(10).to_a.map{|s| ["#{s}", s]}), {},  { :class => 'form-control' } ) %>  
+                 </label>
                 <label class=> <select class="form-control radio-inline">
                     <option>minutes</option>
                     <option>hours</option>
@@ -115,8 +117,6 @@
           <button id="btn-modal-2-back" type="button" class = "btn btn-default"><span class=" glyphicon glyphicon-chevron-left"></span></button>
           <button id="btn-modal-2-cancel"type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           <%= submit_tag 'Save' %>
-
-
         </div>
       </div>
     </div>
@@ -127,22 +127,21 @@
 </div>
 
 <!-- Showing user's alarms -->
-<div class="row">
-  <div class="col-md-6" style="margin:0 auto;">
-   <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span> CREATE NEW ALARM</button>
+<div class="row" >
+  <div class="col-md-12" style="margin:0 auto;"/ >
+   <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span> ALARM</button>
   </div>
 </div>
 
-<div class="row" style="margin:0 auto;">
-  <div class="col-md-12">
-   
-    <% if @alarms.present? %>
+<div class="row" >
+  <div class="col-md-12" style="margin:0 auto;">
+      <% if @alarms.present? %>
       <% @alarms.each do |alarm| %>
         <div class="row alarm_list">
 
       <!-- alarm item -->
       <a href="#" class="list-group-item alarm-item">
-        <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.wakeup_minute %>:<%= alarm.wakeup_minute %> <%= alarm.alarm_ampm  %></h4>
+        <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.wakeup_minute %>:<%= alarm.wakeup_minute %> <%= alarm.wakeup_ampm  %></h4>
         <p class="list-group-item-text alarm-item-title"><%= alarm.title %></p>
         <small>
           <span class="alarm_day">MON</span>&nbsp;
@@ -159,8 +158,6 @@
         <h4>You have no alarm yet. Create alarm on the right.</h4>
     <% end %>   		
     </a>
-
-  
 
   </div>
 </div>
