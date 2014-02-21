@@ -1,10 +1,18 @@
 <!-- myAlarms container -->
 <div class="container myAlarms">
   <!-- Button trigger modal -->
-    <%= form_for :alarm, url: {action: "create"} do |f| %>
-    <%= f.hidden_field :hour_time %>
+  <%= form_for :alarm, url: {action: "create"} do |f| %>
+  <%= f.hidden_field :hour_time %>
   <%= f.hidden_field :minute_time %>
   <%= f.hidden_field :ampm, :value => 'AM' %>
+  <%= f.hidden_field :wakeup_reminder_type%>
+  <%= f.hidden_field :repeat_monday%>
+  <%= f.hidden_field :repeat_tuesday%>
+  <%= f.hidden_field :repeat_wednesday%>
+  <%= f.hidden_field :repeat_thursday%>
+  <%= f.hidden_field :repeat_friday%>
+  <%= f.hidden_field :repeat_saturday%>
+  <%= f.hidden_field :repeat_sunday%>
   <!-- --------- Modal ONE ------------ -->
   <div id="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
 
@@ -56,12 +64,12 @@
               <span>ALARM TYPE</span>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> call 
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="call" checked> call 
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> sms
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="sms"> sms
                 </label>
               </div>
             </div>
@@ -141,13 +149,13 @@
         <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.hour_time %>:<%= alarm.minute_time %> <%= alarm.ampm  %></h4>
         <p class="list-group-item-text alarm-item-title"><%= alarm.title %></p>
         <small>
-          <span class="alarm_day">MON</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.day == "Tue" %>">TUE</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.day == "Wed" %>">WED</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.day == "Thu" %>">THU</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.day == "Fri" %>">FRI</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.day == "Sat" %>">SAT</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.day == "Sun" %>">SUN</span>
+          <span id="mon" class="alarm_day">MON</span>&nbsp;
+          <span id="tues" class="alarm_day <%= "day_active" if alarm.day == "Tue" %>">TUE</span>&nbsp;
+          <span  id ="wed" class="alarm_day <%= "day_active" if alarm.day == "Wed" %>">WED</span>&nbsp;
+          <span id="thurs"  class="alarm_day <%= "day_active" if alarm.day == "Thu" %>">THURS</span>&nbsp;
+          <span id="fri" class="alarm_day <%= "day_active" if alarm.day == "Fri" %>">FRI</span>&nbsp;
+          <span id="sat" class="alarm_day <%= "day_active" if alarm.day == "Sat" %>">SAT</span>&nbsp;
+          <span id="sun" class="alarm_day <%= "day_active" if alarm.day == "Sun" %>">SUN</span>
         </small>
       </div> 
     <%end%>

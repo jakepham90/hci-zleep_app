@@ -4,10 +4,11 @@
   });
 }).call(this);
 
-  var type = $("#alarm_alarm_type option:selected").text();
-  var hour =$(".bootstrap-timepicker-hour").val();
-  var min =$(".bootstrap-timepicker-minute").val();
-  var ampm = $("#alarm_ampm option:selected").text(); 
+var type = $("#alarm_alarm_type option:selected").text();
+var hour =$(".bootstrap-timepicker-hour").val();
+var min =$(".bootstrap-timepicker-minute").val();
+var ampm = $("#alarm_ampm option:selected").text(); 
+var repeatingDays = '';
 
 function initializePage () {
   $('#checkbox-list-days').hide();
@@ -18,11 +19,11 @@ function initializePage () {
       $('#checkbox-list-days').slideDown( "fast");
     } else {
       $('#checkbox-list-days').slideUp( "fast", function() {
-      $('input[name=dayCheckBox]').prop('checked', false);
+        $('input[name=dayCheckBox]').prop('checked', false);
       });
 
     }
-});
+  });
   _modalHandler();
 }
 
@@ -115,8 +116,8 @@ function _modalHandler() {
   var CREATE_BTN = $("#btn-create-new").clone();
   var dirty_dialog_1 = "";
   var input_time = '';
- 
-  var repeatingDays = [];
+
+
 
   /* modal-1 next */
   $("#btn-modal-1-next").click(function (e) {
@@ -127,7 +128,7 @@ function _modalHandler() {
     hour = $(".bootstrap-timepicker-hour").val();
     min  = $(".bootstrap-timepicker-minute").val();
     ampm = $("#alarm_ampm option:selected").text();  
-    repeatingDays = $('input[name=dayCheckBox]:checked').map(function() { return $(this).val(); });
+    repeatingDays =  $('input[name=dayCheckBox]:checked').map(function() { return $(this).val(); });
     var targetTime = new Time (hour, min, ampm);
     var alarm = new Alarm ( targetTime, null);
     var times = alarm.getTimes();
@@ -137,6 +138,15 @@ function _modalHandler() {
     $("#alarm_hour_time").val(hour);
     $("#alarm_minute_time").val(min);
     $("#alarm_ampm").val(ampm);
+    $("#alarm_wakeup_reminder_type").val($('input[name=optionsRadios]:checked').val());
+    $("#alarm_repeat_monday").val();
+    $("#alarm_repeat_tuesday").val();
+    $("#alarm_repeat_wednesday").val();
+    $("#alarm_repeat_thursday").val();
+    $("#alarm_repeat_friday").val();
+    $("#alarm_repeat_saturday").val();
+    $("#alarm_repeat_sunday").val();
+
 
     $("#modal-body-2").prepend(html);
     dirty_dialog_1 = $("#modal").html();     // get dialog1
@@ -144,9 +154,8 @@ function _modalHandler() {
     if (type=="wakeup"){
       $(".modal-title").append("Bedtimes")
     } else 
-    $(".modal-title").append("Wake-up times");
+      $(".modal-title").append("Wake-up times"); 
 
-     
   });
 
   $("#btn-modal-2-cancel").click( function (e) {
@@ -162,6 +171,7 @@ function _modalHandler() {
 
   $(".btn_save").click( function (e) {
     e.preventDefault();
+
 
   });
 }
