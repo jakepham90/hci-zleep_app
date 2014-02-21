@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218013714) do
+ActiveRecord::Schema.define(version: 20140220222121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(version: 20140218013714) do
   end
 
   add_index "alarms", ["user_id"], name: "index_alarms_on_user_id", using: :btree
+
+  create_table "days", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "alarm_id"
+  end
 
   create_table "reminders", force: true do |t|
     t.integer  "alarm_id"
