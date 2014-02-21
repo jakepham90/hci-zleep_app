@@ -4,6 +4,11 @@
   });
 }).call(this);
 
+  var type = $("#alarm_alarm_type option:selected").text();
+  var hour =$(".bootstrap-timepicker-hour").val();
+  var min =$(".bootstrap-timepicker-minute").val();
+  var ampm = $("#alarm_ampm option:selected").text(); 
+
 function initializePage () {
   $('#checkbox-list-days').hide();
   $('#repeatCheckbox:checkbox').click(function() {
@@ -99,7 +104,7 @@ function _renderTimes (times) {
 }
 
 function _radio_tag (id, hour, min, label) {
-  return "<div class='radio'> <label> <input type='radio' name='optionsRadios' id="+id+"hour="+"min="+min+">"+label+"</label> </div> ";
+  return "<div class='radio'> <label> <input type='radio' name='radioReminder' id="+id+ " hour="+hour+" min="+min+">"+label+"</label> </div> ";
 }
 
 /* ========================*/
@@ -110,10 +115,7 @@ function _modalHandler() {
   var CREATE_BTN = $("#btn-create-new").clone();
   var dirty_dialog_1 = "";
   var input_time = '';
-  var type = $("#alarm_alarm_type option:selected").text();
-  var hour ='';
-  var min =''; 
-  var ampm = $("#alarm_ampm option:selected").text();  
+ 
   var repeatingDays = [];
 
   /* modal-1 next */
@@ -123,7 +125,7 @@ function _modalHandler() {
     input_time = $("#timepicker").val();
     type = $("#alarm_alarm_type option:selected").text();
     hour = $(".bootstrap-timepicker-hour").val() ;
-    min  = $(".bootstrap-timepicker-minute").val() ;
+    min  = $(".bootstrap-timepicker-minute").val();
     ampm = $("#alarm_ampm option:selected").text();  
     repeatingDays = $('input[name=dayCheckBox]:checked').map(function() { return $(this).val(); });
     var targetTime = new Time (hour, min, ampm);
@@ -152,10 +154,22 @@ function _modalHandler() {
     $("#modal-dialog-2").replaceWith(dirty_dialog_1);
     $("#timepicker").val(input_time);
   });
+
+  $("#btn_save").click( function (e) {
+    e.preventDefault();
+    $("#alarm_hour_time").val(hour);
+    $("#alarm_minute_time").val(min);
+    $("#alarm_ampm").val(ampm);
+    _getSelectedTime();
+  });
+
+
 }
 
-function _updateForm () {
-  
-}
+function _hourEnd () { return  hour;}
+function _minuteEnd () {return  min;}
+
+function _hourStart () { return $('input[name=radioReminder]:checked').attr("hour"); }
+function _minuteStart () { return $('input[name=radioReminder]:checked').attr("min");}
 
 
