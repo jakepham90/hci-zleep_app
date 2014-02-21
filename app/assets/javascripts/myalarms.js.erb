@@ -127,7 +127,7 @@ function _modalHandler() {
     type = $("#alarm_alarm_type option:selected").text();
     hour = $(".bootstrap-timepicker-hour").val();
     min  = $(".bootstrap-timepicker-minute").val();
-    ampm = $("#alarm_ampm option:selected").text();  
+    ampm = $("#alarm_wakeup_ampm option:selected").text();  
     repeatingDays =  $('input[name=dayCheckBox]:checked').map(function() { return $(this).val(); });
     var targetTime = new Time (hour, min, ampm);
     var alarm = new Alarm ( targetTime, null);
@@ -135,17 +135,20 @@ function _modalHandler() {
     var html = _renderTimes(times);
 
     // store alarm input values
-    $("#alarm_hour_time").val(hour);
-    $("#alarm_minute_time").val(min);
-    $("#alarm_ampm").val(ampm);
+    $("#alarm_wakeup_hour").val(hour);
+    $("#alarm_wakeup_minute").val(min);
+    $("#alarm_wakeup_ampm").val(ampm);
     $("#alarm_wakeup_reminder_type").val($('input[name=optionsRadios]:checked').val());
-    $("#alarm_repeat_monday").val();
-    $("#alarm_repeat_tuesday").val();
-    $("#alarm_repeat_wednesday").val();
-    $("#alarm_repeat_thursday").val();
-    $("#alarm_repeat_friday").val();
-    $("#alarm_repeat_saturday").val();
-    $("#alarm_repeat_sunday").val();
+
+
+   $("#alarm_repeat_monday").val( $("#monday").prop('checked'));
+    $("#alarm_repeat_tuesday").val( $("#tuesday").prop('checked'));
+    $("#alarm_repeat_wednesday").val( $("#wednesday").prop('checked'));
+    $("#alarm_repeat_thursday").val( $("#thursday").prop('checked'));
+    $("#alarm_repeat_friday").val( $("#friday").prop('checked'));
+    $("#alarm_repeat_saturday").val( $("#saturday").prop('checked'));
+    $("#alarm_repeat_sunday").val( $("#sunday").prop('checked'));
+
 
 
     $("#modal-body-2").prepend(html);
@@ -171,10 +174,9 @@ function _modalHandler() {
 
   $(".btn_save").click( function (e) {
     e.preventDefault();
-
-    $("#alarm_hour_time").val(hour);
-    $("#alarm_minute_time").val(min);
-    $("#alarm_ampm").val(ampm);
+  $("#alarm_wakeup_hour").val(hour);
+    $("#alarm_wakeup_minute").val(min);
+    $("#alarm_wakeup_ampm").val(ampm);
     //_getSelectedTime();
 
   });
