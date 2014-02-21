@@ -53,7 +53,7 @@ function timerEventHandler(e){
 
 	//If the timer is expired, stop music playback
 	if (timerEventHandler.elapsedTime >= s[0] ){
-		window.location.href = "/alarm/sleep";
+		window.location.href = "/alarms/sleep";
 		timerEventHandler.elapsedTime = 0;
 		window.clearInterval(timerEventHandler);
 	}

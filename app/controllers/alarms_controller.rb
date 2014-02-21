@@ -54,7 +54,9 @@ skip_before_filter  :verify_authenticity_token
 
   private
   def post_params
-    params.require(:alarm).permit(:title, :alarm_type, :hour_time, :minute_time, :day, :ampm, :reminder_time)
+    params.require(:alarm).permit(:title, :alarm_type, :alarm_hour, :alarm_minute, :wakeup_hour, :wakeup_minute,
+      :reminder_time, :reminder_type, :alarm_ampm, :reminder_ampm, :repeat_monday , :repeat_tuesday , :repeat_wednesday, 
+      :repeat_thursday, :repeat_friday, :repeat_saturday, :repeat_sunday)
   end
 
 

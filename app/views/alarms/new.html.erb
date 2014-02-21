@@ -2,9 +2,9 @@
 <div class="container myAlarms">
   <!-- Button trigger modal -->
     <%= form_for :alarm, url: {action: "create"} do |f| %>
-    <%= f.hidden_field :hour_time, :value => 00 %>
-  <%= f.hidden_field :minute_time, :value => 00 %>
-  <%= f.hidden_field :ampm, :value => 'AM' %>
+    <%= f.hidden_field :wakeup_hour, :value => 00 %>
+    <%= f.hidden_field :wakeup_minute, :value => 00 %>
+    <%= f.hidden_field :ampm, :value => 'AM' %>
   <!-- --------- Modal ONE ------------ -->
   <div id="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
 
@@ -39,13 +39,13 @@
               <div id="col-repeat-input" class="col-xs-12">
                 <label class="checkbox-inline">REPEAT<input type="checkbox" id="repeatCheckbox"/></label>
                 <div id="checkbox-list-days">
-                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" name="dayCheckBox" value="sun"/> sun </label>
-                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox2" name="dayCheckBox" value="mon"/> mon </label>
-                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox3" name="dayCheckBox" value="tues"/> tues </label>
-                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" name="dayCheckBox" value="wed"/> wed </label>
-                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox2" name="dayCheckBox" value="thurs"/>thurs </label>
-                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox3" name="dayCheckBox" value="fri"/> fri </label>
-                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox3" name="dayCheckBox" value="sat"/> sat </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_monday %> Monday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_tuesday %> Tuesday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_wednesday %> Wednesday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_thursday %> Thursday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_friday %> Friday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_saturday %> Saturday </label>
+                  <label class="checkbox-inline">  <%= f.check_box :repeat_sunday %> Sunday </label>
                 </div>
               </div><!--/.col-repeat-input -->   
             </form>
@@ -56,12 +56,13 @@
               <span>ALARM TYPE</span>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> call 
+                    <%= f.radio_button :wakeup_reminder_type, 'CALL' %> CALL
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> sms
+                    <%= f.radio_button :wakeup_reminder_type, 'SMS' %> SMS
+
                 </label>
               </div>
             </div>
@@ -92,13 +93,13 @@
             <div class=" col-xs-12">
               <div>
                 <label class="radio-inline">
-                  <input type="radio" id="inlineCheckbox1" value="option1"> SMS
+                    <%= f.radio_button :sleep_reminder_type, 'SMS' %> SMS
                 </label>
                 <label class="radio-inline">
-                  <input type="radio" id="inlineCheckbox2" value="option2"> Call
+                    <%= f.radio_button :sleep_reminder_type, 'CALL' %> Call
                 </label>
                 <label class="radio-inline">
-                  <input type="radio" id="inlineCheckbox3" value="option3"> None
+                    <%= f.radio_button :sleep_reminder_type, 'NONE' %> None
                 </label>    
                 <label> <input class="radio-inline form-control"type="number" name="quantity" min="1" max="60" value="10"></label>
                 <label class=> <select class="form-control radio-inline">
@@ -141,16 +142,16 @@
 
       <!-- alarm item -->
       <a href="#" class="list-group-item alarm-item">
-        <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.hour_time %>:<%= alarm.minute_time %> <%= alarm.ampm  %></h4>
+        <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.wakeup_minute %>:<%= alarm.wakeup_minute %> <%= alarm.alarm_ampm  %></h4>
         <p class="list-group-item-text alarm-item-title"><%= alarm.title %></p>
         <small>
           <span class="alarm_day">MON</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.day == "Tue" %>">TUE</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.day == "Wed" %>">WED</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.day == "Thu" %>">THU</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.day == "Fri" %>">FRI</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.day == "Sat" %>">SAT</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.day == "Sun" %>">SUN</span>
+          <span class="alarm_day <%= "day_active" if alarm.repeat_monday %>">TUE</span>&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.repeat_tuesday %>">WED</span>&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.repeat_wednesday  %>">THU</span>&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.repeat_thursday %>">FRI</span>&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.repeat_friday %>">SAT</span>&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.repeat_sunday %>">SUN</span>
         </small>
       </div> 
     <%end%>
@@ -159,17 +160,7 @@
     <% end %>   		
     </a>
 
-    <!-- alarm 1 -->
-    <a href="#" class="list-group-item alarm-item">
-      <h4 class="list-group-item-heading alarm-item-time
-        wakeup">6:30 am</h4>
-      <p class="list-group-item-text alarm-item-title">surfing day</p>
-      <p class="list-group-item-text alarm-item-days">
-        <small>SUN <span class="day-active">MON</span> TUE <span class="day-active">WED</span> THU FRI SAT</small></p>
-      <!-- <input type="checkbox" name="my-checkbox" checked>-->
-    </a>
-
-
+  
 
   </div>
 </div>
