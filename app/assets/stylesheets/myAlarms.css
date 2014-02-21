@@ -23,7 +23,7 @@ require
 
 .alarm_day
 {
-  font-size: 18px;
+  font-size: 12px;
   text-align: center;
   text-transform: lowercase;
 }
@@ -49,6 +49,7 @@ require
 {
   color: #DC4B39;
   font-size: 18px;
+  margin-bottom:2px;
 }
 
 
@@ -130,10 +131,9 @@ color: #999;
 }
 
 .list-group-item.alarm-item {
-    min-width:220px;
-    max-width:250px;
-    min-height:100px;
-    max-height:100px;
+  margin:0 auto;
+   width: 400px;
+   height:100px;
     padding:10px 0px 10px 10px;
 }
 .list-group-item.alarm-item.new{
@@ -186,4 +186,8 @@ min-width: 410px;
 
 .modal-body {
 min-height: 200px;
+}
+
+.alarm_day {
+color:#999;
 }
