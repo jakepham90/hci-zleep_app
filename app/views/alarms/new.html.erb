@@ -1,6 +1,7 @@
 <!-- myAlarms container -->
 <div class="container myAlarms">
   <!-- Button trigger modal -->
+<<<<<<< HEAD
   <%= form_for :alarm, url: {action: "create"} do |f| %>
   <%= f.hidden_field :hour_time %>
   <%= f.hidden_field :minute_time %>
@@ -13,6 +14,12 @@
   <%= f.hidden_field :repeat_friday%>
   <%= f.hidden_field :repeat_saturday%>
   <%= f.hidden_field :repeat_sunday%>
+=======
+<%= form_for :alarm, url: {action: "create"} do |f| %>
+    <%= f.hidden_field :wakeup_hour, :value => 00 %>
+    <%= f.hidden_field :wakeup_minute, :value => 00 %>
+    <%= f.hidden_field :wakeup_ampm, :value => 'AM' %>%
+>>>>>>> 673460674a8cea16201022790d41f60e923710d6
   <!-- --------- Modal ONE ------------ -->
   <div id="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
 
@@ -69,7 +76,12 @@
               </div>
               <div class="radio">
                 <label>
+<<<<<<< HEAD
                   <input type="radio" name="optionsRadios" id="optionsRadios2" value="sms"> sms
+=======
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> sms
+
+>>>>>>> 673460674a8cea16201022790d41f60e923710d6
                 </label>
               </div>
             </div>
@@ -114,6 +126,11 @@
                     <option>hours</option>
                     <option>days</option>
                 </select></label>
+                <label class=> <select class="form-control radio-inline">
+                    <option>minutes</option>
+                    <option>hours</option>
+                    <option>days</option>
+                </select></label>
               </div>
             </div>
           </div>
@@ -146,9 +163,10 @@
 
       <!-- alarm item -->
       <a href="#" class="list-group-item alarm-item">
-        <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.hour_time %>:<%= alarm.minute_time %> <%= alarm.ampm  %></h4>
+        <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.wakeup_minute %>:<%= alarm.wakeup_minute %> <%= alarm.wakeup_ampm  %></h4>
         <p class="list-group-item-text alarm-item-title"><%= alarm.title %></p>
         <small>
+<<<<<<< HEAD
           <span id="mon" class="alarm_day">MON</span>&nbsp;
           <span id="tues" class="alarm_day <%= "day_active" if alarm.day == "Tue" %>">TUE</span>&nbsp;
           <span  id ="wed" class="alarm_day <%= "day_active" if alarm.day == "Wed" %>">WED</span>&nbsp;
@@ -156,6 +174,15 @@
           <span id="fri" class="alarm_day <%= "day_active" if alarm.day == "Fri" %>">FRI</span>&nbsp;
           <span id="sat" class="alarm_day <%= "day_active" if alarm.day == "Sat" %>">SAT</span>&nbsp;
           <span id="sun" class="alarm_day <%= "day_active" if alarm.day == "Sun" %>">SUN</span>
+=======
+          <span class="alarm_day">MON</span>&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.repeat_monday %>">TUE</span>&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.repeat_tuesday %>">WED</span>&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.repeat_wednesday  %>">THU</span>&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.repeat_thursday %>">FRI</span>&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.repeat_friday %>">SAT</span>&nbsp;
+          <span class="alarm_day <%= "day_active" if alarm.repeat_sunday %>">SUN</span>
+>>>>>>> 673460674a8cea16201022790d41f60e923710d6
         </small>
       </div> 
     <%end%>
@@ -163,9 +190,6 @@
         <h4>You have no alarm yet. Create alarm on the right.</h4>
     <% end %>   		
     </a>
-
-   
-
 
   </div>
 </div>

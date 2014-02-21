@@ -11,23 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140220222121) do
+=======
+ActiveRecord::Schema.define(version: 20140221051430) do
+>>>>>>> 673460674a8cea16201022790d41f60e923710d6
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "alarms", force: true do |t|
     t.string   "title"
-    t.string   "alarm_type"
-    t.string   "hour_time"
+    t.string   "wakeup_reminder_type"
+    t.string   "sleeping_hour"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "minute_time"
+    t.string   "sleeping_minute"
     t.string   "is_dismiss"
-    t.string   "reminder_time"
-    t.string   "day"
-    t.string   "ampm"
+    t.string   "sleep_reminder_time"
+    t.string   "sleep_reminder_type"
+    t.string   "sleeping_ampm"
+    t.boolean  "repeat_monday"
+    t.boolean  "repeat_tuesday"
+    t.boolean  "repeat_wednesday"
+    t.boolean  "repeat_thursday"
+    t.boolean  "repeat_friday"
+    t.boolean  "repeat_saturday"
+    t.boolean  "repeat_sunday"
+    t.string   "wakeup_hour"
+    t.string   "wakeup_minute"
+    t.string   "wakeup_ampm"
   end
 
   add_index "alarms", ["user_id"], name: "index_alarms_on_user_id", using: :btree

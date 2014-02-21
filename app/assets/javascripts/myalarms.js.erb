@@ -172,8 +172,13 @@ function _modalHandler() {
   $(".btn_save").click( function (e) {
     e.preventDefault();
 
+    $("#alarm_hour_time").val(hour);
+    $("#alarm_minute_time").val(min);
+    $("#alarm_ampm").val(ampm);
+    //_getSelectedTime();
 
   });
+
 }
 
 function _hourEnd () { return  hour;}
