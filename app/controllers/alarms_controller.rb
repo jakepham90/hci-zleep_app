@@ -13,11 +13,11 @@ skip_before_filter  :verify_authenticity_token
  
   def create
     @alarm = current_user.alarms.new(post_params)
-    debug(post_params.inspect)
+    #debug(post_params.inspect)
     #Rails.logger.debug post_params.inspect
 
-    #@alarm.save
-    #redirect_to(new_alarm_path)
+    @alarm.save
+    redirect_to(new_alarm_path)
   end
 
   def edit 

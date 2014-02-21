@@ -2,7 +2,7 @@
 <div class="container myAlarms">
   <!-- Button trigger modal -->
 
-  <%= form_for :alarm, url: {action: "create"} do |f| %>
+  <%= form_for :alarm, url: alarms_path do |f| %>
    <%= f.hidden_field :wakeup_reminder_type%>
   <%= f.hidden_field :repeat_monday%>
   <%= f.hidden_field :repeat_tuesday%>

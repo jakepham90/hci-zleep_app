@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140220222121) do
-=======
-ActiveRecord::Schema.define(version: 20140221051430) do
->>>>>>> 673460674a8cea16201022790d41f60e923710d6
+ActiveRecord::Schema.define(version: 20140221075723) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,26 +28,19 @@ ActiveRecord::Schema.define(version: 20140221051430) do
     t.string   "sleep_reminder_time"
     t.string   "sleep_reminder_type"
     t.string   "sleeping_ampm"
-    t.boolean  "repeat_monday"
-    t.boolean  "repeat_tuesday"
-    t.boolean  "repeat_wednesday"
-    t.boolean  "repeat_thursday"
-    t.boolean  "repeat_friday"
-    t.boolean  "repeat_saturday"
-    t.boolean  "repeat_sunday"
+    t.string   "repeat_monday"
+    t.string   "repeat_tuesday"
+    t.string   "repeat_wednesday"
+    t.string   "repeat_thursday"
+    t.string   "repeat_friday"
+    t.string   "repeat_saturday"
+    t.string   "repeat_sunday"
     t.string   "wakeup_hour"
     t.string   "wakeup_minute"
     t.string   "wakeup_ampm"
   end
 
   add_index "alarms", ["user_id"], name: "index_alarms_on_user_id", using: :btree
-
-  create_table "days", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "alarm_id"
-  end
 
   create_table "reminders", force: true do |t|
     t.integer  "alarm_id"
