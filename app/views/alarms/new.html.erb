@@ -39,13 +39,13 @@
               <div id="col-repeat-input" class="col-xs-12">
                 <label class="checkbox-inline">REPEAT<input type="checkbox" id="repeatCheckbox"/></label>
                 <div id="checkbox-list-days">
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_monday,{}, true, false  %> Monday </label>
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_tuesday,{}, true, false  %> Tuesday </label>
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_wednesday,{}, true, false  %> Wednesday </label>
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_thursday,{}, true, false  %> Thursday </label>
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_friday,{}, true, false  %> Friday </label>
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_saturday,{}, true, false  %> Saturday </label>
-                  <label class="checkbox-inline">  <%= f.check_box :repeat_sunday,{}, true, false  %> Sunday </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" name="dayCheckBox" value="sun"/> sun </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox2" name="dayCheckBox" value="mon"/> mon </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox3" name="dayCheckBox" value="tues"/> tues </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox1" name="dayCheckBox" value="wed"/> wed </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox2" name="dayCheckBox" value="thurs"/>thurs </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox3" name="dayCheckBox" value="fri"/> fri </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="inlineCheckbox3" name="dayCheckBox" value="sat"/> sat </label>
                 </div>
               </div><!--/.col-repeat-input -->   
             </form>
@@ -56,12 +56,12 @@
               <span>ALARM TYPE</span>
               <div class="radio">
                 <label>
-                    <%= f.radio_button :wakeup_reminder_type, 'CALL' %> CALL
+                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> call 
                 </label>
               </div>
               <div class="radio">
                 <label>
-                    <%= f.radio_button :wakeup_reminder_type, 'SMS' %> SMS
+                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> sms
 
                 </label>
               </div>
@@ -93,17 +93,20 @@
             <div class=" col-xs-12">
               <div>
                 <label class="radio-inline">
-                    <%= f.radio_button :sleep_reminder_type, 'SMS' %> SMS
+                  <input type="radio" id="inlineCheckbox1" value="option1"> SMS
                 </label>
                 <label class="radio-inline">
-                    <%= f.radio_button :sleep_reminder_type, 'CALL' %> Call
+                  <input type="radio" id="inlineCheckbox2" value="option2"> Call
                 </label>
                 <label class="radio-inline">
-                    <%= f.radio_button :sleep_reminder_type, 'NONE' %> None
+                  <input type="radio" id="inlineCheckbox3" value="option3"> None
                 </label>    
-                <label>
-                    <%= f.select(:sleep_reminder_time, options_for_select(('0'..'100').step(10).to_a.map{|s| ["#{s}", s]}), {},  { :class => 'form-control' } ) %>  
-                 </label>
+                <label> <input class="radio-inline form-control"type="number" name="quantity" min="1" max="60" value="10"></label>
+                <label class=> <select class="form-control radio-inline">
+                    <option>minutes</option>
+                    <option>hours</option>
+                    <option>days</option>
+                </select></label>
                 <label class=> <select class="form-control radio-inline">
                     <option>minutes</option>
                     <option>hours</option>
@@ -116,7 +119,7 @@
         <div class="modal-footer">
           <button id="btn-modal-2-back" type="button" class = "btn btn-default"><span class=" glyphicon glyphicon-chevron-left"></span></button>
           <button id="btn-modal-2-cancel"type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <%= submit_tag 'Save' %>
+          <span id="btn_save"><%= submit_tag 'Save' %></span>
         </div>
       </div>
     </div>
@@ -129,7 +132,7 @@
 <!-- Showing user's alarms -->
 <div class="row" >
   <div class="col-md-12" style="margin:0 auto;"/ >
-   <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span> ALARM</button>
+   <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span></button>
   </div>
 </div>
 

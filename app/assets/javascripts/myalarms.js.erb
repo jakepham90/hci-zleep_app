@@ -124,7 +124,7 @@ function _modalHandler() {
     console.log(type+hour+min+ampm);
     input_time = $("#timepicker").val();
     type = $("#alarm_alarm_type option:selected").text();
-    hour = $(".bootstrap-timepicker-hour").val() ;
+    hour = $(".bootstrap-timepicker-hour").val();
     min  = $(".bootstrap-timepicker-minute").val();
     ampm = $("#alarm_ampm option:selected").text();  
     repeatingDays = $('input[name=dayCheckBox]:checked').map(function() { return $(this).val(); });
@@ -132,6 +132,11 @@ function _modalHandler() {
     var alarm = new Alarm ( targetTime, null);
     var times = alarm.getTimes();
     var html = _renderTimes(times);
+
+    // store alarm input values
+    $("#alarm_hour_time").val(hour);
+    $("#alarm_minute_time").val(min);
+    $("#alarm_ampm").val(ampm);
 
     $("#modal-body-2").prepend(html);
     dirty_dialog_1 = $("#modal").html();     // get dialog1
@@ -155,14 +160,13 @@ function _modalHandler() {
     $("#timepicker").val(input_time);
   });
 
-  $("#btn_save").click( function (e) {
+  $(".btn_save").click( function (e) {
     e.preventDefault();
     $("#alarm_hour_time").val(hour);
     $("#alarm_minute_time").val(min);
     $("#alarm_ampm").val(ampm);
     //_getSelectedTime();
   });
-
 
 }
 
