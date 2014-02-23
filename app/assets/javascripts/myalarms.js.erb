@@ -27,67 +27,33 @@ function initializePage () {
   _modalHandler();
 }
 
-/* ======================*/
-/* Time Module          */
-/* ======================*/
-function Time(h,m, ap) {
-  this.hour = h;
-  this.min  = m;
-  this.ampm = ap;
-  var preptime = 14;
-
-  this.toMilitary = function () {
-    if (this.ampm == 'PM')
-      this.hour = this.hour + 12;
-  }
-  this.addHour = function (h) {
-    this.hour = (this.hour + 1) % 24;
-    if (this.hour >= 0 && this.hour > 12)
-      this.ampm = 'AM';
-    else this.ampm = 'PM';
-  }
-
-  this.addMin = function (m) {
-    var tmp = this.min + m + preptime;
-    if (tmp > 59) {
-      this.min = tmp % 60;
-      this.addHour(1);
-    }
-  }
-  this.addHourMin = function (h,m) {
-    this.addMin(m);
-    this.addHour(h);
-    return [this.hour, this.min];
-  }
-
-  return (this.toMilitary());
-}
 
 /* ======================*/
 /* Alarm Module          */
 /* ======================*/
-function Alarm(targetTime, type) {
-  this.AVG_CYCLE = 90;
-  this.NUM_CYCLE = 5;
-  this.MIN_TO_ASLEEP = 25;
-  this.alarmtime = targetTime;
-  var _more = new Time (9,25, null);
-  var _normal = new Time (7,55,null);
-  var _less = new Time (6,25, null);
+function Alarm(hour, min) {
+  var timeA = new Date();
+  var timeB = [timeA, timeA, timeA];
+  var amounts = [{ hours: 6, minutes: 25 }, { hours: 7, minutes: 55 }, { hours: 9, minutes: 25 }];
+  timeA.setHours(hour);
+  timeA.setMinutes(min);
 
-  this.getTimes = function () {
-    var times = [];
-    var t = [_less, _normal, _more];
-    var label = ['less', 'normal', 'more'];
-    var amount = ['9h25m', '7h55m','6h25m'];
-    for ( var i = 0; i < 3; i++) {
-      t[i].addHourMin(this.alarmtime.hour, this.alarmtime.min);
-      var hr_min = [t[i].hour, t[i].min, t[i].ampm, amount[i]];
-      times.push(hr_min);
-    }
-    return times;
+  for ( var i in timeB) {
+    var alarmHour = timeA.getHours();
+    var alarmMin = timeA.getMinutes();
+    var amountHour = amounts[i]["hours"];
+    var amountMin = amounts[i]["minutes"];
+    timeB[i].setHours(alarmHour - amountHour);
+    timeB[i].setMinutes(alarmMin - amountMin);
+    console.log(i+ ". " + timeB[i].getHours() + ":" + timeB[i].getMinutes());
   }
+  function getTimes () {
+    return timeB;
+  }
+
 }
+ 
+
 
 /* ======================*/
 /* _render times helper  */
@@ -96,7 +62,7 @@ function _renderTimes (times) {
   var html = "<h4 style='color:#999;'>You should try to fall asleep at one of the following times:</h4>"
     var count = 1;
   for (var i in times) { 
-    console.log(">> hour: "+times[i][0] +"min: "+times[i][1] ); 
+    console.log(times[i] ); 
     var label = times[i][0] + ":" + times[i][1] + '  '+ times[i][2]+' ' + times[i][3];
     html +=  _radio_tag( "time"+count , times[i][0], times[i][1], label); 
     count++;
@@ -129,8 +95,8 @@ function _modalHandler() {
     min  = $(".bootstrap-timepicker-minute").val();
     ampm = $("#alarm_wakeup_ampm option:selected").text();  
     repeatingDays =  $('input[name=dayCheckBox]:checked').map(function() { return $(this).val(); });
-    var targetTime = new Time (hour, min, ampm);
-    var alarm = new Alarm ( targetTime, null);
+    
+    var alarm = new Alarm ( hour, min);
     var times = alarm.getTimes();
     var html = _renderTimes(times);
 
