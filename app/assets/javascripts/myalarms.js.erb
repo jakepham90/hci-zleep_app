@@ -33,24 +33,32 @@ function initializePage () {
 /* ======================*/
 function Alarm(hour, min) {
   var timeA = new Date();
-  var timeB = [timeA, timeA, timeA];
-  var amounts = [{ hours: 6, minutes: 25 }, { hours: 7, minutes: 55 }, { hours: 9, minutes: 25 }];
+  var timeB = [new Date(), new Date(), new Date()];
+  var amounts = [{ hours: 7, minutes: 55 }, { hours: 9, minutes: 25 }, { hours: 10, minutes: 55 }];
   timeA.setHours(hour);
   timeA.setMinutes(min);
+  var civ = [];
 
+  console.log("timeA: " + timeA.toString());
   for ( var i in timeB) {
     var alarmHour = timeA.getHours();
     var alarmMin = timeA.getMinutes();
     var amountHour = amounts[i]["hours"];
     var amountMin = amounts[i]["minutes"];
-    timeB[i].setHours(alarmHour - amountHour);
-    timeB[i].setMinutes(alarmMin - amountMin);
-    console.log(i+ ". " + timeB[i].getHours() + ":" + timeB[i].getMinutes());
+       var ampm = 'am';
+    timeB[i].setHours(hour - amountHour);
+    timeB[i].setMinutes(min - amountMin - 14);
+    if (timeB[i].getHours() > 12) 
+      ampm = 'pm';
+    console.log("timeB: " + timeB[i].toString() + " (" +amountHour+ ", " +amountMin+ ")");
+    
+    var tuple = { h: timeB[i].getHours() % 12, m: timeB[i].getMinutes(), ampm: ampm, amount: amountHour+"h"+amountMin};
+    console.log(tuple);
+    civ.push(tuple);
   }
-  function getTimes () {
-    return timeB;
-  }
-
+  this.times = timeB;
+  this.timesCiv = civ;
+  
 }
  
 
@@ -63,7 +71,7 @@ function _renderTimes (times) {
     var count = 1;
   for (var i in times) { 
     console.log(times[i] ); 
-    var label = times[i][0] + ":" + times[i][1] + '  '+ times[i][2]+' ' + times[i][3];
+    var label = times[i]['h'] + ":" + times[i]['m']+ " " + times[i]['ampm']+ '  '+ times[i]['amount'];
     html +=  _radio_tag( "time"+count , times[i][0], times[i][1], label); 
     count++;
   }
@@ -97,7 +105,7 @@ function _modalHandler() {
     repeatingDays =  $('input[name=dayCheckBox]:checked').map(function() { return $(this).val(); });
     
     var alarm = new Alarm ( hour, min);
-    var times = alarm.getTimes();
+    var times = alarm.timesCiv;
     var html = _renderTimes(times);
 
     // store alarm input values
@@ -105,8 +113,6 @@ function _modalHandler() {
     $("#alarm_wakeup_minute").val(min);
     $("#alarm_wakeup_ampm").val(ampm);
     $("#alarm_wakeup_reminder_type").val($('input[name=optionsRadios]:checked').val());
-
-
    $("#alarm_repeat_monday").val( $("#monday").prop('checked'));
     $("#alarm_repeat_tuesday").val( $("#tuesday").prop('checked'));
     $("#alarm_repeat_wednesday").val( $("#wednesday").prop('checked'));
@@ -154,5 +160,4 @@ function _minuteEnd () {return  min;}
 
 function _hourStart () { return $('input[name=radioReminder]:checked').attr("hour"); }
 function _minuteStart () { return $('input[name=radioReminder]:checked').attr("min");}
-
 
