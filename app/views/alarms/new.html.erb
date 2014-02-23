@@ -3,178 +3,168 @@
   <!-- Button trigger modal -->
 
   <%= form_for :alarm, url: alarms_path do |f| %>
-   <%= f.hidden_field :wakeup_reminder_type%>
-  <%= f.hidden_field :repeat_monday%>
-  <%= f.hidden_field :repeat_tuesday%>
-  <%= f.hidden_field :repeat_wednesday%>
-  <%= f.hidden_field :repeat_thursday%>
-  <%= f.hidden_field :repeat_friday%>
-  <%= f.hidden_field :repeat_saturday%>
-  <%= f.hidden_field :repeat_sunday%>
-
+    <%= f.hidden_field :wakeup_reminder_type%>
+    <%= f.hidden_field :repeat_monday%>
+    <%= f.hidden_field :repeat_tuesday%>
+    <%= f.hidden_field :repeat_wednesday%>
+    <%= f.hidden_field :repeat_thursday%>
+    <%= f.hidden_field :repeat_friday%>
+    <%= f.hidden_field :repeat_saturday%>
+    <%= f.hidden_field :repeat_sunday%>
 
     <%= f.hidden_field :wakeup_hour, :value => 00 %>
     <%= f.hidden_field :wakeup_minute, :value => 00 %>
     <%= f.hidden_field :wakeup_ampm, :value => 'AM' %>
 
-  <!-- --------- Modal ONE ------------ -->
-  <div id="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <!-- --------- Modal ONE ------------ -->
+    <div id="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
 
-    <div id="modal-dialog-1"  class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel">Create alarm</h4>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <!-- time input column -->
-            <div class="col-xs-12 col-time-input">
-              <form class="form-inline" role="form">
+      <div id="modal-dialog-1"  class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Create alarm</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <!-- time input column -->
+              <div class="col-xs-12 col-time-input">
+                <form class="form-inline" role="form">
+                  <div style="display:inline;">
+                    <span> I need to</span> <select id="alarm-type-selection"> <option>wakeup</option> <option>sleep</option> </select></div>
 
-                <span>I need to</span>
-                <div class="form-group ">
-                  <select id="alarm-type-selection" class="form-control">
-                    <option>wakeup</option>
-                    <option>sleep</option>
-                </select></div>
-
-                <span >at</span>
-                <div class="form-group">
                   <div class='input-append bootstrap-timepicker' style='display: inline;'>
-                    <input id="timepicker"class='dateselect-time input-small timepicker' type='text' >
-                    <span class='add-on'><i class='icon-time glyphicon glyphicon-time'></i></span>
+                    <span> at
+                      <input id="timepicker"class='dateselect-time input-small timepicker' type='text'/>
+                      <span class='add-on'><i class='icon-time glyphicon glyphicon-time'></i></span></span>
                   </div>
-                </div>
-              </div> <!-- /.col-time-input-->
-              <!--repeat column -->
+                </form>
+              </div>
+            </div>
+            
+            <div class="row" style="margin-top:25px">
+              <div class="col-xs-12">
+                <form class="form-inline" role="form"><span>Alarm type: </span> 
+                <div class="radio"> <label> <input type="radio" name="optionsRadios" id="optionsRadios1" value="call" checked> call </label> </div>
+                <div class="radio"> <label> <input type="radio" name="optionsRadios" id="optionsRadios2" value="sms"> sms </label> </div>
+              </form>
+              </div>
+            </div>
+         
+            <div class="row"> 
               <div id="col-repeat-input" class="col-xs-12">
                 <label class="checkbox-inline">REPEAT<input type="checkbox" id="repeatCheckbox"/></label>
                 <div id="checkbox-list-days">
-                  <label class="checkbox-inline"> <input type="checkbox" id="sunday" name="dayCheckBox" /> sun </label>
-                  <label class="checkbox-inline"> <input type="checkbox" id="monday" name="dayCheckBox" /> mon </label>
-                  <label class="checkbox-inline"> <input type="checkbox" id="tuesday" name="dayCheckBox" /> tues </label>
-                  <label class="checkbox-inline"> <input type="checkbox" id="wednesday" name="dayCheckBox" /> wed </label>
-                  <label class="checkbox-inline"> <input type="checkbox" id="thursday" name="dayCheckBox" />thurs </label>
-                  <label class="checkbox-inline"> <input type="checkbox" id="friday" name="dayCheckBox" /> fri </label>
-                  <label class="checkbox-inline"> <input type="checkbox" id="saturday" name="dayCheckBox" /> sat </label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="sunday" name="dayCheckBox"/>sun</label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="monday" name="dayCheckBox"/>mon</label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="tuesday" name="dayCheckBox"/>tues</label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="wednesday" name="dayCheckBox"/>wed</label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="thursday" name="dayCheckBox"/>thurs</label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="friday" name="dayCheckBox"/>fri</label>
+                  <label class="checkbox-inline"> <input type="checkbox" id="saturday" name="dayCheckBox"/>sat</label>
                 </div>
               </div><!--/.col-repeat-input -->   
-            </form>
-          </div><!--/.row -->
-
-          <div class="row">
-            <div class="col-xs-12">
-              <span>ALARM TYPE</span>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="call" checked> call 
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="sms"> sms
-                </label>
-              </div>
             </div>
+
+
+
+
+          </div> <!-- /.modal-body -->
+          <div class="modal-footer">
+
+            <button id="btn-modal-1-cancel"type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button id="btn-modal-1-next"type="button" class="btn btn-primary">Next</button>
           </div>
-        </div> <!-- /.modal-body -->
-        <div class="modal-footer">
-
-          <button id="btn-modal-1-cancel"type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button id="btn-modal-1-next"type="button" class="btn btn-primary">Next</button>
-        </div>
-      </div><!-- /.modal-step-1 -->
-    </div> <! -- /.modal-dialog -->
-  </div> <!-- /.modal -->
+        </div><!-- /.modal-step-1 -->
+      </div> <! -- /.modal-dialog -->
+    </div> <!-- /.modal -->
 
 
 
-  <!-- -------- Modal TWO------------ -->
-  <div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div id="modal-dialog-2" class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel"></h4>
-        </div>
-        <div id="modal-body-2" class="modal-body">
-        
-          <div class="row">
-            <div class=" col-xs-12">
+    <!-- -------- Modal TWO------------ -->
+    <div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div id="modal-dialog-2" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel"></h4>
+          </div>
+          <div id="modal-body-2" class="modal-body">
+
+            <div class="row">
+              <div class=" col-xs-12">
                 <h4 style="color:#999">Reminder</h4>
-              <div>
-                <label class="radio-inline">
-                  <input type="radio" id="inlineCheckbox1" value="option1"> SMS
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" id="inlineCheckbox2" value="option2"> Call
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" id="inlineCheckbox3" value="option3"> None
-                </label>    
-                <label> <input class="radio-inline form-control"type="number" name="quantity" min="1" max="60" value="10"></label>
-                <label class=> <select class="form-control radio-inline">
-                    <option>minutes</option>
-                    <option>hours</option>
-                    <option>days</option>
-                </select></label>
-                <label class=> <select class="form-control radio-inline">
-                    <option>minutes</option>
-                    <option>hours</option>
-                    <option>days</option>
-                </select></label>
+                <div>
+                  <label class="radio-inline">
+                    <input type="radio" id="inlineCheckbox1" value="option1"> SMS
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" id="inlineCheckbox2" value="option2"> Call
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" id="inlineCheckbox3" value="option3"> None
+                  </label>    
+                  <label> <input class="radio-inline form-control"type="number" name="quantity" min="1" max="60" value="10"></label>
+                  <label class=> <select class="form-control radio-inline">
+                      <option>minutes</option>
+                      <option>hours</option>
+                      <option>days</option>
+                  </select></label>
+                  <label class=> <select class="form-control radio-inline">
+                      <option>minutes</option>
+                      <option>hours</option>
+                      <option>days</option>
+                  </select></label>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button id="btn-modal-2-back" type="button" class = "btn btn-default"><span class=" glyphicon glyphicon-chevron-left"></span></button>
-          <button id="btn-modal-2-cancel"type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <span id="btn_save"><%= submit_tag 'Save' %></span>
+          <div class="modal-footer">
+            <button id="btn-modal-2-back" type="button" class = "btn btn-default"><span class=" glyphicon glyphicon-chevron-left"></span></button>
+            <button id="btn-modal-2-cancel"type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <span id="btn_save"><%= submit_tag 'Save' %></span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-<% end %>
+  <% end %>
 
 </div>
 
 <!-- Showing user's alarms -->
 <div class="row" >
   <div class="col-md-12" style="margin:0 auto;"/ >
-   <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span></button>
+    <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span></button>
   </div>
 </div>
 
 <div class="row" >
   <div class="col-md-12" style="margin:0 auto;">
-      <% if @alarms.present? %>
+    <% if @alarms.present? %>
       <% @alarms.each do |alarm| %>
         <div class="row alarm_list">
 
-      <!-- alarm item -->
-      <a href="#" class="list-group-item alarm-item">
-        <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.wakeup_minute %>:<%= alarm.wakeup_minute %> <%= alarm.wakeup_ampm  %></h4>
-        <p class="list-group-item-text alarm-item-title"><%= alarm.title %></p>
-        <small>
+          <!-- alarm item -->
+          <a href="#" class="list-group-item alarm-item">
+            <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.wakeup_minute %>:<%= alarm.wakeup_minute %> <%= alarm.wakeup_ampm  %></h4>
+            <p class="list-group-item-text alarm-item-title"><%= alarm.title %></p>
+            <small>
 
-          <span class="alarm_day">MON</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.repeat_monday %>">TUE</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.repeat_tuesday %>">WED</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.repeat_wednesday  %>">THU</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.repeat_thursday %>">FRI</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.repeat_friday %>">SAT</span>&nbsp;
-          <span class="alarm_day <%= "day_active" if alarm.repeat_sunday %>">SUN</span>
+              <span class="alarm_day">MON</span>&nbsp;
+              <span class="alarm_day <%= "day_active" if alarm.repeat_monday %>">TUE</span>&nbsp;
+              <span class="alarm_day <%= "day_active" if alarm.repeat_tuesday %>">WED</span>&nbsp;
+              <span class="alarm_day <%= "day_active" if alarm.repeat_wednesday  %>">THU</span>&nbsp;
+              <span class="alarm_day <%= "day_active" if alarm.repeat_thursday %>">FRI</span>&nbsp;
+              <span class="alarm_day <%= "day_active" if alarm.repeat_friday %>">SAT</span>&nbsp;
+              <span class="alarm_day <%= "day_active" if alarm.repeat_sunday %>">SUN</span>
 
-        </small>
-      </div> 
-    <%end%>
-    <% else %>
+            </small>
+          </div> 
+        <%end%>
+      <% else %>
         <h4>You have no alarm yet. Create alarm on the right.</h4>
-    <% end %>   		
+      <% end %>   		
     </a>
 
   </div>
@@ -185,13 +175,13 @@
 
 
 <script> 
-$('#timepicker').timepicker().on('show.timepicker', function(e) {
+  $('#timepicker').timepicker().on('show.timepicker', function(e) {
     console.log('The time is ' + e.time.value);
     var hour = $(".bootstrap-timepicker-hour").val();
     console.log('The hour is ' + e.time.showInputs);
     console.log('The minute is ' + e.time.minute);
     console.log('The meridian is ' + e.time.meridian);
-    });
+  });
 </script>
 
 
