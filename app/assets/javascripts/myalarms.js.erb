@@ -37,7 +37,7 @@ function Alarm(hour, min) {
   var amounts = [{ hours: 7, minutes: 55 }, { hours: 9, minutes: 25 }, { hours: 10, minutes: 55 }];
   timeA.setHours(hour);
   timeA.setMinutes(min);
-  var civ = [];
+  var localFormat = [];
 
   console.log("timeA: " + timeA.toString());
   for ( var i in timeB) {
@@ -52,12 +52,16 @@ function Alarm(hour, min) {
       ampm = 'pm';
     console.log("timeB: " + timeB[i].toString() + " (" +amountHour+ ", " +amountMin+ ")");
     
-    var tuple = { h: timeB[i].getHours() % 12, m: timeB[i].getMinutes(), ampm: ampm, amount: amountHour+"h"+amountMin};
-    console.log(tuple);
-    civ.push(tuple);
+    localFormat.push([_timeFormatter(timeB[i].toLocaleTimeString()), amountHour + 'h' + amountMin + 'm']);
   }
-  this.times = timeB;
-  this.timesCiv = civ;
+  this.times = localFormat;
+
+  // form time to [<hour>, <min>, <AM/PM>]]
+  function _timeFormatter (time) {
+    var str1 = time.split(' ');
+    var str2 = str1[0].split(":");
+    return str2[0] + ":" + str2[1] + ' ' +str1[1];
+  }
   
 }
  
@@ -71,15 +75,15 @@ function _renderTimes (times) {
     var count = 1;
   for (var i in times) { 
     console.log(times[i] ); 
-    var label = times[i]['h'] + ":" + times[i]['m']+ " " + times[i]['ampm']+ '  '+ times[i]['amount'];
-    html +=  _radio_tag( "time"+count , times[i][0], times[i][1], label); 
+    var label = times[i][0] +" "+ times[i][1];
+    html +=  _radio_tag( "time"+count , times[i][0], label); 
     count++;
   }
   return html;
 }
 
-function _radio_tag (id, hour, min, label) {
-  return "<div class='radio'> <label> <input type='radio' name='radioReminder' id="+id+ " hour="+hour+" min="+min+">"+label+"</label> </div> ";
+function _radio_tag (id, val, label) {
+  return "<div class='radio'> <label> <input type='radio' name='radioReminder' id="+id+ " value="+val+"/>"+label+"</label> </div> ";
 }
 
 /* ========================*/
@@ -105,7 +109,7 @@ function _modalHandler() {
     repeatingDays =  $('input[name=dayCheckBox]:checked').map(function() { return $(this).val(); });
     
     var alarm = new Alarm ( hour, min);
-    var times = alarm.timesCiv;
+    var times = alarm.times;
     var html = _renderTimes(times);
 
     // store alarm input values
