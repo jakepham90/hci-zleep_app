@@ -19,7 +19,7 @@
     <!-- --------- Modal ONE ------------ -->
     <div id="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
 
-      <div id="modal-dialog-1"  class="modal-dialog">
+      <div id="modal-dialog-1"  class="modal-dialog modal-dialog-1">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -79,18 +79,15 @@
       </div> <! -- /.modal-dialog -->
     </div> <!-- /.modal -->
 
-
-
     <!-- -------- Modal TWO------------ -->
     <div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div id="modal-dialog-2" class="modal-dialog">
+      <div id="modal-dialog-2" class="modal-dialog modal-dialog-2">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h4 class="modal-title" id="myModalLabel"></h4>
           </div>
           <div id="modal-body-2" class="modal-body">
-
             <div class="row">
               <div class=" col-xs-12">
                 <h4 style="color:#999">Reminder</h4>
@@ -127,9 +124,7 @@
         </div>
       </div>
     </div>
-
   <% end %>
-
 </div>
 
 <!-- Showing user's alarms -->
@@ -141,16 +136,14 @@
 
 <div class="row" >
   <div class="col-md-12" style="margin:0 auto;">
+    <div class="row alarm_list">
     <% if @alarms.present? %>
       <% @alarms.each do |alarm| %>
-        <div class="row alarm_list">
-
           <!-- alarm item -->
           <a href="#" class="list-group-item alarm-item">
-            <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.wakeup_minute %>:<%= alarm.wakeup_minute %> <%= alarm.wakeup_ampm  %></h4>
+            <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.wakeup_hour%>:<%= alarm.wakeup_minute %> <%= alarm.wakeup_ampm  %></h4>
             <p class="list-group-item-text alarm-item-title"><%= alarm.title %></p>
             <small>
-
               <span class="alarm_day">MON</span>&nbsp;
               <span class="alarm_day <%= "day_active" if alarm.repeat_monday %>">TUE</span>&nbsp;
               <span class="alarm_day <%= "day_active" if alarm.repeat_tuesday %>">WED</span>&nbsp;
@@ -158,15 +151,13 @@
               <span class="alarm_day <%= "day_active" if alarm.repeat_thursday %>">FRI</span>&nbsp;
               <span class="alarm_day <%= "day_active" if alarm.repeat_friday %>">SAT</span>&nbsp;
               <span class="alarm_day <%= "day_active" if alarm.repeat_sunday %>">SUN</span>
-
             </small>
-          </div> 
+            </a>       
         <%end%>
       <% else %>
         <h4>You have no alarm yet. Create alarm on the right.</h4>
       <% end %>   		
-    </a>
-
+     </div>  
   </div>
 </div>
 

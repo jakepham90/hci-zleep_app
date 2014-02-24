@@ -45,7 +45,7 @@ function Alarm(hour, min) {
     var alarmMin = timeA.getMinutes();
     var amountHour = amounts[i]["hours"];
     var amountMin = amounts[i]["minutes"];
-       var ampm = 'am';
+    var ampm = 'am';
     timeB[i].setHours(hour - amountHour);
     timeB[i].setMinutes(min - amountMin - 14);
     if (timeB[i].getHours() > 12) 
@@ -128,8 +128,8 @@ function _modalHandler() {
 
 
     $("#modal-body-2").prepend(html);
-    dirty_dialog_1 = $("#modal").html();     // get dialog1
-    $("#modal-dialog-1").replaceWith($("#modal-dialog-2"));
+    dirty_dialog_1 = $(".modal-dialog-1").clone();     // get dialog1
+    $("#modal-dialog-1").replaceWith($(".modal-dialog-2").clone());
     if (type=="wakeup"){
       $(".modal-title").append("Bedtimes")
     } else 
@@ -144,7 +144,7 @@ function _modalHandler() {
 
   $("#btn-modal-2-back").click( function (e) {
     e.preventDefault();
-    $("#modal-dialog-2").replaceWith(dirty_dialog_1);
+    $(".modal-dialog-2").replaceWith(dirty_dialog_1);
     $("#timepicker").val(input_time);
   });
 
