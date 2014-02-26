@@ -32,7 +32,7 @@ class WelcomeController < ApplicationController
 			@client.account.calls.create(
 		  :from => '+18587629676',
 		  :to => @user.phone_number,
-		  :url => "https://zleep.herokuapp.com/welcome/message.xml"
+		  :url => "https://demo.twilio.com/welcome/voice/"
 		 	)
    	end
    	
@@ -41,12 +41,7 @@ class WelcomeController < ApplicationController
 
    end
 
-	def message
-    @city = 124
-    @state = 12421
-    render 'message.xml.erb', :content_type => 'text/xml'
-  end
-
+	
   def gather
 
   end

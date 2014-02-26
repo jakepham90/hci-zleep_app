@@ -20,6 +20,5 @@
 //= require jsapi
 //= require charts
 //= require myalarms
-//= require clock
 
 
