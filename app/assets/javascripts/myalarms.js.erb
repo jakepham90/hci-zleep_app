@@ -70,9 +70,15 @@ function Alarm(hour, min) {
 /* ======================*/
 /* _render times helper  */
 /* ======================*/
-function _renderTimes (times) {
-  var html = "<h4 style='color:#999;'>You should try to fall asleep at one of the following times:</h4>"
-    var count = 1;
+function _renderTimes (times, type) {
+
+  var html ='';
+  if (type == 'wakeup')
+    html = "<h4 style='color:#999;'>You should fall asleep at one of the following times:</h4>";
+  else
+    html = "<h4 style='color:#999;'>You should wake up at one of the following times:</h4>";
+
+      var count = 1;
   for (var i in times) { 
     console.log(times[i] ); 
     var label = times[i][0] +" "+ times[i][1];
@@ -122,7 +128,7 @@ function _modalHandler() {
 
     var alarm = new Alarm ( hour, min);
     var times = alarm.times;
-    var html = _renderTimes(times);
+    var html = _renderTimes(times, type);
 
     console.log("renderTimes >>" + html);
 

@@ -36,7 +36,7 @@
                   <div class='input-append bootstrap-timepicker' style='display: inline;'>
                     <span> at</span>
                     <input id="timepicker"class='dateselect-time input-small timepicker' type='text'>
-                    <span class='add-on'><i class='icon-time glyphicon glyphicon-time'></i></span></input
+                    <span class='add-on'><i class='icon-time glyphicon glyphicon-time'></i></span></input>
                   </div>
                 </form>
               </div>
@@ -162,7 +162,8 @@
 
 
 <script> 
-  $('#timepicker').timepicker().on('show.timepicker', function(e) {
+$('.timepicker').timepicker().on('show.timepicker', function(e) {
+    e.preventDefault();
     console.log('The time is ' + e.time.value);
     var hour = $(".bootstrap-timepicker-hour").val();
     console.log('The hour is ' + e.time.showInputs);
