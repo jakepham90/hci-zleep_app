@@ -125,6 +125,7 @@ function _modalHandler() {
     $("#alarm_repeat_friday").val( $("#friday").prop('checked'));
     $("#alarm_repeat_saturday").val( $("#saturday").prop('checked'));
     $("#alarm_repeat_sunday").val( $("#sunday").prop('checked'));
+    $("#alarm_title").val($("#title-input-field").val());
 
     var alarm = new Alarm ( hour, min);
     var times = alarm.times;

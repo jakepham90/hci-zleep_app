@@ -11,8 +11,7 @@ require
 .day_active
 {
   font-weight: bolder;
-  text-decoration: underline;
-  color: #5cb85c;
+  color: #428bca;
 }
 
 .alarm_control_padding
@@ -21,8 +20,10 @@ require
 }
 
 
+
 .alarm_day
 {
+
   font-size: 12px;
   text-align: center;
   text-transform: lowercase;
@@ -188,12 +189,18 @@ min-width: 410px;
 min-height: 200px;
 }
 
-.alarm_day {
-color:#999;
-}
 
 #alarm-type-selection {
   max-width: 100px;
+}
+
+.alarm_day.span:hover {
+  color:#999;
+}
+
+
+#title-input-field {
+  margin-top:15px;
 }
 
 

@@ -16,6 +16,8 @@
     <%= f.hidden_field :wakeup_minute, :value => 00 %>
     <%= f.hidden_field :wakeup_ampm, :value => 'AM' %>
 
+    <%= f.hidden_field :title %>
+
     <!-- --------- Modal ONE ------------ -->
     <div id="modal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
 
@@ -41,7 +43,14 @@
                 </form>
               </div>
             </div>
-            
+
+            <div class="row">
+            <div class="col-xs-6 form-inline">
+                <span>title: 
+                <input id="title-input-field" type="text" class="form-control"/></span>
+            </div>
+          </div>
+
             <div class="row" style="margin-top:25px">
               <div class="col-xs-12">
                 <form class="form-inline" role="form"><span>Alarm type: </span> 
@@ -138,7 +147,7 @@
           <!-- alarm item -->
           <a href="#" class="list-group-item alarm-item">
             <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.wakeup_hour%>:<%= alarm.wakeup_minute %> <%= alarm.wakeup_ampm  %></h4>
-            <p class="list-group-item-text alarm-item-title"><%= alarm.title %></p>
+            <span class="list-group-item-text alarm-item-title"><%= alarm.title %></span><br>
             <small>
               <span class="alarm_day">MON</span>&nbsp;
               <span class="alarm_day <%= "day_active" if alarm.repeat_monday %>">TUE</span>&nbsp;
