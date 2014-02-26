@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Bariol-Bold;
+  src: url(Bariol-Regular.otf);
+}
 body {
     padding-top: 90px;
 }
@@ -20,4 +24,7 @@ body {
 }
 
 
-
+.title_top {
+  font-family:Bariol-Bold;
+  font-size: 28pt;
+}
