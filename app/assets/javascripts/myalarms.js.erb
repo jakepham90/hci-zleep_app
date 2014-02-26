@@ -51,7 +51,7 @@ function Alarm(hour, min) {
     if (timeB[i].getHours() > 12) 
       ampm = 'pm';
     console.log("timeB: " + timeB[i].toString() + " (" +amountHour+ ", " +amountMin+ ")");
-    
+
     localFormat.push([_timeFormatter(timeB[i].toLocaleTimeString()), amountHour + 'h' + amountMin + 'm']);
   }
   this.times = localFormat;
@@ -62,9 +62,9 @@ function Alarm(hour, min) {
     var str2 = str1[0].split(":");
     return str2[0] + ":" + str2[1] + ' ' +str1[1];
   }
-  
+
 }
- 
+
 
 
 /* ======================*/
@@ -97,27 +97,22 @@ function _modalHandler() {
 
 
 
-  /* modal-1 next */
-  $("#btn-modal-1-next").click(function (e) {
+  $('body').on('click',".btn-modal-1-next",function (e) {
     e.preventDefault(); 
-    console.log(type+hour+min+ampm);
+    console.log("btn-1-next-clicked");
     input_time = $("#timepicker").val();
     type = $("#alarm_alarm_type option:selected").text();
     hour = $(".bootstrap-timepicker-hour").val();
     min  = $(".bootstrap-timepicker-minute").val();
     ampm = $("#alarm_wakeup_ampm option:selected").text();  
     repeatingDays =  $('input[name=dayCheckBox]:checked').map(function() { return $(this).val(); });
-    
-    var alarm = new Alarm ( hour, min);
-    var times = alarm.times;
-    var html = _renderTimes(times);
 
     // store alarm input values
     $("#alarm_wakeup_hour").val(hour);
     $("#alarm_wakeup_minute").val(min);
     $("#alarm_wakeup_ampm").val(ampm);
     $("#alarm_wakeup_reminder_type").val($('input[name=optionsRadios]:checked').val());
-   $("#alarm_repeat_monday").val( $("#monday").prop('checked'));
+    $("#alarm_repeat_monday").val( $("#monday").prop('checked'));
     $("#alarm_repeat_tuesday").val( $("#tuesday").prop('checked'));
     $("#alarm_repeat_wednesday").val( $("#wednesday").prop('checked'));
     $("#alarm_repeat_thursday").val( $("#thursday").prop('checked'));
@@ -125,32 +120,40 @@ function _modalHandler() {
     $("#alarm_repeat_saturday").val( $("#saturday").prop('checked'));
     $("#alarm_repeat_sunday").val( $("#sunday").prop('checked'));
 
+    var alarm = new Alarm ( hour, min);
+    var times = alarm.times;
+    var html = _renderTimes(times);
 
+    console.log("renderTimes >>" + html);
 
-    $("#modal-body-2").prepend(html);
-    dirty_dialog_1 = $(".modal-dialog-1").clone();     // get dialog1
-    $("#modal-dialog-1").replaceWith($(".modal-dialog-2").clone());
+    $("#timelist-div").html(html);
+    dirty_dialog_1 = $("#modal").clone(true, true).html();     // get dialog1
+    //console.log(dirty_dialog_1);
+    $("#modal").html($(".modal-2").clone(true, true).html());
     if (type=="wakeup"){
-      $(".modal-title").append("Bedtimes")
+      $(".modal-title").html("Bedtimes")
     } else 
-      $(".modal-title").append("Wake-up times"); 
+      $(".modal-title").html("Wake-up times"); 
 
+
+    $(".btn-modal-2-back").on( "click", function (e) {
+      e.preventDefault();
+      $("#modal").html(dirty_dialog_1);
+      $("#timepicker").val(input_time);
+      //$("#btn-create-new").click();
+    });
   });
 
-  $("#btn-modal-2-cancel").click( function (e) {
+  $(".btn-modal-2-cancel").click( function (e) {
     e.preventDefault();
     location.reload(); 
   });
 
-  $("#btn-modal-2-back").click( function (e) {
-    e.preventDefault();
-    $(".modal-dialog-2").replaceWith(dirty_dialog_1);
-    $("#timepicker").val(input_time);
-  });
+
 
   $(".btn_save").click( function (e) {
     e.preventDefault();
-  $("#alarm_wakeup_hour").val(hour);
+    $("#alarm_wakeup_hour").val(hour);
     $("#alarm_wakeup_minute").val(min);
     $("#alarm_wakeup_ampm").val(ampm);
     //_getSelectedTime();
