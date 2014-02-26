@@ -134,7 +134,7 @@
 
 <!-- Showing user's alarms -->
 <div class="row" >
-  <div class="col-md-12" style="margin:0 auto;"/ >
+  <div class="col-md-12 div-create-new-btn"/ >
     <button id="btn-create-new" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-plus"></span></button>
   </div>
 </div>
@@ -149,13 +149,13 @@
             <h4 class="alarm_time" style="text-transform: lowercase;"><%= alarm.wakeup_hour%>:<%= alarm.wakeup_minute %> <%= alarm.wakeup_ampm  %></h4>
             <span class="list-group-item-text alarm-item-title"><%= alarm.title %></span><br>
             <small>
-              <span class="alarm_day">MON</span>&nbsp;
-              <span class="alarm_day <%= "day_active" if alarm.repeat_monday %>">TUE</span>&nbsp;
-              <span class="alarm_day <%= "day_active" if alarm.repeat_tuesday %>">WED</span>&nbsp;
-              <span class="alarm_day <%= "day_active" if alarm.repeat_wednesday  %>">THU</span>&nbsp;
-              <span class="alarm_day <%= "day_active" if alarm.repeat_thursday %>">FRI</span>&nbsp;
-              <span class="alarm_day <%= "day_active" if alarm.repeat_friday %>">SAT</span>&nbsp;
-              <span class="alarm_day <%= "day_active" if alarm.repeat_sunday %>">SUN</span>
+              <span class="alarm_day <%= "day_active" if alarm.repeat_sunday == 'true' %>">SUN</span>
+              <span class="alarm_day <%= "day_active" if alarm.repeat_monday == 'true' %>">MON</span>&nbsp;
+              <span class="alarm_day <%= "day_active" if alarm.repeat_tuesday == 'true' %>">TUES</span>&nbsp;
+              <span class="alarm_day <%= "day_active" if alarm.repeat_wednesday  == 'true' %>">WED</span>&nbsp;
+              <span class="alarm_day <%= "day_active" if alarm.repeat_thursday == 'true' %>">THURS</span>&nbsp;
+              <span class="alarm_day <%= "day_active" if alarm.repeat_friday == 'true' %>">FRI</span>&nbsp;
+              <span class="alarm_day <%= "day_active" if alarm.repeat_saturday == 'true' %>">SAT</span>
             </small>
             </a>       
         <%end%>
