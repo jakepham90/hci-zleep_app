@@ -59,7 +59,7 @@ skip_before_filter  :verify_authenticity_token
   def post_params
     params.require(:alarm).permit(:title, :wakeup_reminder_time, :sleeping_hour, :sleeping_minute, :is_dismiss, :sleep_reminder_time, :sleep_reminder_type,
             :sleeping_ampm, :repeat_monday,  :repeat_tuesday,  :repeat_wednesday,  :repeat_thursday,  :repeat_friday,  :repeat_saturday,
-             :repeat_sunday, :wakeup_hour, :wakeup_minute, :wakeup_ampm)
+             :repeat_sunday, :wakeup_hour, :wakeup_minute, :wakeup_ampm, :sleep_reminder_time_unit)
   end
 
 

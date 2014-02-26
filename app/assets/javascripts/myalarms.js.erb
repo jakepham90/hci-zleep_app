@@ -9,6 +9,8 @@ var hour =$(".bootstrap-timepicker-hour").val();
 var min =$(".bootstrap-timepicker-minute").val();
 var ampm = $("#alarm_ampm option:selected").text(); 
 var repeatingDays = '';
+var reminder_type = '';
+var reminder_time = '';
 
 function initializePage () {
   $('#checkbox-list-days').hide();
@@ -112,6 +114,7 @@ function _modalHandler() {
     min  = $(".bootstrap-timepicker-minute").val();
     ampm = $("#alarm_wakeup_ampm option:selected").text();  
     repeatingDays =  $('input[name=dayCheckBox]:checked').map(function() { return $(this).val(); });
+  
 
     // store alarm input values
     $("#alarm_wakeup_hour").val(hour);
@@ -125,7 +128,7 @@ function _modalHandler() {
     $("#alarm_repeat_friday").val( $("#friday").prop('checked'));
     $("#alarm_repeat_saturday").val( $("#saturday").prop('checked'));
     $("#alarm_repeat_sunday").val( $("#sunday").prop('checked'));
-    $("#alarm_title").val($("#title-input-field").val());
+  //  $("#alarm_title").val($("#title-input-field").val());
 
     var alarm = new Alarm ( hour, min);
     var times = alarm.times;
@@ -163,6 +166,7 @@ function _modalHandler() {
     $("#alarm_wakeup_hour").val(hour);
     $("#alarm_wakeup_minute").val(min);
     $("#alarm_wakeup_ampm").val(ampm);
+    $("#alarm_sleep_reminder_time").val(); // TODO 
     //_getSelectedTime();
 
   });
