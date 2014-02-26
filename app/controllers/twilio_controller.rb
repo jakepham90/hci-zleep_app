@@ -1,7 +1,11 @@
 class TwilioController < ApplicationController
 	def message
-	    respond_to do |format|
-	      format.xml { @postto }
-	    end
-	  end
+	        render 'message.xml.erb', :content_type => 'text/xml'
+
+	end
+	def validate
+
+		    render 'validate.xml.erb', :content_type => 'text/xml'
+
+	end
 end

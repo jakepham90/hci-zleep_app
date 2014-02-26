@@ -32,18 +32,12 @@ class WelcomeController < ApplicationController
 			@client.account.calls.create(
 		  :from => '+18587629676',
 		  :to => @user.phone_number,
-		  :url => "https://demo.twilio.com/welcome/voice/"
+		  :url => "https://dl.dropboxusercontent.com/u/84415358/message.xml"
 		 	)
    	end
-   	
-
-	
+   
 
    end
-
 	
-  def gather
-
-  end
 
 end
