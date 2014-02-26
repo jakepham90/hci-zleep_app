@@ -14,6 +14,10 @@ require
   color: #428bca;
 }
 
+.day_non_active {
+color:  #999;
+}
+
 .alarm_control_padding
 {
   padding-right: 15px;
@@ -130,7 +134,7 @@ color: #999;
 .list-group-item.alarm-item {
   margin:0 auto;
    width: 400px;
-   height:100px;
+   height:125px;
     padding:10px 0px 10px 10px;
 }
 .list-group-item.alarm-item.new{
@@ -191,7 +195,7 @@ min-height: 200px;
 }
 
 .alarm_day.span:hover {
-  color:#999;
+  color: #eee;
 }
 
 
@@ -206,10 +210,24 @@ min-height: 200px;
     color: #FFFFFF; 
     display:inline-block;
     width: 388px;
-    border-color: #DD7064;
+    border-color: #DD706;
 }
 .div-create-new-btn{
  width: 100%;
   text-align: center;
   margin-bottom:15px;
+}
+
+.btn-discard {
+font-size:12pt;
+float:right;
+}
+
+#alarm_title {
+  margin-top:15px;
+}
+
+.reminder img {
+height:20px;
+width:20px;
 }
