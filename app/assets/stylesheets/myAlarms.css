@@ -11,8 +11,7 @@ require
 .day_active
 {
   font-weight: bolder;
-  text-decoration: underline;
-  color: #5cb85c;
+  color: #428bca;
 }
 
 .alarm_control_padding
@@ -21,8 +20,10 @@ require
 }
 
 
+
 .alarm_day
 {
+
   font-size: 12px;
   text-align: center;
   text-transform: lowercase;
@@ -48,7 +49,7 @@ require
 .alarm_time
 {
   color: #DC4B39;
-  font-size: 18px;
+  font-size: 28px;
   margin-bottom:2px;
 }
 
@@ -101,10 +102,6 @@ float:left;
   width:60px;
 }
 
-#btn-create-new {
-    background-color: #DC4B39;
-    color: #FFFFFF; float:right;
-}
 .create-new-alarm {
     position:absolute;
     bottom:10;
@@ -188,6 +185,31 @@ min-width: 410px;
 min-height: 200px;
 }
 
-.alarm_day {
-color:#999;
+
+#alarm-type-selection {
+  max-width: 100px;
+}
+
+.alarm_day.span:hover {
+  color:#999;
+}
+
+
+#title-input-field {
+  margin-top:15px;
+}
+
+
+
+#btn-create-new {
+    background-color: #DD7064;
+    color: #FFFFFF; 
+    display:inline-block;
+    width: 388px;
+    border-color: #DD7064;
+}
+.div-create-new-btn{
+ width: 100%;
+  text-align: center;
+  margin-bottom:15px;
 }
