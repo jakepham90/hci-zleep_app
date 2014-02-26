@@ -32,7 +32,7 @@ class WelcomeController < ApplicationController
 			@client.account.calls.create(
 		  :from => '+18587629676',
 		  :to => @user.phone_number,
-		  :url => "http://zleep.herokuapp.com/welcome/message.xml"
+		  :url => "https://zleep.herokuapp.com/welcome/message.xml"
 		 	)
    	end
    	
